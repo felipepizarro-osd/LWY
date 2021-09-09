@@ -23,10 +23,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Widget build(BuildContext context) {
-    var question = [
-      'El cristian lo mataron los milicos?',
-      'Cual es tu animal Favorito'
-    ];
+    var question = ['Que quieres aprender ?', 'Cual es tu area favorita ?'];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
