@@ -11,6 +11,33 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "C19Software",
       home: SplashScreen(),
+      theme: ThemeData(
+        primaryColor: Colors.grey[300],
+        accentColor: Colors.green[300],
+        highlightColor: Colors.yellow,
+
+
+        textTheme: TextTheme(
+          //Supuestos textos para reutilizar
+          headline1: TextStyle(
+            fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue[600],
+
+          ), //head1
+
+          headline2: TextStyle(
+            fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.redAccent,
+
+          ),
+          //head2
+
+        )
+
+
+      ),
     );
   }
 }
