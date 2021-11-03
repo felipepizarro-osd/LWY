@@ -1,3 +1,4 @@
+import 'package:first_app/screens/main_screen.dart';
 import 'package:first_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "C19Software",
-      home: SplashScreen(),
+      home: MainScreen(),
       theme: ThemeData(
         primaryColor: Colors.grey[300],
         accentColor: Colors.green[300],
