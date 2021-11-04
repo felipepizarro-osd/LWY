@@ -1,10 +1,16 @@
-# LWY
-c19 software apk e-learning 
-Aplicacion desarrollada en flutter con en lenguaje de programacion Dart en android studio
-Aplicacion interactiva con explicaciones de temas de ingenieria e matematicas
+# flutter_application_2
 
-Flutter 
+A new Flutter project.
 
-Open the Folder of the project 
-Run the project with Androif SDK emulator 
-![image](https://user-images.githubusercontent.com/66143232/131267641-6c5b9c58-b62f-4014-8afa-6e1faafb7e02.png)
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
