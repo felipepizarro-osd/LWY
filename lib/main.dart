@@ -1,57 +1,25 @@
 import 'package:flutter/material.dart';
-import './Question.dart';
+import 'package:flutter_application_2/src/pages/opciones.dart';
+import 'src/pages/pages.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  var questionIndex = 0;
-
-  void responder() {
-    setState(() {
-      questionIndex = questionIndex + 1;
-    });
-
-    print(questionIndex);
-    //print("respuesta elegida !");
-  }
-
   Widget build(BuildContext context) {
-    var question = [
-      'El cristian lo mataron los milicos?',
-      'Cual es tu animal Favorito'
-    ];
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Proyecto app'),
-        ),
-        body: Column(
-          children: <Widget>[
-            Question(
-              question[questionIndex],
-            ),
-            RaisedButton(
-              child: Text('Respuesta 1'),
-              onPressed: responder,
-            ),
-            RaisedButton(
-              child: Text('Respuesta 2'),
-              onPressed: responder,
-            ),
-            RaisedButton(
-              child: Text('Respuesta 3'),
-              onPressed: responder,
-            ),
-          ],
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: "Cursos Ing",
+      initialRoute: "home",
+      routes: {
+        "home": (_) => const HomePages(),
+        "perfil": (_) => const PerfillUser(),
+        "setting": (_) => const opciones(),
+      },
     );
   }
 }
