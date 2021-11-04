@@ -14,12 +14,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Cursos Ing",
-      initialRoute: "home",
+      initialRoute: "GO",
       routes: {
+        "GO": (_) => MainScreen(),
         "home": (_) => const HomePages(),
-        "perfil": (_) => const PerfillUser(),
+        
         "setting": (_) => const opciones(),
       },
+      theme: ThemeData(
+          primaryColor: Colors.grey[300],
+          accentColor: Colors.green[300],
+          highlightColor: Colors.yellow,
+          textTheme: TextTheme(
+            //Supuestos textos para reutilizar
+            headline1: TextStyle(
+              fontSize: 36.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue[600],
+            ), //head1
+
+            headline2: TextStyle(
+              fontSize: 36.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.redAccent,
+            ),
+            //head2
+          )), //theme
     );
   }
 }

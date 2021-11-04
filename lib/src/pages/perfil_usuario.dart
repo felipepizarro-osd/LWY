@@ -26,7 +26,7 @@ class PerfillUser extends StatelessWidget {
                   },
                 ),
                 const Text(
-                  'volver',
+                  'Perfil',
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.normal,
@@ -37,12 +37,12 @@ class PerfillUser extends StatelessWidget {
             ),
             const SizedBox(height: 100),
             Image.asset(
-              'assets/Userpic.png',
+              'assets/imgs/Userpic.png',
               width: 200,
               height: 200,
             ),
             Image.asset(
-              "assets/Lapiz1.png",
+              "assets/imgs/Lapiz1.png",
               alignment: Alignment.center,
               width: 40,
               height: 40,
