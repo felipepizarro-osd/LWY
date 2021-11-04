@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "GO",
       routes: {
         "GO": (_) => MainScreen(),
-        "home": (_) => const HomePages(),
-        
+        "perfil": (_) => PerfillUser(),
+        "home": (_) => MainScreen(),
         "setting": (_) => const opciones(),
       },
       theme: ThemeData(

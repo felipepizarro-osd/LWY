@@ -11,14 +11,14 @@ class MainScreen extends StatelessWidget {
       body: Column(
         //color: Colors.grey[100],
         children: <Widget>[
-          customAppBar(),
+          customAppBar(context),
           this.listaVertical(),
         ],
       ),
     );
   }
 
-  Widget customAppBar() {
+  Widget customAppBar(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       child: Row(
@@ -34,6 +34,7 @@ class MainScreen extends StatelessWidget {
             icon: Image.network(
                 'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
             onPressed: () {
+              Navigator.pushNamed(context, "perfil");
               
             },
           ),
