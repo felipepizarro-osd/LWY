@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_application_2/src/pages/perfil_usuario.dart';
 
 class HomePages extends StatelessWidget {
@@ -8,24 +9,37 @@ class HomePages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CupertinoColors.systemBackground,
-      body: SizedBox(
-          width: 411,
-          height: 681,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image.asset(
-                'assets/Image6.png',
-                width: 400,
-                height: 400,
+      body: Container(
+        width: 411,
+        height: 681,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.asset(
+              'assets/Image6.png',
+              width: 400,
+              height: 400,
+            ),
+            ElevatedButton(
+              child: Text(
+                'Go',
+                style: GoogleFonts.baloo(
+                  fontSize: 35,
+                ),
               ),
-            ],
-          )),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.arrow_forward_ios),
-        onPressed: () {
-          Navigator.pushNamed(context, "perfil");
-        },
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                  ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, "perfil");
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

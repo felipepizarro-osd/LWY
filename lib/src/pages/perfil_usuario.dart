@@ -48,25 +48,24 @@ class PerfillUser extends StatelessWidget {
               height: 40,
             ),
             const SizedBox(height: 1),
-            const Text(
-              "Editar",
-              style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.normal),
-            ),
-            const SizedBox(height: 3),
-            const Text(
-              "C19 guy",
-              style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Arial',
+            Text(
+              'Editar',
+              style: GoogleFonts.caveat(
+                fontSize: 25,
               ),
             ),
             const SizedBox(height: 3),
             Text(
-              "Student",
-              style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.values[2],
+              'C19 Guy',
+              style: GoogleFonts.caveat(
+                fontSize: 25,
+              ),
+            ),
+            const SizedBox(height: 3),
+            Text(
+              'Student',
+              style: GoogleFonts.caveat(
+                fontSize: 25,
               ),
             ),
           ],
