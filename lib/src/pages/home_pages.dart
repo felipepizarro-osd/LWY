@@ -22,7 +22,7 @@ class HomePages extends StatelessWidget {
             ),
             ElevatedButton(
               child: Text(
-                'Go',
+                'Go!',
                 style: GoogleFonts.baloo(
                   fontSize: 35,
                 ),
