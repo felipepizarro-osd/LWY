@@ -1,13 +1,19 @@
+import 'package:first_app/componentes/chemistry_option.dart';
+import 'package:first_app/componentes/computer_option.dart';
+import 'package:first_app/componentes/math_option.dart';
+import 'package:first_app/componentes/physical_option.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: ListView(children: <Widget>[
+      body: Column(
+        //color: Colors.grey[100],
+        children: <Widget>[
           customAppBar(),
-        ]),
+          this.listaVertical(),
+        ],
       ),
     );
   }
@@ -16,18 +22,46 @@ class MainScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       child: Row(
-        
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
             'assets/imgs/inicio.png',
-            height: 500,
+            height: 56,
+            width: 212,
           ),
           IconButton(
-            icon: SvgPicture.asset('assets/icons/perfil.svg'),
+            iconSize: 43,
+            icon: Image.network(
+                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
             onPressed: () {},
           ),
         ],
       ),
+    );
+  }
+
+  Widget listaVertical() {
+    return Column(
+//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10.0),
+        ),
+        Container(
+          height: 590,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              opcionInformatica(),
+              opcionMatematicas(),
+              opcionFisica(),
+              opcionQuimica(),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
