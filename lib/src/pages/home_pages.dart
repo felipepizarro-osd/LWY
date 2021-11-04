@@ -14,19 +14,17 @@ class HomePages extends StatelessWidget {
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image.asset('assets/imgs/c19.png',
-            height: 500,),
-            
+            Image.asset(
+              'assets/imgs/c19.png',
+              height: 500,
+            ),
             IconButton(
               iconSize: 100,
-
               icon: SvgPicture.asset('assets/icons/go.svg'),
-              
               onPressed: () {
-                Navigator.pushNamed(context, "GO");
+                Navigator.pushNamed(context, "home");
               },
-              
-              ),
+            ),
           ], //Widget
         ),
       ), //Container
