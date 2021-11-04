@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Cursos Ing",
       initialRoute: "GO",
       routes: {
-        "GO": (_) => MainScreen(),
+        "GO": (_) => HomePages(),
         "perfil": (_) => PerfillUser(),
         "home": (_) => MainScreen(),
         "setting": (_) => const opciones(),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
               color: Colors.blue[600],
             ), //head1
 
-            headline2: TextStyle(
+            headline2: const TextStyle(
               fontSize: 36.0,
               fontWeight: FontWeight.bold,
               color: Colors.redAccent,
