@@ -34,13 +34,13 @@ Widget customAppBar(BuildContext context) {
           children: const <Widget>[
             SizedBox(width: 20),
             kirchhoff(),
-            SizedBox(width: 40),
+            SizedBox(width: 20),
             LeyCoulomb(),
           ],
         ),
         const SizedBox(height: 25),
         const CampoElectrico(),
-        const SizedBox(height: 80),
+        const SizedBox(height: 60),
         Row(
           children: <Widget>[
             TextButton(

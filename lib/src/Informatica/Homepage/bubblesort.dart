@@ -9,8 +9,8 @@ class BubbleSort extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          width: 154,
-          height: 136,
+          width: 170,
+          height: 140,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Color.fromRGBO(165, 166, 246, 1),
@@ -20,7 +20,7 @@ class BubbleSort extends StatelessWidget {
             children: <Widget>[
               const SizedBox(height: 10),
               Container(
-                width: 140,
+                width: 150,
                 height: 7,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9),
@@ -32,7 +32,7 @@ class BubbleSort extends StatelessWidget {
                   Text(
                     ' Bubble Sort',
                     style: GoogleFonts.redHatDisplay(
-                        fontSize: 23,
+                        fontSize: 27,
                         fontWeight: FontWeight.bold,
                         color: const Color.fromRGBO(93, 95, 239, 1)),
                   ),
@@ -43,7 +43,7 @@ class BubbleSort extends StatelessWidget {
                 'Programacion',
                 style: GoogleFonts.redHatDisplay(
                     fontSize: 14,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.bold,
                     color: const Color.fromRGBO(58, 58, 68, 1)),
               ),
             ],

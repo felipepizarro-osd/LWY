@@ -34,9 +34,9 @@ Widget customAppBar(BuildContext context) {
         const SizedBox(height: 10),
         Row(
           children: const <Widget>[
-            SizedBox(width: 20),
+            SizedBox(width: 15),
             ArbolAvl(),
-            SizedBox(width: 40),
+            SizedBox(width: 20),
             Listas(),
           ],
         ),

@@ -10,8 +10,8 @@ class kirchhoff extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          width: 154,
-          height: 136,
+          width: 170,
+          height: 140,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: const Color.fromRGBO(253, 220, 218, 1),

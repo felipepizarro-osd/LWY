@@ -9,8 +9,8 @@ class ArbolAvl extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          width: 154,
-          height: 136,
+          width: 170,
+          height: 140,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: const Color.fromRGBO(253, 220, 218, 1),
@@ -20,7 +20,7 @@ class ArbolAvl extends StatelessWidget {
             children: <Widget>[
               const SizedBox(height: 10),
               Container(
-                width: 140,
+                width: 150,
                 height: 7,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9),
@@ -32,7 +32,7 @@ class ArbolAvl extends StatelessWidget {
                   Text(
                     ' Arbol AVL',
                     style: GoogleFonts.redHatDisplay(
-                        fontSize: 22,
+                        fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: const Color.fromRGBO(241, 120, 182, 1)),
                   ),

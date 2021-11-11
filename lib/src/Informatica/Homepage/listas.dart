@@ -8,8 +8,8 @@ class Listas extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          width: 154,
-          height: 136,
+          width: 170,
+          height: 140,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: const Color.fromRGBO(245, 255, 141, 1),
@@ -19,7 +19,7 @@ class Listas extends StatelessWidget {
             children: <Widget>[
               const SizedBox(height: 10),
               Container(
-                width: 140,
+                width: 150,
                 height: 7,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9),
@@ -31,7 +31,7 @@ class Listas extends StatelessWidget {
                   Text(
                     ' Listas',
                     style: GoogleFonts.redHatDisplay(
-                        fontSize: 23,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: const Color.fromRGBO(172, 107, 203, 1)),
                   ),
