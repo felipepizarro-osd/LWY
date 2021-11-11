@@ -9,6 +9,8 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        //mainAxisAlignment: MainAxisAlignment.spaceAround,
+
         //color: Colors.grey[100],
         children: <Widget>[
           customAppBar(context),
@@ -20,7 +22,7 @@ class MainScreen extends StatelessWidget {
 
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -35,7 +37,6 @@ class MainScreen extends StatelessWidget {
                 'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
             onPressed: () {
               Navigator.pushNamed(context, "perfil");
-              
             },
           ),
         ],
@@ -50,7 +51,7 @@ class MainScreen extends StatelessWidget {
 
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10.0),
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
         ),
         Container(
           height: 590,

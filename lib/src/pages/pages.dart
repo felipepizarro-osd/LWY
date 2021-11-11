@@ -1,4 +1,7 @@
-export 'package:flutter_application_2/src/pages/home_pages.dart';
-export 'package:flutter_application_2/src/pages/perfil_usuario.dart';
-export 'package:flutter_application_2/src/pages/opciones.dart';
-export 'package:flutter_application_2/src/pages/main_screen.dart';
+export '/src/pages/home_pages.dart';
+export '/src/pages/perfil_usuario.dart';
+export '/src/pages/opciones.dart';
+export '/src/pages/main_screen.dart';
+export '/src/pages/main_screen.dart';
+export '/src/componentes/physical_option.dart';
+export '/src/Fisica/home_fisica.dart';

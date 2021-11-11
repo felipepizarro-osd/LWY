@@ -25,12 +25,10 @@ class PerfillUser extends StatelessWidget {
                     Navigator.pushNamed(context, "home");
                   },
                 ),
-                const Text(
-                  'Perfil',
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.normal,
-                    fontFamily: 'Helvetica',
+                Text(
+                  'volver',
+                  style: GoogleFonts.baloo(
+                    fontSize: 25,
                   ),
                 ),
               ],

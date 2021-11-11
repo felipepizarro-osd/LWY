@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class opcionMatematicas extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -18,7 +19,8 @@ class opcionMatematicas extends StatelessWidget {
               ),
               child: Text(
                 "Matemáticas",
-                style: TextStyle(color: Colors.black, fontSize: 34.0),
+                style: GoogleFonts.andikaNewBasic(
+                    fontSize: 45, fontWeight: FontWeight.normal),
               ),
               onPressed: () {},
             ),
