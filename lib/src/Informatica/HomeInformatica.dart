@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/src/Informatica/Homepage/Encabezadoi.dart';
 import 'package:flutter_application_2/src/Informatica/Homepage/bubblesort.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'Homepage/arbolavl.dart';
 import 'Homepage/listas.dart';
@@ -41,6 +42,23 @@ Widget customAppBar(BuildContext context) {
         ),
         const SizedBox(height: 25),
         const BubbleSort(),
+        const SizedBox(height: 80),
+        Row(
+          children: <Widget>[
+            TextButton(
+              child: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushNamed(context, "home");
+              },
+            ),
+            Text(
+              'Prev',
+              style: GoogleFonts.arbutusSlab(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
       ],
     ),
   );

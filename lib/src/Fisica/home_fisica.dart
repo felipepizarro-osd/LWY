@@ -40,6 +40,23 @@ Widget customAppBar(BuildContext context) {
         ),
         const SizedBox(height: 25),
         const CampoElectrico(),
+        const SizedBox(height: 80),
+        Row(
+          children: <Widget>[
+            TextButton(
+              child: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushNamed(context, "home");
+              },
+            ),
+            Text(
+              'Prev',
+              style: GoogleFonts.arbutusSlab(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        )
       ],
     ),
   );
