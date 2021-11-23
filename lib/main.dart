@@ -6,6 +6,7 @@ import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
 import 'src/pages/pages.dart';
+import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion2_EQ.dart';
 import 'src/temas/quimica/EquilibrioQuimico/Pages/home_balance.dart';
 import 'src/temas/quimica/LeyCharles/Pages/home_leyCharles.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/home_nomenclatura.dart';
@@ -34,10 +35,22 @@ class MyApp extends StatelessWidget {
         "informatica": (_) => const HomePageInformatica(),
         "quimica": (_) => const HomePageQuimica(),
         "matematica": (_) => const HomeMatematica(),
+
+
+        //QUIMICA________________________________________________________
+        "back_EQ": (_) => const HomePageQuimica(),
         "equilibrioQuimico" : (_) => const EquilibrioQuimico(),
         "nomenclatura" : (_) => const homeNomenclatura(),
         "leyCharles" : (_) => const homeLeyCharles(),
+        //Equilibrio quimico
         "explBalanceQuimico" : (_) => const Explicacion1_EQ(),
+        
+        "back1_EQ" : (_) => const EquilibrioQuimico(),
+        "next1_EQ" : (_) =>  Explicacion2_EQ(),
+        //"next2_EQ" : (_) =>  Explicacion3_EQ(),
+        "back2_EQ" : (_) => const Explicacion1_EQ(),
+        
+        
         
       },
       theme: ThemeData(

@@ -53,8 +53,8 @@ class LeyCharles extends StatelessWidget {
         ),
         MaterialButton(
           elevation: 10,
-          minWidth: 154,
-          height: 136,
+          minWidth: 170,
+          height: 140,
           onPressed: () {
             Navigator.pushNamed(context, "leyCharles");
           },

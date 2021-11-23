@@ -19,6 +19,7 @@ class EquilibrioQuimico extends StatelessWidget {
           Ejemplos_balance(),
           SizedBox(height: 20),
           Ejercicios_balance(),
+          botonFinal(context),
           //this.Botonera(context),
           //customAppBar2(context),
         ],
@@ -50,55 +51,35 @@ class EquilibrioQuimico extends StatelessWidget {
     );
   }
 
-  Widget Botonera(context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.center,
-
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
-        ),
-        Container(
-          height: 300,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
-              Explicacion_balance(),
-              Explicacion_balance(),
-              Explicacion_balance(),
-
-            ],
-          ),
-        ),
-
-      ],      
-
-    );
-
-
-
-  }
-
-  Widget customAppBar2(BuildContext context) {
+  Widget botonFinal(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          IconButton(
-            iconSize: 60,
-            icon: Image.asset('assets/imgs/back.png',height: 50,
-            width: 200),
-            onPressed: () {
-              Navigator.pushNamed(context, "perfil");
-            },
-          ),
+          //Boton Back
+          Row(
+            children: <Widget>[
+              TextButton(
+                child: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.pushNamed(context, "back_EQ");
+                },
+              ),
+              Text(
+                'Prev',
+                style: GoogleFonts.arbutusSlab(
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ), 
+          //Botón Next   
+
         ],
       ),
     );
-  }  
-
+  }    
 
 
 

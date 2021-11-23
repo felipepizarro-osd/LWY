@@ -41,7 +41,8 @@ Widget customAppBar(BuildContext context) {
         const SizedBox(height: 25),
         const C_SegundaDerivada(),
         const SizedBox(height: 60),
-        Row(
+        
+        Stack(
           children: <Widget>[
             TextButton(
               child: const Icon(Icons.arrow_back),

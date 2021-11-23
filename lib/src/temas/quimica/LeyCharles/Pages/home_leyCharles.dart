@@ -27,7 +27,7 @@ class homeLeyCharles extends StatelessWidget {
           SizedBox(height: 20),
           Ejercicios_leyCharles(),
           //this.Botonera(context),
-          //customAppBar2(context),
+          botonFinal(context),
         ],
       ),
     );
@@ -57,21 +57,34 @@ class homeLeyCharles extends StatelessWidget {
     );
   }
 
-  Widget customAppBar2(BuildContext context) {
+  Widget botonFinal(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          IconButton(
-            iconSize: 60,
-            icon: Image.asset('assets/imgs/leyCharles.png', height: 50, width: 200),
-            onPressed: () {
-              Navigator.pushNamed(context, "perfil");
-            },
-          ),
+          //Boton Back
+          Row(
+            children: <Widget>[
+              TextButton(
+                child: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.pushNamed(context, "back_EQ");
+                },
+              ),
+              Text(
+                'Prev',
+                style: GoogleFonts.arbutusSlab(
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ), 
+          //Botón Next   
+
         ],
       ),
     );
-  }
+  }  
+
 }
