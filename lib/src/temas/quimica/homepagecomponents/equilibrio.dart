@@ -49,14 +49,14 @@ class EquilibrioQ extends StatelessWidget {
             ],
           ),
         ),
-        MaterialButton(
-          elevation: 10,
-          minWidth: 154,
-          height: 136,
-          onPressed: () {
-            Navigator.pushNamed(context, "setting");
-          },
-        ),
+      MaterialButton(
+        elevation: 10,
+        minWidth: 154,
+        height: 136,
+        onPressed: () {
+          Navigator.pushNamed(context, "equilibrioQuimico");
+        },
+      ),
       ],
     );
   }

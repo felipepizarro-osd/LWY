@@ -5,6 +5,9 @@ import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
 import 'src/pages/pages.dart';
+import 'src/temas/quimica/EquilibrioQuimico/Pages/home_balance.dart';
+import 'src/temas/quimica/LeyCharles/Pages/home_leyCharles.dart';
+import 'src/temas/quimica/NomenclaturaQuimica/Pages/home_nomenclatura.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +22,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Cursos Ing",
       initialRoute: "GO",
+      //Ruta inicial GO, la cambiaré por equilibrio quimico pa ir probando
       routes: {
-        "GO": (_) => HomePages(),
+        "GO": (_) => EquilibrioQuimico(), //Ruta inicial GO, la cambiaré por equilibrio quimico pa ir probando 
+        //HomePages(), ruta inicial
         "perfil": (_) => const PerfillUser(),
         "home": (_) => MainScreen(),
         "setting": (_) => const opciones(),
@@ -28,6 +33,9 @@ class MyApp extends StatelessWidget {
         "informatica": (_) => const HomePageInformatica(),
         "quimica": (_) => const HomePageQuimica(),
         "matematica": (_) => const HomeMatematica(),
+        "equilibrioQuimico" : (_) => const EquilibrioQuimico(),
+        "nomenclatura" : (_) => const homeNomenclatura(),
+        "leyCharles" : (_) => const homeLeyCharles(),
       },
       theme: ThemeData(
           primaryColor: Colors.grey[300],

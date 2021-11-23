@@ -17,6 +17,7 @@ class HomePageInformatica extends StatelessWidget {
       body: Column(
         children: <Widget>[
           const SizedBox(height: 20),
+          customAppBar2(context),
           customAppBar(context),
         ],
       ),
@@ -58,6 +59,30 @@ Widget customAppBar(BuildContext context) {
               ),
             ),
           ],
+        ),
+      ],
+    ),
+  );
+}
+
+Widget customAppBar2(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Image.asset(
+          'assets/imgs/tema.png',
+          height: 56,
+          width: 212,
+        ),
+        IconButton(
+          iconSize: 43,
+          icon: Image.network(
+              'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
+          onPressed: () {
+            Navigator.pushNamed(context, "perfil");
+          },
         ),
       ],
     ),
