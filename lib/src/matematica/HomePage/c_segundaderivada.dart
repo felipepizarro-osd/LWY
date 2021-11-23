@@ -1,10 +1,8 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CampoElectrico extends StatelessWidget {
-  const CampoElectrico({Key? key}) : super(key: key);
+class C_SegundaDerivada extends StatelessWidget {
+  const C_SegundaDerivada({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +30,17 @@ class CampoElectrico extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Text(
-                    '   Campo\n   Electrico',
+                    '    Criterio \n    Segunda \n    Derivada',
                     style: GoogleFonts.redHatDisplay(
-                        fontSize: 23,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: const Color.fromRGBO(172, 107, 203, 1)),
                   ),
                 ],
               ),
-              SizedBox(height: 3),
+              const SizedBox(height: 3),
               Text(
-                'Electromagnetismo',
+                'Cálculo',
                 style: GoogleFonts.redHatDisplay(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,

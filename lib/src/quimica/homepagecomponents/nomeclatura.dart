@@ -1,11 +1,8 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CampoElectrico extends StatelessWidget {
-  const CampoElectrico({Key? key}) : super(key: key);
-
+class Nomeclatura extends StatelessWidget {
+  const Nomeclatura({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -15,7 +12,7 @@ class CampoElectrico extends StatelessWidget {
           height: 140,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: const Color.fromRGBO(245, 255, 141, 1),
+            color: const Color.fromRGBO(253, 220, 218, 1),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -26,23 +23,23 @@ class CampoElectrico extends StatelessWidget {
                 height: 7,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9),
-                  color: const Color.fromRGBO(252, 221, 236, 1),
+                  color: const Color.fromRGBO(165, 166, 246, 1),
                 ),
               ),
               Row(
                 children: <Widget>[
                   Text(
-                    '   Campo\n   Electrico',
+                    '    Nomeclatura\n    Quimica',
                     style: GoogleFonts.redHatDisplay(
-                        fontSize: 23,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
-                        color: const Color.fromRGBO(172, 107, 203, 1)),
+                        color: const Color.fromRGBO(241, 120, 182, 1)),
                   ),
                 ],
               ),
-              SizedBox(height: 3),
+              const SizedBox(height: 3),
               Text(
-                'Electromagnetismo',
+                '  Quimica general',
                 style: GoogleFonts.redHatDisplay(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,

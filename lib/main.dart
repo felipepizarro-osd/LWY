@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/src/Informatica/HomeInformatica.dart';
+import 'package:flutter_application_2/src/matematica/HomePage/home_matematica.dart';
+import 'package:flutter_application_2/src/quimica/homepagecomponents/home_quimica.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'src/pages/pages.dart';
 
@@ -23,6 +25,8 @@ class MyApp extends StatelessWidget {
         "setting": (_) => const opciones(),
         "fisica": (_) => const FisicaHome(),
         "informatica": (_) => const HomePageInformatica(),
+        "quimica": (_) => const HomePageQuimica(),
+        "matematica": (_) => const HomeMatematica(),
       },
       theme: ThemeData(
           primaryColor: Colors.grey[300],

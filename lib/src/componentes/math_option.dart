@@ -22,7 +22,9 @@ class opcionMatematicas extends StatelessWidget {
                 style: GoogleFonts.andikaNewBasic(
                     fontSize: 45, fontWeight: FontWeight.normal),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, "matematica");
+              },
             ),
           ],
         ),
