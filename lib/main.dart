@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
 
 import 'src/pages/HomeInformatica.dart';
 import 'src/pages/home_fisica.dart';
@@ -36,6 +37,8 @@ class MyApp extends StatelessWidget {
         "equilibrioQuimico" : (_) => const EquilibrioQuimico(),
         "nomenclatura" : (_) => const homeNomenclatura(),
         "leyCharles" : (_) => const homeLeyCharles(),
+        "explBalanceQuimico" : (_) => const Explicacion1_EQ(),
+        
       },
       theme: ThemeData(
           primaryColor: Colors.grey[300],
