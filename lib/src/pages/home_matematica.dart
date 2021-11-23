@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/matematica/HomePage/c_segundaderivada.dart';
-import 'package:flutter_application_2/src/matematica/HomePage/encabezadoM.dart';
-import 'package:flutter_application_2/src/matematica/HomePage/s.revolucion.dart';
-import 'package:flutter_application_2/src/matematica/HomePage/sumariemann.dart';
+import 'package:flutter_application_2/src/temas/matematica/HomePage/c_segundaderivada.dart';
+import 'package:flutter_application_2/src/temas/matematica/HomePage/encabezadoM.dart';
+import 'package:flutter_application_2/src/temas/matematica/HomePage/s.revolucion.dart';
+import 'package:flutter_application_2/src/temas/matematica/HomePage/sumariemann.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeMatematica extends StatelessWidget {

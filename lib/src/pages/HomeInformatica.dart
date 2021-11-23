@@ -1,13 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/Fisica/HomePageComponents/kirchhoff.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'HomePageComponents/Encabezado.dart';
-import 'HomePageComponents/kirchhoff.dart';
-import 'HomePageComponents/campoElectrico.dart';
-import 'HomePageComponents/coulomb.dart';
+// ignore_for_file: file_names
 
-class FisicaHome extends StatelessWidget {
-  const FisicaHome({Key? key}) : super(key: key);
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_application_2/src/temas/Informatica/Homepage/Encabezadoi.dart';
+import 'package:flutter_application_2/src/temas/Informatica/Homepage/arbolavl.dart';
+import 'package:flutter_application_2/src/temas/Informatica/Homepage/bubblesort.dart';
+import 'package:flutter_application_2/src/temas/Informatica/Homepage/listas.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class HomePageInformatica extends StatelessWidget {
+  const HomePageInformatica({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +30,19 @@ Widget customAppBar(BuildContext context) {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        const encabezado(),
+        const InformaticaEncabezado(),
         const SizedBox(height: 10),
         Row(
           children: const <Widget>[
+            SizedBox(width: 15),
+            ArbolAvl(),
             SizedBox(width: 20),
-            kirchhoff(),
-            SizedBox(width: 20),
-            LeyCoulomb(),
+            Listas(),
           ],
         ),
         const SizedBox(height: 25),
-        const CampoElectrico(),
-        const SizedBox(height: 60),
+        const BubbleSort(),
+        const SizedBox(height: 80),
         Row(
           children: <Widget>[
             TextButton(
@@ -56,7 +58,7 @@ Widget customAppBar(BuildContext context) {
               ),
             ),
           ],
-        )
+        ),
       ],
     ),
   );

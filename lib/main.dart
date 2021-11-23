@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/Informatica/HomeInformatica.dart';
-import 'package:flutter_application_2/src/matematica/HomePage/home_matematica.dart';
-import 'package:flutter_application_2/src/quimica/homepagecomponents/home_quimica.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import 'src/pages/HomeInformatica.dart';
+import 'src/pages/home_fisica.dart';
+import 'src/pages/home_matematica.dart';
+import 'src/pages/home_quimica.dart';
 import 'src/pages/pages.dart';
 
 void main() {

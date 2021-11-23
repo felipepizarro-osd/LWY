@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/quimica/homepagecomponents/EncabezadoQ.dart';
-import 'package:flutter_application_2/src/quimica/homepagecomponents/equilibrio.dart';
-import 'package:flutter_application_2/src/quimica/homepagecomponents/leyCharles.dart';
-import 'package:flutter_application_2/src/quimica/homepagecomponents/nomeclatura.dart';
+import 'package:flutter_application_2/src/temas/quimica/homepagecomponents/EncabezadoQ.dart';
+import 'package:flutter_application_2/src/temas/quimica/homepagecomponents/equilibrio.dart';
+import 'package:flutter_application_2/src/temas/quimica/homepagecomponents/leycharles.dart';
+import 'package:flutter_application_2/src/temas/quimica/homepagecomponents/nomeclatura.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageQuimica extends StatelessWidget {

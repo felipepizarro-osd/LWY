@@ -1,15 +1,13 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/Informatica/Homepage/Encabezadoi.dart';
-import 'package:flutter_application_2/src/Informatica/Homepage/bubblesort.dart';
+import 'package:flutter_application_2/src/temas/Fisica/HomePageComponents/Encabezado.dart';
+import 'package:flutter_application_2/src/temas/Fisica/HomePageComponents/campoElectrico.dart';
+import 'package:flutter_application_2/src/temas/Fisica/HomePageComponents/coulomb.dart';
+import 'package:flutter_application_2/src/temas/Fisica/HomePageComponents/kirchhoff.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
-import 'Homepage/arbolavl.dart';
-import 'Homepage/listas.dart';
-
-class HomePageInformatica extends StatelessWidget {
-  const HomePageInformatica({Key? key}) : super(key: key);
+class FisicaHome extends StatelessWidget {
+  const FisicaHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,19 +28,19 @@ Widget customAppBar(BuildContext context) {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        const InformaticaEncabezado(),
+        const encabezado(),
         const SizedBox(height: 10),
         Row(
           children: const <Widget>[
-            SizedBox(width: 15),
-            ArbolAvl(),
             SizedBox(width: 20),
-            Listas(),
+            kirchhoff(),
+            SizedBox(width: 20),
+            LeyCoulomb(),
           ],
         ),
         const SizedBox(height: 25),
-        const BubbleSort(),
-        const SizedBox(height: 80),
+        const CampoElectrico(),
+        const SizedBox(height: 60),
         Row(
           children: <Widget>[
             TextButton(
@@ -58,7 +56,7 @@ Widget customAppBar(BuildContext context) {
               ),
             ),
           ],
-        ),
+        )
       ],
     ),
   );
