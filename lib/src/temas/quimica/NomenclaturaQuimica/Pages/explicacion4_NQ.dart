@@ -1,15 +1,12 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/componentes/ejemplos.dart';
-import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/componentes/ejercicios.dart';
-import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/componentes/explicacion.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
-class homeNomenclatura extends StatelessWidget {
-  const homeNomenclatura({Key? key}) : super(key: key);
+class Explicacion4_NQ extends StatelessWidget {
+  const Explicacion4_NQ({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -18,17 +15,8 @@ class homeNomenclatura extends StatelessWidget {
             height: 20,
           ),
           customAppBar(context),
-          SizedBox(
-            height: 40,
-          ),
-          Explicacion_Nomenclatura(),
-          SizedBox(
-            height: 20,
-          ),
-          Ejemplos_Nomenclatura(),
-          SizedBox(height: 20),
-          Ejercicios_Nomenclatura(),
-          //this.Botonera(context),
+          barra(context),
+          cuerpo(context),
           botonFinal(context),
         ],
       ),
@@ -59,6 +47,18 @@ class homeNomenclatura extends StatelessWidget {
     );
   }
 
+  Widget barra(context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Image.asset('assets/imgs/NomeclaturaC.png'),
+        ],
+      ),
+    );
+  }
+
   Widget botonFinal(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
@@ -71,7 +71,7 @@ class homeNomenclatura extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back_EQ");
+                  Navigator.pushNamed(context, "explicacion3_NQ");
                 },
               ),
               Text(
@@ -83,6 +83,45 @@ class homeNomenclatura extends StatelessWidget {
             ],
           ),
           //Botón Next
+          Row(
+            children: <Widget>[
+              Text(
+                'Next',
+                style: GoogleFonts.arbutusSlab(
+                  fontSize: 20,
+                ),
+              ),
+              TextButton(
+                child: const Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.pushNamed(context, "explicacion5_NQ");
+                },
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget cuerpo(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            'Las sustancias químicas se clasifican de acuerdo a las diferentes valencias que posean. Estas se representan verbalmente con el uso de prefijos y sufijos.',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              letterSpacing: 1.2,
+            ),
+          ),
+          Image.asset(
+            "assets/imgs/imagen25.png",
+            width: 500,
+            height: 230,
+          ),
         ],
       ),
     );
