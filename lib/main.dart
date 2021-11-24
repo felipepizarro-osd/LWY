@@ -6,6 +6,8 @@ import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
 import 'src/pages/pages.dart';
+import 'src/temas/quimica/EquilibrioQuimico/Pages/ejemplo_EQ.dart';
+import 'src/temas/quimica/EquilibrioQuimico/Pages/ejercicio_EQ.dart';
 import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion2_EQ.dart';
 import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion3_EQ.dart';
 import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion4_EQ.dart';
@@ -49,20 +51,25 @@ class MyApp extends StatelessWidget {
         //Equilibrio quimico
         "explBalanceQuimico": (_) => const Explicacion1_EQ(),
 
-        "back1_EQ": (_) => const EquilibrioQuimico(),
+        "ejemBalanceQuimico":(_) => const Ejemplo_EQ(),
+
+        "ejerciciosBalanceQuimico":(_) => const ejercicio_EQ(),
+
+        
         "next1_EQ": (_) => Explicacion2_EQ(),
         "next2_EQ": (_) => Explicacion3_EQ(),
         "next3_EQ": (_) => Explicacion4_EQ(),
         "next4_EQ": (_) => Explicacion5_EQ(),
         "next5_EQ" : (_) =>  Explicacion6_EQ(),
-        //"next6_EQ" : (_) =>  ejemplo_EQ(),
-        //"next7_EQ" : (_) =>  ejercicio_EQ(),
-
+      
+        "back1_EQ": (_) => const EquilibrioQuimico(),
         "back2_EQ": (_) => const Explicacion1_EQ(),
         "back3_EQ": (_) => const Explicacion2_EQ(),
         "back4_EQ": (_) => const Explicacion3_EQ(),
         "back5_EQ": (_) => const Explicacion4_EQ(),
-        "back6_EQ": (_) => const Explicacion5_EQ(),
+        "back6_EQ": (_) => const EquilibrioQuimico(),
+        "back7_EQ": (_) => const EquilibrioQuimico(),
+        "back8_EQ": (_) => const EquilibrioQuimico(),
       },
       theme: ThemeData(
           primaryColor: Colors.grey[300],
