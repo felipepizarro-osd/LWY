@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
+import 'package:flutter_application_2/src/temas/quimica/LeyCharles/Pages/explicacion1_LC.dart';
 
 import 'src/pages/HomeInformatica.dart';
 import 'src/pages/home_fisica.dart';
@@ -14,6 +15,9 @@ import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion4_EQ.dart';
 import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion5_EQ.dart';
 import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion6_EQ.dart';
 import 'src/temas/quimica/EquilibrioQuimico/Pages/home_balance.dart';
+import 'src/temas/quimica/LeyCharles/Pages/ejemplo_LC.dart';
+import 'src/temas/quimica/LeyCharles/Pages/ejercicio_LC.dart';
+import 'src/temas/quimica/LeyCharles/Pages/explicacion2_LC.dart';
 import 'src/temas/quimica/LeyCharles/Pages/home_leyCharles.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/home_nomenclatura.dart';
 
@@ -70,6 +74,25 @@ class MyApp extends StatelessWidget {
         "back6_EQ": (_) => const EquilibrioQuimico(),
         "back7_EQ": (_) => const EquilibrioQuimico(),
         "back8_EQ": (_) => const EquilibrioQuimico(),
+
+        //Ley de Charles
+        "explleyCharles": (_) => const Explicacion1_LC(),
+        
+        "ejemleyCharles":(_) => const Ejemplo_LC(),
+
+        "ejerciciosleyCharles":(_) => const Ejercicio_LC(),
+
+        "next1_LC": (_) => Explicacion2_LC(),
+
+        "back1_LC": (_) => const homeLeyCharles(),
+        "back2_LC": (_) => const homeLeyCharles(),
+        "back3_LC": (_) => const homeLeyCharles(),
+        "back4_LC": (_) => const homeLeyCharles(),
+        
+        
+
+
+
       },
       theme: ThemeData(
           primaryColor: Colors.grey[300],
