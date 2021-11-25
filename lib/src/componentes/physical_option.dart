@@ -13,7 +13,7 @@ class opcionFisica extends StatelessWidget {
               elevation: 10,
               minWidth: 379,
               height: 174,
-              color: Theme.of(context).primaryColor,
+              color: Color.fromRGBO(247, 220, 111, 1),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
