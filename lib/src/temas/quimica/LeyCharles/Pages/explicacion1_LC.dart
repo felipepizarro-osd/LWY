@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Explicacion1_LC extends StatelessWidget {
-  const Explicacion1_LC ({Key? key}) : super(key: key);
+  const Explicacion1_LC({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +44,6 @@ class Explicacion1_LC extends StatelessWidget {
   Widget listaVertical(context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
@@ -56,9 +55,13 @@ class Explicacion1_LC extends StatelessWidget {
             children: <Widget>[
               barra(context),
               explicacion1(context),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               imagen(context),
-              SizedBox(height: 50,),
+              SizedBox(
+                height: 50,
+              ),
               botonFinal(context),
             ],
           ),
@@ -79,7 +82,7 @@ class Explicacion1_LC extends StatelessWidget {
     );
   }
 
-  Widget imagen (BuildContext context) {
+  Widget imagen(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 0),
       child: Row(
@@ -128,7 +131,7 @@ class Explicacion1_LC extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back1_LC");
+                  Navigator.pop(context);
                 },
               ),
               Text(

@@ -90,7 +90,7 @@ class Explicacion1_EQ extends StatelessWidget {
     );
   }
 
-  Widget AyB (BuildContext context) {
+  Widget AyB(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
       child: Row(
@@ -99,16 +99,12 @@ class Explicacion1_EQ extends StatelessWidget {
           Image.asset(
             'assets/imgs/a.png',
           ),
-
           Image.asset(
             'assets/imgs/+.png',
-
           ),
-
           Image.asset(
             'assets/imgs/b.png',
-          ),                    
-
+          ),
         ],
       ),
     );
@@ -126,7 +122,7 @@ class Explicacion1_EQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back1_EQ");
+                  Navigator.pop(context);
                 },
               ),
               Text(
@@ -136,7 +132,7 @@ class Explicacion1_EQ extends StatelessWidget {
                 ),
               ),
             ],
-          ), 
+          ),
           //Botón Next
           Row(
             children: <Widget>[
@@ -146,22 +142,16 @@ class Explicacion1_EQ extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-
               TextButton(
                 child: const Icon(Icons.arrow_forward),
                 onPressed: () {
                   Navigator.pushNamed(context, "next1_EQ");
                 },
               ),
-
             ],
-          )   
-
+          )
         ],
       ),
     );
-  }  
-
-
-
+  }
 }

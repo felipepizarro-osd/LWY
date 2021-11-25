@@ -53,7 +53,7 @@ class Ejercicios_Nomenclatura extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "ejerciciosNomenclatura");
+                Navigator.pushNamed(context, "ejercicio1_NQ");
               },
             ),
           ],
