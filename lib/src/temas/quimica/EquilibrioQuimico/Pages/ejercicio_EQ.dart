@@ -11,14 +11,12 @@ class ejercicio_EQ extends StatelessWidget {
       body: Column(
         children: <Widget>[
           customAppBar(context),
-
           barra(context),
           explicacion1(context),
           SizedBox(height: 55),
           Pregunta(context),
           SizedBox(height: 15),
           botonFinal(context),
-          
         ],
       ),
     );
@@ -83,7 +81,7 @@ class ejercicio_EQ extends StatelessWidget {
     );
   }
 
-  Widget Pregunta (BuildContext context) {
+  Widget Pregunta(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Row(
@@ -92,16 +90,12 @@ class ejercicio_EQ extends StatelessWidget {
           Image.asset(
             'assets/imgs/respuesta.png',
           ),
-
           Image.asset(
             'assets/imgs/comprueba.png',
-
           ),
-
           Image.asset(
             'assets/imgs/borrar.png',
-          ),                    
-
+          ),
         ],
       ),
     );
@@ -119,7 +113,7 @@ class ejercicio_EQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back7_EQ");
+                  Navigator.pop(context);
                 },
               ),
               Text(
@@ -130,7 +124,6 @@ class ejercicio_EQ extends StatelessWidget {
               ),
             ],
           ),
-
         ],
       ),
     );

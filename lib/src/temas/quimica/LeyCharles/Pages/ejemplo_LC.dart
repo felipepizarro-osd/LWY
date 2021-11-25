@@ -12,7 +12,6 @@ class Ejemplo_LC extends StatelessWidget {
         children: <Widget>[
           customAppBar(context),
           this.listaVertical(context),
-          
         ],
       ),
     );
@@ -21,7 +20,6 @@ class Ejemplo_LC extends StatelessWidget {
   Widget listaVertical(context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
@@ -44,8 +42,6 @@ class Ejemplo_LC extends StatelessWidget {
               explicacion3(context),
               SizedBox(height: 10),
               formula4(context),
-              
-              
               SizedBox(height: 20),
               botonFinal(context),
             ],
@@ -54,6 +50,7 @@ class Ejemplo_LC extends StatelessWidget {
       ],
     );
   }
+
   Widget customAppBar(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
@@ -119,7 +116,6 @@ class Ejemplo_LC extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 height: 1.9),
           ),
-
         ],
       ),
     );
@@ -145,7 +141,7 @@ class Ejemplo_LC extends StatelessWidget {
         ],
       ),
     );
-  }  
+  }
 
   Widget explicacion2(context) {
     return Padding(
@@ -167,7 +163,7 @@ class Ejemplo_LC extends StatelessWidget {
         ],
       ),
     );
-  } 
+  }
 
   Widget formula2(BuildContext context) {
     return Padding(
@@ -195,7 +191,7 @@ class Ejemplo_LC extends StatelessWidget {
         ],
       ),
     );
-  }  
+  }
 
   Widget formula4(BuildContext context) {
     return Padding(
@@ -209,7 +205,7 @@ class Ejemplo_LC extends StatelessWidget {
         ],
       ),
     );
-  }  
+  }
 
   Widget explicacion3(context) {
     return Padding(
@@ -246,7 +242,7 @@ class Ejemplo_LC extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back3_LC");
+                  Navigator.pop(context);
                 },
               ),
               Text(
@@ -257,7 +253,6 @@ class Ejemplo_LC extends StatelessWidget {
               ),
             ],
           ),
-
         ],
       ),
     );

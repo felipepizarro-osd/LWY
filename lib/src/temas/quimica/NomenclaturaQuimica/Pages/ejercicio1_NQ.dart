@@ -111,7 +111,6 @@ class Ejercicio1_NQ extends StatelessWidget {
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
                   Navigator.pop(context);
-                  ;
                 },
               ),
               Text(

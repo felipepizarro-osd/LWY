@@ -11,7 +11,6 @@ class Ejemplo_EQ extends StatelessWidget {
       body: Column(
         children: <Widget>[
           customAppBar(context),
-
           barra(context),
           explicacion1(context),
           SizedBox(height: 5),
@@ -22,7 +21,6 @@ class Ejemplo_EQ extends StatelessWidget {
           explicacion3(context),
           SizedBox(height: 20),
           botonFinal(context),
-          
         ],
       ),
     );
@@ -107,7 +105,7 @@ class Ejemplo_EQ extends StatelessWidget {
         ],
       ),
     );
-  }  
+  }
 
   Widget formula(BuildContext context) {
     return Padding(
@@ -158,7 +156,7 @@ class Ejemplo_EQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back7_EQ");
+                  Navigator.pop(context);
                 },
               ),
               Text(
@@ -169,7 +167,6 @@ class Ejemplo_EQ extends StatelessWidget {
               ),
             ],
           ),
-
         ],
       ),
     );
