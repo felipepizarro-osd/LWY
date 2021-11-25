@@ -53,7 +53,7 @@ class Ejemplos_Nomenclatura extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "ejemNomenclatura");
+                Navigator.pushNamed(context, "ejemplo1_NQ");
               },
             ),
           ],

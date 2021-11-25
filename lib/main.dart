@@ -5,7 +5,10 @@ import 'src/pages/pages.dart';
 import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
+import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
+import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
+import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion6_NQ.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,7 +48,9 @@ class MyApp extends StatelessWidget {
         "explicacion3_NQ": (_) => const Explicacion3_NQ(),
         "explicacion4_NQ": (_) => const Explicacion4_NQ(),
         "explicacion5_NQ": (_) => const Explicacion5_NQ(),
-
+        "explicacion6_NQ": (_) => const Explicacion6_NQ(),
+        "ejemplo1_NQ": (_) => const Ejemplo1_NQ(),
+        "ejercicio1_NQ": (_) => const Ejercicio1_NQ(),
         "homeNQ": (_) => const homeNomenclatura(),
 
         //Equilibrio quimico
@@ -85,23 +90,24 @@ class MyApp extends StatelessWidget {
         "back4_LC": (_) => const homeLeyCharles(),
       },
       theme: ThemeData(
-          primaryColor: Colors.grey[300],
-          highlightColor: Colors.yellow,
-          textTheme: TextTheme(
-            //Supuestos textos para reutilizar
-            headline1: TextStyle(
-              fontSize: 36.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue[600],
-            ), //head1
+        primaryColor: Colors.grey[300],
+        highlightColor: Colors.yellow,
+        textTheme: TextTheme(
+          //Supuestos textos para reutilizar
+          headline1: TextStyle(
+            fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue[600],
+          ), //head1
 
-            headline2: const TextStyle(
-              fontSize: 36.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.redAccent,
-            ),
-            //head2
-          )), //theme
+          headline2: const TextStyle(
+            fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.redAccent,
+          ),
+          //head2
+        ),
+      ), //theme
     );
   }
 }
