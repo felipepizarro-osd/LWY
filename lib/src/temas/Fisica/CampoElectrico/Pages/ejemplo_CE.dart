@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, unnecessary_this, file_names, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -54,9 +56,10 @@ class Ejemplo_CE extends StatelessWidget {
             scrollDirection: Axis.vertical,
             children: <Widget>[
               barra(context),
-              //formula(context),
               explicacion1(context),
               formula(context),
+              SizedBox(height: 10,),
+              formula2(context),
               botonFinal(context),
             ],
           ),
@@ -127,7 +130,7 @@ class Ejemplo_CE extends StatelessWidget {
 
   Widget formula(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 75, vertical: 0),
+      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 0),
       child:Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -140,11 +143,10 @@ class Ejemplo_CE extends StatelessWidget {
             'assets/imgs/fisica/form2.png',
           ),          
 
-          SizedBox(height: 20),
-
+          SizedBox(height: 20,width: 0,),
           Text(
-            'En este problema se empleará la siguiente fórmula de campo eléctrico, pero haciendo uso de la distancia. Para ello colocamos los datos:',
-            textAlign: TextAlign.justify,
+            'Sabemos que la fórmula es la siguiente:',
+            textAlign: TextAlign.start,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Red Hat Display',
@@ -152,11 +154,43 @@ class Ejemplo_CE extends StatelessWidget {
                 letterSpacing: -0.4399999976158142,
                 fontWeight: FontWeight.normal,
                 height: 2),
-          ),             
+          ),    
+
+          Image.asset(
+            'assets/imgs/fisica/form3.png',
+          ),              
+          SizedBox(height: 20,width: 0,),     
+
+          Text(
+            'Sustituyendo los datos en la fórmula:',
+            textAlign: TextAlign.start,
+            style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 16,
+                letterSpacing: -0.4399999976158142,
+                fontWeight: FontWeight.normal,
+                height: 2),
+          ),                   
         ],
       ),
     );
   }
+
+  Widget formula2(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image.asset(
+            'assets/imgs/fisica/form4.png',
+          ),
+        ],
+      ),
+    );
+  }  
+
   Widget botonFinal(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),

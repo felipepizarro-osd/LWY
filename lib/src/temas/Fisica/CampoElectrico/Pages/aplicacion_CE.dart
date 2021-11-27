@@ -1,11 +1,10 @@
-
-// ignore_for_file: annotate_overrides, unnecessary_this, file_names, prefer_const_constructors
+// ignore_for_file: annotate_overrides, non_constant_identifier_names, prefer_const_literals_to_create_immutables, file_names
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion_CE extends StatelessWidget {
-  const Explicacion_CE({Key? key}) : super(key: key);
+class aplicacion_CE extends StatelessWidget {
+  const aplicacion_CE({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,10 +12,41 @@ class Explicacion_CE extends StatelessWidget {
         children: <Widget>[
           customAppBar(context),
           this.listaVertical(context),
+
         ],
       ),
     );
   }
+
+  Widget listaVertical(context) {
+    return Column(
+//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
+        ),
+        Container(
+          height: 590,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              barra(context),
+              //SizedBox(height: 30),
+              explicacion1(context),
+              //SizedBox(height: 46),
+              foto(context),
+              //SizedBox(height: 10),
+
+              botonFinal(context),              
+
+            ],
+          ),
+        ),
+      ],
+    );
+  }  
 
   Widget customAppBar(BuildContext context) {
     return Padding(
@@ -42,28 +72,17 @@ class Explicacion_CE extends StatelessWidget {
     );
   }
 
-  Widget listaVertical(context) {
-    return Column(
-//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
+  Widget foto(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
 
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
-        ),
-        Container(
-          height: 590,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
-              barra(context),
-              //formula(context),
-              explicacion1(context),
-              botonFinal(context),
-            ],
-          ),
-        ),
-      ],
+          Image.asset('assets/imgs/fisica/foto2.png',height: 235,width: 382,),
+
+        ],
+      ),
     );
   }
 
@@ -73,7 +92,7 @@ class Explicacion_CE extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/fisica/explicacion_CE.png'),
+          Image.asset('assets/imgs/fisica/aplicacion_CE.png'),
         ],
       ),
     );
@@ -81,37 +100,23 @@ class Explicacion_CE extends StatelessWidget {
 
   Widget explicacion1(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center ,
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Un campo eléctrico es un campo de fuerza creado por la atracción y repulsión de cargas eléctricas (la causa del flujo eléctrico) y se mide en Voltios por metro (V/m). El flujo decrece con la distancia a la fuente que provoca el campo.',
+            'El microondas utiliza una señal electromagnética que funciona a la frecuencia de resonancia del agua, esto quiere decir que sólo las moléculas de agua vibran haciendo que aumenten su energía y se rompan haciendo que se evaporen. (Por eso sólo se calienta la leche y no la taza)',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 20,
+                fontSize: 16,
                 letterSpacing: -0.4399999976158142,
                 fontWeight: FontWeight.normal,
                 height: 2.2),
           ),
-          SizedBox(height: 15,),
-          Image.asset('assets/imgs/fisica/foto1.png'),
-
-          SizedBox(height: 15,),
-          Text(
-            'Los campos eléctricos estáticos (también conocidos como campos electrostáticos) son campos eléctricos que no varían con el tiempo (frecuencia de 0 Hz). Los campos eléctricos estáticos se generan por cargas eléctricas fijas en el espacio, y son distintos de los campos que cambian con el tiempo, como los campos electromagnéticos generados por electrodomésticos, que utilizan corriente alterna (AC) o por teléfonos móviles, etc',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 20,
-                letterSpacing: -0.4399999976158142,
-                fontWeight: FontWeight.normal,
-                height: 2.2),
-          )          
+         
         ],
       ),
     );

@@ -13,6 +13,8 @@ import 'src/pages/pages.dart';
 import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -79,8 +81,8 @@ class MyApp extends StatelessWidget {
         //Campo Electrico
         "explcampoElectrico": (_) => const Explicacion_CE(),
         "ejemcampoElectrico": (_) => const Ejemplo_CE(),
-        //"ejcampoElectrico": (_) => const Explicacion_CE(),
-        //"apcampoElectrico": (_) => const Explicacion_CE(),
+        "ejcampoElectrico": (_) => const ejercicio_CE(),
+        "apcampoElectrico": (_) => const aplicacion_CE(),
 
 
 

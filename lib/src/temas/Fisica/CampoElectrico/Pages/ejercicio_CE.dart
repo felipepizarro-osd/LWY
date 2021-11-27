@@ -4,15 +4,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion_CE extends StatelessWidget {
-  const Explicacion_CE({Key? key}) : super(key: key);
+class ejercicio_CE extends StatelessWidget {
+  const ejercicio_CE({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
           customAppBar(context),
-          this.listaVertical(context),
+          barra(context),
+          SizedBox(height: 30),
+          explicacion1(context),
+          SizedBox(height: 46),
+          Pregunta(context),
+          SizedBox(height: 10),
+
+          botonFinal(context),
         ],
       ),
     );
@@ -42,28 +49,23 @@ class Explicacion_CE extends StatelessWidget {
     );
   }
 
-  Widget listaVertical(context) {
-    return Column(
-//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
-
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
-        ),
-        Container(
-          height: 590,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
-              barra(context),
-              //formula(context),
-              explicacion1(context),
-              botonFinal(context),
-            ],
+  Widget Pregunta(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Image.asset(
+            'assets/imgs/respuesta.png',
           ),
-        ),
-      ],
+          Image.asset(
+            'assets/imgs/comprueba.png',
+          ),
+          Image.asset(
+            'assets/imgs/borrar.png',
+          ),
+        ],
+      ),
     );
   }
 
@@ -73,7 +75,7 @@ class Explicacion_CE extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/fisica/explicacion_CE.png'),
+          Image.asset('assets/imgs/fisica/ejercicio_CE.png'),
         ],
       ),
     );
@@ -81,37 +83,23 @@ class Explicacion_CE extends StatelessWidget {
 
   Widget explicacion1(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center ,
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Un campo eléctrico es un campo de fuerza creado por la atracción y repulsión de cargas eléctricas (la causa del flujo eléctrico) y se mide en Voltios por metro (V/m). El flujo decrece con la distancia a la fuente que provoca el campo.',
+            'Para una carga puntual de Q = +1nC ubique un punto alejado de dicha carga aproximadamente a unos 150 cm de esta.\n-Estime el valor de la intensidad de campo y el potencial eléctricos, a través de las siguientes expresiones matemáticas escalares: .\n-Campo eléctrico: E=K Q/r^2',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 20,
+                fontSize: 18,
                 letterSpacing: -0.4399999976158142,
                 fontWeight: FontWeight.normal,
                 height: 2.2),
           ),
-          SizedBox(height: 15,),
-          Image.asset('assets/imgs/fisica/foto1.png'),
-
-          SizedBox(height: 15,),
-          Text(
-            'Los campos eléctricos estáticos (también conocidos como campos electrostáticos) son campos eléctricos que no varían con el tiempo (frecuencia de 0 Hz). Los campos eléctricos estáticos se generan por cargas eléctricas fijas en el espacio, y son distintos de los campos que cambian con el tiempo, como los campos electromagnéticos generados por electrodomésticos, que utilizan corriente alterna (AC) o por teléfonos móviles, etc',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 20,
-                letterSpacing: -0.4399999976158142,
-                fontWeight: FontWeight.normal,
-                height: 2.2),
-          )          
+         
         ],
       ),
     );
