@@ -44,6 +44,7 @@ class Ejercicios_balance extends StatelessWidget {
                       ),
                     ],
                   ),
+                  
                   const SizedBox(height: 2),
                 ],
               ),

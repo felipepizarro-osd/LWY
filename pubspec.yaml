@@ -62,6 +62,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/imgs/
+    - assets/imgs/matematicas/
+    #- assets/imgs/fisica/
+    #- assets/imgs/informatica/
     - assets/icons/
   # To add assets to your application, add an assets section, like this:
   # assets:

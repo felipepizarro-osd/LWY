@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
+import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
+import 'package:flutter_application_2/src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
 import 'package:flutter_application_2/src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
 import 'package:flutter_application_2/src/temas/quimica/LeyCharles/Pages/explicacion1_LC.dart';
 import 'src/pages/pages.dart';
@@ -36,6 +39,29 @@ class MyApp extends StatelessWidget {
         "quimica": (_) => const HomePageQuimica(),
         "matematica": (_) => const HomeMatematica(),
 
+
+        //INFORMATICA________________________________________________________
+        "back_informatica": (_) => const HomeMatematica(),
+        "solidoR": (_) => home_solido(),
+        "sumas": (_) => home_sumas(),
+        "derivada2": (_) => home_segundaDerivada(),
+        //"sumasR": (_) => home_sumas(),
+        //"derivada2": (_) => home_derivada2(),
+        //"solidoR": (_) => home_solido(),
+
+        //fin de INFORMATICA________________________________________________________        
+
+
+        //MATEMATICAS________________________________________________________
+        "back_SR": (_) => const HomeMatematica(),
+        "solidoR": (_) => home_solido(),
+        "sumas": (_) => home_sumas(),
+        "derivada2": (_) => home_segundaDerivada(),
+        //"sumasR": (_) => home_sumas(),
+        //"derivada2": (_) => home_derivada2(),
+        //"solidoR": (_) => home_solido(),
+
+        //fin de MATEMATICAS________________________________________________________
         //QUIMICA________________________________________________________
         "back_EQ": (_) => const HomePageQuimica(),
         "equilibrioQuimico": (_) => const EquilibrioQuimico(),
@@ -88,6 +114,8 @@ class MyApp extends StatelessWidget {
         "back2_LC": (_) => const homeLeyCharles(),
         "back3_LC": (_) => const homeLeyCharles(),
         "back4_LC": (_) => const homeLeyCharles(),
+
+        //fin de QUIMICA________________________________________________________
       },
       theme: ThemeData(
         primaryColor: Colors.grey[300],

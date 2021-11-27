@@ -6,6 +6,7 @@ class Ejemplos_balance extends StatelessWidget {
   const Ejemplos_balance({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
+    
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[

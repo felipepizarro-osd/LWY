@@ -14,9 +14,9 @@ class HomeMatematica extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          const SizedBox(height: 20),
+          barra1(context),
           customAppBar(context),
-          SizedBox(height: 40),
+          //SizedBox(height: 40),
           botonFinal(context),
         ],
       ),
@@ -31,7 +31,7 @@ Widget customAppBar(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         const EncabezadoM(),
-        const SizedBox(height: 10),
+        const SizedBox(height: 5),
         Row(
           children: const <Widget>[
             SizedBox(width: 20),
@@ -50,7 +50,7 @@ Widget customAppBar(BuildContext context) {
 
   Widget botonFinal(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -71,24 +71,29 @@ Widget customAppBar(BuildContext context) {
               ),
             ],
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  //Navigator.pushNamed(context, "explicacion4_NQ");
-                },
-              ),
-            ],
-          )
         ],
       ),
     );
   }
+
+  Widget barra1(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical:0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Image.asset(
+            'assets/imgs/matematicas/temasG.png',
+          ),
+          IconButton(
+            iconSize: 43,
+            icon: Image.network(
+                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
+            onPressed: () {
+              Navigator.pushNamed(context, "perfil");
+            },
+          ),
+        ],
+      ),
+    );
+  }  

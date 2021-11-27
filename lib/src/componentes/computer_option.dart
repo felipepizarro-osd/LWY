@@ -20,7 +20,7 @@ class opcionInformatica extends StatelessWidget {
               child: Text(
                 "Informática",
                 style: GoogleFonts.andikaNewBasic(
-                    fontSize: 45, fontWeight: FontWeight.normal),
+                    fontSize: 45, fontWeight: FontWeight.bold),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, "informatica");
