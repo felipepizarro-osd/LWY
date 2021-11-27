@@ -1,23 +1,17 @@
-// ignore_for_file: annotate_overrides, file_names
+
+// ignore_for_file: annotate_overrides, unnecessary_this, file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion2_EQ extends StatelessWidget {
-  const Explicacion2_EQ({Key? key}) : super(key: key);
+class Explicacion_CE extends StatelessWidget {
+  const Explicacion_CE({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          //SizedBox(height: 20,),
           customAppBar(context),
-          //barra(context),
-          //formula(context),
-          //explicacion1(context),
-          //SizedBox(height: 20),
-
-          //botonFinal(context),
           this.listaVertical(context),
         ],
       ),
@@ -31,7 +25,7 @@ class Explicacion2_EQ extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/equilibrio.png',
+            'assets/imgs/fisica/campoElectrico.png',
             height: 56,
             width: 212,
           ),
@@ -63,7 +57,7 @@ class Explicacion2_EQ extends StatelessWidget {
             scrollDirection: Axis.vertical,
             children: <Widget>[
               barra(context),
-              formula(context),
+              //formula(context),
               explicacion1(context),
               botonFinal(context),
             ],
@@ -79,21 +73,7 @@ class Explicacion2_EQ extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/explicacion2_EQ.png'),
-        ],
-      ),
-    );
-  }
-
-  Widget formula(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 75, vertical: 0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/formula1.png',
-          ),
+          Image.asset('assets/imgs/fisica/explicacion_CE.png'),
         ],
       ),
     );
@@ -107,7 +87,7 @@ class Explicacion2_EQ extends StatelessWidget {
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Las letras entre paréntesis rectangular\nindican concentración molar de\nreactivo o producto y los exponentes\nson los coeficientes estequiométricos\nrespectivos en la reacción.\nK = cte. de cada reacción en el equilibrio\nK < 1 ; entonces la reacción es muy\nreversible y se dice que se encuentra\ndesplazada a la izquierda. \nK = 1 ; es una reacción en la que se\nobtiene 50% de reactivos y 50% de\nproductos.\nSi K > 1 ; la reacción tiene un\nrendimiento alto y se dice que esta\ndesplazada a la derecha.',
+            'Un campo eléctrico es un campo de fuerza creado por la atracción y repulsión de cargas eléctricas (la causa del flujo eléctrico) y se mide en Voltios por metro (V/m). El flujo decrece con la distancia a la fuente que provoca el campo.',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
@@ -116,7 +96,22 @@ class Explicacion2_EQ extends StatelessWidget {
                 letterSpacing: -0.4399999976158142,
                 fontWeight: FontWeight.normal,
                 height: 2.2),
-          )
+          ),
+          SizedBox(height: 15,),
+          Image.asset('assets/imgs/fisica/foto1.png'),
+
+          SizedBox(height: 15,),
+          Text(
+            'Los campos eléctricos estáticos (también conocidos como campos electrostáticos) son campos eléctricos que no varían con el tiempo (frecuencia de 0 Hz). Los campos eléctricos estáticos se generan por cargas eléctricas fijas en el espacio, y son distintos de los campos que cambian con el tiempo, como los campos electromagnéticos generados por electrodomésticos, que utilizan corriente alterna (AC) o por teléfonos móviles, etc',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 20,
+                letterSpacing: -0.4399999976158142,
+                fontWeight: FontWeight.normal,
+                height: 2.2),
+          )          
         ],
       ),
     );
@@ -134,7 +129,7 @@ class Explicacion2_EQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_EQ");
+                  Navigator.pop(context);
                 },
               ),
               Text(
@@ -145,23 +140,7 @@ class Explicacion2_EQ extends StatelessWidget {
               ),
             ],
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "next2_EQ");
-                },
-              ),
-            ],
-          )
+          
         ],
       ),
     );

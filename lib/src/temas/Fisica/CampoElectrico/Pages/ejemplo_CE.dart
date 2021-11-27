@@ -1,23 +1,14 @@
-// ignore_for_file: annotate_overrides, file_names
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion2_EQ extends StatelessWidget {
-  const Explicacion2_EQ({Key? key}) : super(key: key);
+class Ejemplo_CE extends StatelessWidget {
+  const Ejemplo_CE({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          //SizedBox(height: 20,),
           customAppBar(context),
-          //barra(context),
-          //formula(context),
-          //explicacion1(context),
-          //SizedBox(height: 20),
-
-          //botonFinal(context),
           this.listaVertical(context),
         ],
       ),
@@ -31,7 +22,7 @@ class Explicacion2_EQ extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/equilibrio.png',
+            'assets/imgs/fisica/campoElectrico.png',
             height: 56,
             width: 212,
           ),
@@ -63,8 +54,9 @@ class Explicacion2_EQ extends StatelessWidget {
             scrollDirection: Axis.vertical,
             children: <Widget>[
               barra(context),
-              formula(context),
+              //formula(context),
               explicacion1(context),
+              formula(context),
               botonFinal(context),
             ],
           ),
@@ -79,21 +71,7 @@ class Explicacion2_EQ extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/explicacion2_EQ.png'),
-        ],
-      ),
-    );
-  }
-
-  Widget formula(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 75, vertical: 0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/formula1.png',
-          ),
+          Image.asset('assets/imgs/fisica/ejemplo_CE.png'),
         ],
       ),
     );
@@ -107,21 +85,78 @@ class Explicacion2_EQ extends StatelessWidget {
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Las letras entre paréntesis rectangular\nindican concentración molar de\nreactivo o producto y los exponentes\nson los coeficientes estequiométricos\nrespectivos en la reacción.\nK = cte. de cada reacción en el equilibrio\nK < 1 ; entonces la reacción es muy\nreversible y se dice que se encuentra\ndesplazada a la izquierda. \nK = 1 ; es una reacción en la que se\nobtiene 50% de reactivos y 50% de\nproductos.\nSi K > 1 ; la reacción tiene un\nrendimiento alto y se dice que esta\ndesplazada a la derecha.',
+            'Una carga de 5×10^-6 C se introduce a una región donde actúa un campo de fuerza de 0.04N. ¿Cuál es la intensidad del campo eléctrico en esa región?',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 20,
+                fontSize: 18,
                 letterSpacing: -0.4399999976158142,
                 fontWeight: FontWeight.normal,
-                height: 2.2),
-          )
+                height: 2),
+          ),
+          SizedBox(height: 5),
+          Text(
+            'Solución',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(245, 136, 35, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.4399999976158142,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),   
+
+          Text(
+            'En este problema se empleará la siguiente fórmula de campo eléctrico, pero haciendo uso de la distancia. Para ello colocamos los datos:',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.4399999976158142,
+                fontWeight: FontWeight.normal,
+                height: 2),
+          ),                 
+          SizedBox(height: 15,),        
         ],
       ),
     );
   }
 
+  Widget formula(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 75, vertical: 0),
+      child:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Image.asset(
+            'assets/imgs/fisica/form1.png',
+          ),
+          SizedBox(height: 20),
+
+          Image.asset(
+            'assets/imgs/fisica/form2.png',
+          ),          
+
+          SizedBox(height: 20),
+
+          Text(
+            'En este problema se empleará la siguiente fórmula de campo eléctrico, pero haciendo uso de la distancia. Para ello colocamos los datos:',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 16,
+                letterSpacing: -0.4399999976158142,
+                fontWeight: FontWeight.normal,
+                height: 2),
+          ),             
+        ],
+      ),
+    );
+  }
   Widget botonFinal(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
@@ -134,7 +169,7 @@ class Explicacion2_EQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_EQ");
+                  Navigator.pop(context);
                 },
               ),
               Text(
@@ -145,23 +180,7 @@ class Explicacion2_EQ extends StatelessWidget {
               ),
             ],
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "next2_EQ");
-                },
-              ),
-            ],
-          )
+          
         ],
       ),
     );

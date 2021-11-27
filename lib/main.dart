@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/ejemplo_CE.dart';
+import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/explicacion_CE.dart';
+import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/home_campoE.dart';
+import 'package:flutter_application_2/src/temas/Fisica/LeyCoulomb/Pages/home_leyCoulomb.dart';
+import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
 import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
 import 'package:flutter_application_2/src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
@@ -57,11 +62,36 @@ class MyApp extends StatelessWidget {
         "solidoR": (_) => home_solido(),
         "sumas": (_) => home_sumas(),
         "derivada2": (_) => home_segundaDerivada(),
-        //"sumasR": (_) => home_sumas(),
-        //"derivada2": (_) => home_derivada2(),
-        //"solidoR": (_) => home_solido(),
 
         //fin de MATEMATICAS________________________________________________________
+
+        //FISICA________________________________________________________
+        "back_fisica": (_) => const FisicaHome(),
+        "campoE": (_) => home_campoElectrico(),
+        "leyKirchoff": (_) => home_leyKirchoff(),
+        "leyCoulomb": (_) => home_leyCoulomb(),
+        
+        //Leyes de Kirchoff
+        //"explicacion1_NQ": (_) => const Explicacion1_NQ(),
+
+        //Ley de Coulomb
+
+        //Campo Electrico
+        "explcampoElectrico": (_) => const Explicacion_CE(),
+        "ejemcampoElectrico": (_) => const Ejemplo_CE(),
+        //"ejcampoElectrico": (_) => const Explicacion_CE(),
+        //"apcampoElectrico": (_) => const Explicacion_CE(),
+
+
+
+
+        "back_CE": (_) => const home_campoElectrico(),
+        
+        "ejemplo_CE": (_) => const Ejemplo1_NQ(),
+        "ejercicio_CE": (_) => const Ejercicio1_NQ(),
+
+        //fin de FISICA________________________________________________________
+
         //QUIMICA________________________________________________________
         "back_EQ": (_) => const HomePageQuimica(),
         "equilibrioQuimico": (_) => const EquilibrioQuimico(),
