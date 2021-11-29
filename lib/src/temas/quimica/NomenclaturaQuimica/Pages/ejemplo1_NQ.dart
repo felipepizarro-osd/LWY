@@ -85,23 +85,7 @@ class Ejemplo1_NQ extends StatelessWidget {
               ),
             ],
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "ejercicio1_NQ");
-                },
-              ),
-            ],
-          )
+
         ],
       ),
     );

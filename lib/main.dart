@@ -5,6 +5,7 @@ import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/home
 import 'package:flutter_application_2/src/temas/Fisica/LeyCoulomb/Pages/home_leyCoulomb.dart';
 import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
 import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
+import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
 import 'package:flutter_application_2/src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
 import 'package:flutter_application_2/src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
@@ -13,8 +14,12 @@ import 'src/pages/pages.dart';
 import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
+import 'src/pages/practica.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -65,6 +70,32 @@ class MyApp extends StatelessWidget {
         "sumas": (_) => home_sumas(),
         "derivada2": (_) => home_segundaDerivada(),
 
+        //Solido de Revolucion
+        "explSolidoRevolucion": (_) => const Explicacion1_SR(),
+        "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
+        "ejSolidoRevolucion": (_) => Practica(),
+        
+        "back1_SR": (_) => const home_solido(),
+        "next1_SR": (_) => const Explicacion2_SR(),
+        "back2_SR": (_) => const home_solido(),
+        "vidaCotidiana": (_) => const Explicacion3_SR(),
+        
+
+
+        //"ejemSolidoRevolucion": (_) => const Ejemplo_CE(),
+        //"ejSolidorRevolucion": (_) => const ejercicio_CE(),        
+
+
+
+        //Sumas de Riemann
+
+        //Criterio de la segunda derivada
+
+      
+
+
+
+
         //fin de MATEMATICAS________________________________________________________
 
         //FISICA________________________________________________________
@@ -107,6 +138,11 @@ class MyApp extends StatelessWidget {
         "explicacion4_NQ": (_) => const Explicacion4_NQ(),
         "explicacion5_NQ": (_) => const Explicacion5_NQ(),
         "explicacion6_NQ": (_) => const Explicacion6_NQ(),
+
+        "back1_NQ": (_) => const homeNomenclatura(),
+        "back2_NQ": (_) => const homeNomenclatura(),
+        "back3_NQ": (_) => const homeNomenclatura(),
+
         "ejemplo1_NQ": (_) => const Ejemplo1_NQ(),
         "ejercicio1_NQ": (_) => const Ejercicio1_NQ(),
         "homeNQ": (_) => const homeNomenclatura(),
