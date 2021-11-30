@@ -1,8 +1,10 @@
+// ignore_for_file: annotate_overrides, file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class home_segundaDerivada extends StatelessWidget {
-  const home_segundaDerivada({Key? key}) : super(key: key);
+class Explicacion1_AVL extends StatelessWidget {
+  const Explicacion1_AVL({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +38,7 @@ class home_segundaDerivada extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/matematicas/derivada2.png',
+            'assets/imgs/informatica/arbolAVLvideo.png',
             height: 56,
             width: 212,
           ),
@@ -254,6 +256,7 @@ class home_segundaDerivada extends StatelessWidget {
     );
   }      
 
+  //Botones de salir
   Widget botonFinal(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
@@ -266,7 +269,7 @@ class home_segundaDerivada extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back_SR");
+                  Navigator.pushNamed(context, "back_AVL");
                 },
               ),
               Text(
@@ -277,6 +280,23 @@ class home_segundaDerivada extends StatelessWidget {
               ),
             ],
           ),
+
+          Row(
+            children: <Widget>[
+              Text(
+                'Next',
+                style: GoogleFonts.arbutusSlab(
+                  fontSize: 20,
+                ),
+              ),
+              TextButton(
+                child: const Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.pushNamed(context, "next_AVL");
+                },
+              ),
+            ],
+          )     
           //Botón Next
         ],
       ),

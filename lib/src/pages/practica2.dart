@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Practica extends StatelessWidget {
+class Practica2 extends StatelessWidget {
   late String respuesta;
   final _keyForm = GlobalKey<FormState>();
   
@@ -22,18 +22,9 @@ class Practica extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Icon(Icons.fact_check, color: Colors.blue, size: 150),
-                  SizedBox(height: 200),
-                  Text(
-                    'Registro',
-                    style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.w600),
-                  ),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -54,8 +45,8 @@ class Practica extends StatelessWidget {
                           },
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
-                            icon: Icon(Icons.calendar_view_day),
-                            labelText: 'Numero de Documento',
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su Respuesta',
                             border: OutlineInputBorder(),
                             isDense: false,
                             contentPadding: EdgeInsets.all(10),
@@ -65,10 +56,11 @@ class Practica extends StatelessWidget {
                           height: 20,
                         ),
                         Container(
-                          width: double.infinity,
+                          width: 118,
+                          height: 40,
                           child: RaisedButton(
                             child: Text(
-                              'Aceptar y Continuar',
+                              'Comprobar',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),

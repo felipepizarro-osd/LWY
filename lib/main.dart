@@ -4,7 +4,9 @@ import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/expl
 import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/home_campoE.dart';
 import 'package:flutter_application_2/src/temas/Fisica/LeyCoulomb/Pages/home_leyCoulomb.dart';
 import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
+import 'package:flutter_application_2/src/temas/Informatica/ArbolAVL/Pages/explicacion1_AVL.dart';
 import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
+import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/ejercicio1_SR.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
 import 'package:flutter_application_2/src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
@@ -15,6 +17,7 @@ import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
 import 'src/pages/practica.dart';
+import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
@@ -57,9 +60,15 @@ class MyApp extends StatelessWidget {
         "solidoR": (_) => home_solido(),
         "sumas": (_) => home_sumas(),
         "derivada2": (_) => home_segundaDerivada(),
-        //"sumasR": (_) => home_sumas(),
-        //"derivada2": (_) => home_derivada2(),
-        //"solidoR": (_) => home_solido(),
+
+        //Arbol AVL
+        "arbolAVL": (_) => const Explicacion1_AVL(),
+
+
+      
+        //Listas
+        //Bubble Sort
+
 
         //fin de INFORMATICA________________________________________________________        
 
@@ -69,11 +78,16 @@ class MyApp extends StatelessWidget {
         "solidoR": (_) => home_solido(),
         "sumas": (_) => home_sumas(),
         "derivada2": (_) => home_segundaDerivada(),
+        "chupaloCarlo": (_) => HomeMatematica(),
+
+
 
         //Solido de Revolucion
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
-        "ejSolidoRevolucion": (_) => Practica(),
+        "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
+
+        "explSumasRiemann": (_) => Practica2(),
         
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
