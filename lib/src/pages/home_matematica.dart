@@ -16,6 +16,8 @@ class HomeMatematica extends StatelessWidget {
         children: <Widget>[
           const SizedBox(height: 20),
           customAppBar(context),
+          SizedBox(height: 40),
+          botonFinal(context),
         ],
       ),
     );
@@ -40,25 +42,53 @@ Widget customAppBar(BuildContext context) {
         ),
         const SizedBox(height: 25),
         const C_SegundaDerivada(),
-        const SizedBox(height: 60),
         
-        Stack(
-          children: <Widget>[
-            TextButton(
-              child: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.pushNamed(context, "home");
-              },
-            ),
-            Text(
-              'Prev',
-              style: GoogleFonts.arbutusSlab(
-                fontSize: 20,
-              ),
-            ),
-          ],
-        )
       ],
     ),
   );
 }
+
+  Widget botonFinal(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          //Boton Back
+          Row(
+            children: <Widget>[
+              TextButton(
+                child: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.pushNamed(context, "home");
+                },
+              ),
+              Text(
+                'Prev',
+                style: GoogleFonts.arbutusSlab(
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
+          //Botón Next
+          Row(
+            children: <Widget>[
+              Text(
+                'Next',
+                style: GoogleFonts.arbutusSlab(
+                  fontSize: 20,
+                ),
+              ),
+              TextButton(
+                child: const Icon(Icons.arrow_forward),
+                onPressed: () {
+                  //Navigator.pushNamed(context, "explicacion4_NQ");
+                },
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }

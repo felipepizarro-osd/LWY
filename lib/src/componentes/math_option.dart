@@ -13,7 +13,7 @@ class opcionMatematicas extends StatelessWidget {
               elevation: 10,
               minWidth: 379,
               height: 174,
-              color: Theme.of(context).primaryColor,
+              color: Color.fromRGBO(99, 133, 255, 1),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),

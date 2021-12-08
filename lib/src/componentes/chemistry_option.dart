@@ -13,7 +13,7 @@ class opcionQuimica extends StatelessWidget {
               elevation: 10,
               minWidth: 379,
               height: 174,
-              color: Theme.of(context).primaryColor,
+              color: Color.fromRGBO(49, 198, 113, 0.99),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
