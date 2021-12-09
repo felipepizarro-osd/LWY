@@ -1,9 +1,11 @@
 
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, annotate_overrides, file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class incorrecto_SR extends StatelessWidget {
-  const incorrecto_SR({Key? key}) : super(key: key);
+class Ejemplo2_SR extends StatelessWidget {
+  const Ejemplo2_SR({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,18 +47,6 @@ class incorrecto_SR extends StatelessWidget {
     );
   }
 
-  Widget barra(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('assets/imgs/matematicas/ejemplo_SR.png'),
-        ],
-      ),
-    );
-  }
-
   Widget listaVertical(context) {
     return Column(
 //      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -67,15 +57,13 @@ class incorrecto_SR extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
         ),
         Container(
-          height: 570,
+          height: 590,
           child: ListView(
             scrollDirection: Axis.vertical,
             children: <Widget>[
               SizedBox(
                 height: 0,
               ),
-              barra(context),
-              SizedBox(height: 15,),
               explicacion1(context),
               foto(context),
               SizedBox(height: 25,),

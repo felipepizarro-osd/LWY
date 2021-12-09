@@ -20,6 +20,7 @@ import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
@@ -78,7 +79,6 @@ class MyApp extends StatelessWidget {
         "solidoR": (_) => home_solido(),
         "sumas": (_) => home_sumas(),
         "derivada2": (_) => home_segundaDerivada(),
-        "chupaloCarlo": (_) => HomeMatematica(),
 
 
 
@@ -91,6 +91,8 @@ class MyApp extends StatelessWidget {
         
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
+        //"next2_SR": (_) => const Ejemplo2_SR(),
+        
         "back2_SR": (_) => const home_solido(),
         "vidaCotidiana": (_) => const Explicacion3_SR(),
         

@@ -54,8 +54,8 @@ class Ejercicio1_SR extends StatelessWidget {
                               return 'numero vacio';
                             }
 
-                            if (valor != 'y=5' || valor != 'y = 5' || valor != 'Y = 5' || valor != 'Y=5') {
-                              return 'Respuesta Incorrecta';
+                            if (valor != 'y=5' && valor != 'y = 5' && valor != 'Y = 5' && valor != 'Y=5') {
+                              return 'Respuesta incorrecta';
                             }
 
                             return null;
@@ -84,7 +84,7 @@ class Ejercicio1_SR extends StatelessWidget {
                             onPressed: () {
                               if (_keyForm.currentState!.validate()) {
                                 print('Correcto');
-                                explicacion1(context);
+                                //explicacion1(context);
                                 //Navigator.pushNamed(context, "chupaloCarlo");
 
                               } else {

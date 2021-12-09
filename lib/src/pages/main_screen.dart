@@ -62,8 +62,11 @@ class MainScreen extends StatelessWidget {
             scrollDirection: Axis.vertical,
             children: <Widget>[
               Informatica(context),
+              SizedBox(height: 5),
               Matematicas(context),
+              SizedBox(height: 5),
               Fisica(context),
+              SizedBox(height: 5),
               Quimica(context),
             ],
           ),
@@ -74,14 +77,14 @@ class MainScreen extends StatelessWidget {
 
 Widget Informatica (BuildContext context){
       return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Stack(
           alignment: AlignmentDirectional.bottomCenter,
           children: <Widget>[
             Container(
               width: 379,
-              height: 174,
+              height: 142,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 //color de fondo
@@ -103,12 +106,12 @@ Widget Informatica (BuildContext context){
                   ),
                   Row(
                     children: <Widget>[
-                      const SizedBox(height: 85, width: 20),
+                      const SizedBox(height: 105, width: 70),
       // Figma Flutter Generator H6Widget - TEXT
                       Text('Informática', textAlign: TextAlign.left, style: TextStyle(
                         color: Color.fromRGBO(25, 25, 29, 1),
                         fontFamily: 'Red Hat Display',
-                        fontSize: 34,
+                        fontSize: 48,
                         letterSpacing: -0.4399999976158142,
                         fontWeight: FontWeight.bold,
                         height: 1.2941176470588236
@@ -117,7 +120,7 @@ Widget Informatica (BuildContext context){
                     ],
                   ),
 
-                  Image.asset('assets/imgs/matematicas/barra.png'),
+                  //Image.asset('assets/imgs/matematicas/barra.png'),
                   
                   const SizedBox(height: 2),
                 ],
@@ -126,7 +129,7 @@ Widget Informatica (BuildContext context){
             MaterialButton(
               elevation: 10,
               minWidth: 379,
-              height: 174,
+              height: 142,
               onPressed: () {
                 Navigator.pushNamed(context, "informatica");
               },
@@ -148,7 +151,7 @@ Widget Matematicas (BuildContext context){
           children: <Widget>[
             Container(
               width: 379,
-              height: 174,
+              height: 142,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 //color de fondo
@@ -169,12 +172,12 @@ Widget Matematicas (BuildContext context){
                   ),
                   Row(
                     children: <Widget>[
-                      const SizedBox(height: 85, width: 20),
+                      const SizedBox(height: 105, width: 50),
       // Figma Flutter Generator H6Widget - TEXT
                       Text('Matemáticas', textAlign: TextAlign.left, style: TextStyle(
                         color: Color.fromRGBO(25, 25, 29, 1),
                         fontFamily: 'Red Hat Display',
-                        fontSize: 34,
+                        fontSize: 48,
                         letterSpacing: -0.4399999976158142,
                         fontWeight: FontWeight.bold,
                         height: 1.2941176470588236
@@ -182,8 +185,6 @@ Widget Matematicas (BuildContext context){
 
                     ],
                   ),
-
-                  Image.asset('assets/imgs/matematicas/barra.png'),
                   
                   const SizedBox(height: 2),
                 ],
@@ -192,7 +193,7 @@ Widget Matematicas (BuildContext context){
             MaterialButton(
               elevation: 10,
               minWidth: 379,
-              height: 174,
+              height: 142,
               onPressed: () {
                 Navigator.pushNamed(context, "matematica");
               },
@@ -214,7 +215,7 @@ Widget Fisica (BuildContext context){
           children: <Widget>[
             Container(
               width: 379,
-              height: 174,
+              height: 142,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 //color de fondo
@@ -235,12 +236,12 @@ Widget Fisica (BuildContext context){
                   ),
                   Row(
                     children: <Widget>[
-                      const SizedBox(height: 85, width: 20),
+                      const SizedBox(height: 105, width: 120),
       // Figma Flutter Generator H6Widget - TEXT
                       Text('Física', textAlign: TextAlign.left, style: TextStyle(
                         color: Color.fromRGBO(25, 25, 29, 1),
                         fontFamily: 'Red Hat Display',
-                        fontSize: 34,
+                        fontSize: 48,
                         letterSpacing: -0.4399999976158142,
                         fontWeight: FontWeight.bold,
                         height: 1.2941176470588236
@@ -249,7 +250,7 @@ Widget Fisica (BuildContext context){
                     ],
                   ),
 
-                  Image.asset('assets/imgs/matematicas/barra.png'),
+                  //Image.asset('assets/imgs/matematicas/barra.png'),
                   
                   const SizedBox(height: 2),
                 ],
@@ -258,7 +259,7 @@ Widget Fisica (BuildContext context){
             MaterialButton(
               elevation: 10,
               minWidth: 379,
-              height: 174,
+              height: 142,
               onPressed: () {
                 Navigator.pushNamed(context, "fisica");
               },
@@ -280,7 +281,7 @@ Widget Quimica (BuildContext context){
           children: <Widget>[
             Container(
               width: 379,
-              height: 174,
+              height: 142,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 //color de fondo
@@ -301,12 +302,12 @@ Widget Quimica (BuildContext context){
                   ),
                   Row(
                     children: <Widget>[
-                      const SizedBox(height: 85, width: 20),
+                      const SizedBox(height: 105, width: 70),
       // Figma Flutter Generator H6Widget - TEXT
                       Text('Química', textAlign: TextAlign.left, style: TextStyle(
                         color: Color.fromRGBO(25, 25, 29, 1),
                         fontFamily: 'Red Hat Display',
-                        fontSize: 34,
+                        fontSize: 48,
                         letterSpacing: -0.4399999976158142,
                         fontWeight: FontWeight.bold,
                         height: 1.2941176470588236
@@ -315,7 +316,7 @@ Widget Quimica (BuildContext context){
                     ],
                   ),
 
-                  Image.asset('assets/imgs/matematicas/barra.png'),
+                  //Image.asset('assets/imgs/matematicas/barra.png'),
                   
                   const SizedBox(height: 2),
                 ],
@@ -324,7 +325,7 @@ Widget Quimica (BuildContext context){
             MaterialButton(
               elevation: 10,
               minWidth: 379,
-              height: 174,
+              height: 142,
               onPressed: () {
                 Navigator.pushNamed(context, "quimica");
               },
