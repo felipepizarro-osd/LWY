@@ -71,7 +71,7 @@ class Explicacion1_NQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "homeNQ");
+                  Navigator.pushNamed(context, "back2_NQ");
                 },
               ),
               Text(

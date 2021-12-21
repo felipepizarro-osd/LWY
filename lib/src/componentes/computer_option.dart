@@ -12,7 +12,7 @@ class opcionInformatica extends StatelessWidget {
             MaterialButton(
               elevation: 10,
               minWidth: 379,
-              height: 174,
+              height: 142,
               color: Color.fromRGBO(254, 202, 255, 1),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
@@ -20,7 +20,7 @@ class opcionInformatica extends StatelessWidget {
               child: Text(
                 "Informática",
                 style: GoogleFonts.andikaNewBasic(
-                    fontSize: 45, fontWeight: FontWeight.normal),
+                    fontSize: 48, fontWeight: FontWeight.bold),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, "informatica");

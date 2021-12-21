@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/ejemplo_CE.dart';
+import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/explicacion_CE.dart';
+import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/home_campoE.dart';
+import 'package:flutter_application_2/src/temas/Fisica/LeyCoulomb/Pages/home_leyCoulomb.dart';
+import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
+import 'package:flutter_application_2/src/temas/Informatica/ArbolAVL/Pages/explicacion1_AVL.dart';
+import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
+import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/ejercicio1_SR.dart';
+import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
+import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
+import 'package:flutter_application_2/src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
 import 'package:flutter_application_2/src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
 import 'package:flutter_application_2/src/temas/quimica/LeyCharles/Pages/explicacion1_LC.dart';
 import 'src/pages/pages.dart';
 import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
 import 'src/pages/home_quimica.dart';
+import 'src/pages/practica.dart';
+import 'src/pages/practica2.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -36,6 +55,92 @@ class MyApp extends StatelessWidget {
         "quimica": (_) => const HomePageQuimica(),
         "matematica": (_) => const HomeMatematica(),
 
+
+        //INFORMATICA________________________________________________________
+        "back_informatica": (_) => const HomeMatematica(),
+        "solidoR": (_) => home_solido(),
+        "sumas": (_) => home_sumas(),
+        "derivada2": (_) => home_segundaDerivada(),
+
+        //Arbol AVL
+        "arbolAVL": (_) => const Explicacion1_AVL(),
+
+
+      
+        //Listas
+        //Bubble Sort
+
+
+        //fin de INFORMATICA________________________________________________________        
+
+
+        //MATEMATICAS________________________________________________________
+        "back_SR": (_) => const HomeMatematica(),
+        "solidoR": (_) => home_solido(),
+        "sumas": (_) => home_sumas(),
+        "derivada2": (_) => home_segundaDerivada(),
+
+
+
+        //Solido de Revolucion
+        "explSolidoRevolucion": (_) => const Explicacion1_SR(),
+        "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
+        "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
+
+        "explSumasRiemann": (_) => Practica2(),
+        
+        "back1_SR": (_) => const home_solido(),
+        "next1_SR": (_) => const Explicacion2_SR(),
+        //"next2_SR": (_) => const Ejemplo2_SR(),
+        
+        "back2_SR": (_) => const home_solido(),
+        "vidaCotidiana": (_) => const Explicacion3_SR(),
+        
+
+
+        //"ejemSolidoRevolucion": (_) => const Ejemplo_CE(),
+        //"ejSolidorRevolucion": (_) => const ejercicio_CE(),        
+
+
+
+        //Sumas de Riemann
+
+        //Criterio de la segunda derivada
+
+      
+
+
+
+
+        //fin de MATEMATICAS________________________________________________________
+
+        //FISICA________________________________________________________
+        "back_fisica": (_) => const FisicaHome(),
+        "campoE": (_) => home_campoElectrico(),
+        "leyKirchoff": (_) => home_leyKirchoff(),
+        "leyCoulomb": (_) => home_leyCoulomb(),
+        
+        //Leyes de Kirchoff
+        //"explicacion1_NQ": (_) => const Explicacion1_NQ(),
+
+        //Ley de Coulomb
+
+        //Campo Electrico
+        "explcampoElectrico": (_) => const Explicacion_CE(),
+        "ejemcampoElectrico": (_) => const Ejemplo_CE(),
+        "ejcampoElectrico": (_) => const ejercicio_CE(),
+        "apcampoElectrico": (_) => const aplicacion_CE(),
+
+
+
+
+        "back_CE": (_) => const home_campoElectrico(),
+        
+        "ejemplo_CE": (_) => const Ejemplo1_NQ(),
+        "ejercicio_CE": (_) => const Ejercicio1_NQ(),
+
+        //fin de FISICA________________________________________________________
+
         //QUIMICA________________________________________________________
         "back_EQ": (_) => const HomePageQuimica(),
         "equilibrioQuimico": (_) => const EquilibrioQuimico(),
@@ -49,6 +154,11 @@ class MyApp extends StatelessWidget {
         "explicacion4_NQ": (_) => const Explicacion4_NQ(),
         "explicacion5_NQ": (_) => const Explicacion5_NQ(),
         "explicacion6_NQ": (_) => const Explicacion6_NQ(),
+
+        "back1_NQ": (_) => const homeNomenclatura(),
+        "back2_NQ": (_) => const homeNomenclatura(),
+        "back3_NQ": (_) => const homeNomenclatura(),
+
         "ejemplo1_NQ": (_) => const Ejemplo1_NQ(),
         "ejercicio1_NQ": (_) => const Ejercicio1_NQ(),
         "homeNQ": (_) => const homeNomenclatura(),
@@ -88,6 +198,8 @@ class MyApp extends StatelessWidget {
         "back2_LC": (_) => const homeLeyCharles(),
         "back3_LC": (_) => const homeLeyCharles(),
         "back4_LC": (_) => const homeLeyCharles(),
+
+        //fin de QUIMICA________________________________________________________
       },
       theme: ThemeData(
         primaryColor: Colors.grey[300],

@@ -82,7 +82,7 @@ class Explicacion6_NQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "explicacion5_NQ");
+                  Navigator.pushNamed(context, "back1_NQ");
                 },
               ),
               Text(
@@ -94,22 +94,7 @@ class Explicacion6_NQ extends StatelessWidget {
             ],
           ),
           //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "ejemplo1_NQ");
-                },
-              ),
-            ],
-          )
+
         ],
       ),
     );

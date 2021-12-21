@@ -55,7 +55,7 @@ class kirchhoff extends StatelessWidget {
           minWidth: 154,
           height: 136,
           onPressed: () {
-            Navigator.pushNamed(context, "setting");
+            Navigator.pushNamed(context, "leyKirchoff");
           },
         ),
       ],

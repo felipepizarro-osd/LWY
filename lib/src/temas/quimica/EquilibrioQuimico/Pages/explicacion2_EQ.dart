@@ -65,11 +65,6 @@ class Explicacion2_EQ extends StatelessWidget {
               barra(context),
               formula(context),
               explicacion1(context),
-
-              //barra1EQ(),
-              //formula1EQ(),
-              //texto1EQ(),
-              //botonFinal1EQ(),
               botonFinal(context),
             ],
           ),

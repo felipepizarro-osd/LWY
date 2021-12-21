@@ -16,7 +16,8 @@ class HomePageInformatica extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          const SizedBox(height: 20),
+          barra1(context),
+          //const SizedBox(height: 20),
           customAppBar(context),
         ],
       ),
@@ -41,7 +42,7 @@ class HomePageInformatica extends StatelessWidget {
           ),
           const SizedBox(height: 25),
           const BubbleSort(),
-          const SizedBox(height: 80),
+          //const SizedBox(height: 80),
           Row(
             children: <Widget>[
               TextButton(
@@ -63,46 +64,23 @@ class HomePageInformatica extends StatelessWidget {
     );
   }
 
-  Widget botonFinal(BuildContext context) {
+  Widget barra1(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical:0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          //Boton Back
-          Row(
-            children: <Widget>[
-              TextButton(
-                child: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.pushNamed(context, "explicacion2_NQ");
-                },
-              ),
-              Text(
-                'Prev',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-            ],
+          Image.asset(
+            'assets/imgs/matematicas/temasG.png',
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "explicacion4_NQ");
-                },
-              ),
-            ],
-          )
+          IconButton(
+            iconSize: 43,
+            icon: Image.network(
+                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
+            onPressed: () {
+              Navigator.pushNamed(context, "perfil");
+            },
+          ),
         ],
       ),
     );

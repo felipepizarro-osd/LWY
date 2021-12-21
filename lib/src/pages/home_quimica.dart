@@ -14,7 +14,7 @@ class HomePageQuimica extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          const SizedBox(height: 20),
+          barra1(context),
           customAppBar(context),
         ],
       ),
@@ -24,7 +24,7 @@ class HomePageQuimica extends StatelessWidget {
 
 Widget customAppBar(BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
@@ -40,7 +40,7 @@ Widget customAppBar(BuildContext context) {
         ),
         const SizedBox(height: 25),
         const LeyCharles(),
-        const SizedBox(height: 60),
+        //const SizedBox(height: 60),
         Row(
           children: <Widget>[
             TextButton(
@@ -61,3 +61,25 @@ Widget customAppBar(BuildContext context) {
     ),
   );
 }
+
+  Widget barra1(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical:0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Image.asset(
+            'assets/imgs/matematicas/temasG.png',
+          ),
+          IconButton(
+            iconSize: 43,
+            icon: Image.network(
+                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
+            onPressed: () {
+              Navigator.pushNamed(context, "perfil");
+            },
+          ),
+        ],
+      ),
+    );
+  } 
