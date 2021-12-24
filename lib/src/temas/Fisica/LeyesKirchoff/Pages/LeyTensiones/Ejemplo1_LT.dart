@@ -12,7 +12,7 @@ class Ejemplo1_LT extends StatelessWidget {
       body: Column(
         children: <Widget>[
           SizedBox(
-            height: 7,
+            height: 26,
           ),
           customAppBar(context),
           listaVertical(context),
