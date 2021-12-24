@@ -106,7 +106,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "Explicacion1_LC");
+                Navigator.pushNamed(context, "Explicacion1_LCo");
               },
             ),
           ],
@@ -165,7 +165,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "Ejemplo1_LC");
+                Navigator.pushNamed(context, "Ejemplo1_LCo");
               },
             ),
           ],
@@ -224,7 +224,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "Ejercicio1_LC");
+                Navigator.pushNamed(context, "Ejercicio1_LCo");
               },
             ),
           ],
@@ -283,7 +283,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "Aplicacion1_LC");
+                Navigator.pushNamed(context, "Aplicacion1_LCo");
               },
             ),
           ],

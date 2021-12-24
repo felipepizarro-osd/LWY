@@ -20,6 +20,10 @@ import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Aplicacion1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Ejemplo1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Ejercicio1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Explicacion1_LC.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/Aplicacion1_LK.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejemplo1_LN.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejercicio1_LN.dart';
@@ -127,6 +131,12 @@ class MyApp extends StatelessWidget {
         "Explicacion1_LT": (_) => const Explicacion1_LT(),
         "Ejemplo1_LT": (_) => const Ejemplo1_LT(),
         "Ejercicio1_LT": (_) => const Ejercicio1_LT(),
+        //ley de coulomb
+        "homeLC": (_) => const home_leyCoulomb(),
+        "Aplicacion1_LCo": (_) => const Aplicacion1_LCo(),
+        "Ejercicio1_LCo": (_) => const Ejercicio1_LCo(),
+        "Ejemplo1_LCo": (_) => const Ejemplo1_LCo(),
+        "Explicacion1_LCo": (_) => const Explicacion1_LCo(),
 
         //"explicacion1_NQ": (_) => const Explicacion1_NQ(),
 

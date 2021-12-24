@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Ejemplo1_LC extends StatelessWidget {
-  const Ejemplo1_LC({Key? key}) : super(key: key);
+class Ejemplo1_LCo extends StatelessWidget {
+  const Ejemplo1_LCo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class Ejemplo1_LC extends StatelessWidget {
       body: Column(
         children: <Widget>[
           SizedBox(
-            height: 7,
+            height: 26,
           ),
           customAppBar(context),
           listaVertical(context),
