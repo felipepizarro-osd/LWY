@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion_LeyDeNodos extends StatelessWidget {
-  const Explicacion_LeyDeNodos({Key? key}) : super(key: key);
+class Explicacion_LeyDeTensiones extends StatelessWidget {
+  const Explicacion_LeyDeTensiones({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Column(
@@ -53,7 +53,7 @@ class Explicacion_LeyDeNodos extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "Explicacion1_LN");
+                Navigator.pushNamed(context, "Explicacion1_LT");
               },
             ),
           ],

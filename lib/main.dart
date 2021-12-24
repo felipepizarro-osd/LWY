@@ -20,6 +20,16 @@ import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/Aplicacion1_LK.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejemplo1_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejercicio1_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Explicacion1_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/componentes/ejercicios.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/homenodos.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejemplo1_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio1_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
@@ -101,13 +111,27 @@ class MyApp extends StatelessWidget {
         "back_fisica": (_) => const FisicaHome(),
         "campoE": (_) => home_campoElectrico(),
         "leyKirchoff": (_) => home_leyKirchoff(),
-        "leyCoulomb": (_) => home_leyCoulomb(),
 
-        //Leyes de Kirchoff
+        "leyCoulomb": (_) => home_leyCoulomb(),
+        //kirchooff
+        "leynodos": (_) => const EjerciciosLN(),
+        "homeLK": (_) => const home_leyKirchoff(),
+        "homenodos": (_) => const homeleynodos(),
+        "Aplicacion1_LK": (_) => const Aplicacion1_LK(),
+        //nodos
+        "Explicacion1_LN": (_) => const Explicacion1_LN(),
+        "Ejemplo1_LN": (_) => const Ejemplo1_LN(),
+        "Ejercicio1_LN": (_) => const Ejercicio1_LN(),
+        //ley de las tensiones
+        "hometensiones": (_) => const Home_LT(),
+        "Explicacion1_LT": (_) => const Explicacion1_LT(),
+        "Ejemplo1_LT": (_) => const Ejemplo1_LT(),
+        "Ejercicio1_LT": (_) => const Ejercicio1_LT(),
+
         //"explicacion1_NQ": (_) => const Explicacion1_NQ(),
 
         //Ley de Coulomb
-
+        // "Ejercicio1_LC": (_) => const Ejercicio1_LC(),
         //Campo Electrico
         "explcampoElectrico": (_) => const Explicacion_CE(),
         "ejemcampoElectrico": (_) => const Ejemplo_CE(),

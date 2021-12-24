@@ -1,19 +1,14 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/componentes/ejemplos.dart';
-import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/componentes/ejercicios.dart';
-import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/componentes/explicacion.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
 import 'componentes/ejemplos.dart';
 import 'componentes/ejercicios.dart';
 import 'componentes/explicacion.dart';
 
-class homeleynodos extends StatelessWidget {
-  const homeleynodos({Key? key}) : super(key: key);
+class Home_LT extends StatelessWidget {
+  const Home_LT({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -25,13 +20,13 @@ class homeleynodos extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Explicacion_LeyDeNodos(),
+          Explicacion_LeyDeTensiones(),
           SizedBox(
             height: 20,
           ),
-          EjemplosLN(),
+          EjemplosLT(),
           SizedBox(height: 20),
-          EjerciciosLN(),
+          EjerciciosLT(),
           //this.Botonera(context),
           botonFinal(context),
         ],
@@ -41,14 +36,22 @@ class homeleynodos extends StatelessWidget {
 
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/leynodos.png',
-            height: 56,
-            width: 230,
+            'assets/imgs/cajita.png',
+            height: 60,
+            width: 60,
+          ),
+          Text(
+            'Ley de las Tensiones',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
           ),
           IconButton(
             iconSize: 43,

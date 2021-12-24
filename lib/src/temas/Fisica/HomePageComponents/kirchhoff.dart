@@ -31,7 +31,7 @@ class kirchhoff extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Text(
-                    ' Leyes de\n Kirchhoff',
+                    '  Leyes de\n  Kirchhoff',
                     style: GoogleFonts.redHatDisplay(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
@@ -43,17 +43,15 @@ class kirchhoff extends StatelessWidget {
               Text(
                 'Electromagnetismo',
                 style: GoogleFonts.redHatDisplay(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromRGBO(58, 58, 68, 1)),
+                    fontSize: 14, color: const Color.fromRGBO(58, 58, 68, 1)),
               ),
             ],
           ),
         ),
         MaterialButton(
           elevation: 10,
-          minWidth: 154,
-          height: 136,
+          minWidth: 170,
+          height: 140,
           onPressed: () {
             Navigator.pushNamed(context, "leyKirchoff");
           },

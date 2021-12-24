@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion1_LN extends StatelessWidget {
-  const Explicacion1_LN({Key? key}) : super(key: key);
+class Ejemplo1_LN extends StatelessWidget {
+  const Ejemplo1_LN({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,7 @@ class Explicacion1_LN extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/eleynodos.png'),
+          Image.asset('assets/imgs/ejemploLN.png'),
         ],
       ),
     );
@@ -117,16 +117,32 @@ class Explicacion1_LN extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'En un circuito eléctrico, es común que se generen nodos de corriente. Un nodo es el punto del circuito donde se unen mas de un terminal de un componente eléctrico. Si lo desea pronuncie “nodo” y piense en “nudo” porque esa es precisamente la realidad: dos o mas componentes se unen anudados entre sí (en realidad soldados entre sí). En la figura 1 se puede observar el mas básico de los circuitos de CC (corriente continua) que contiene dos nodos.',
+            'En la primera figura se puede observar el mas básico de los circuitos de corriente continua (CC) que contiene dos nodos.',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
-            "assets/imgs/image50.png",
+            "assets/imgs/image51.png",
             width: 500,
-            height: 170,
+            height: 250,
+          ),
+          Text(
+            "Observe que se trata de dos resistores de 1K (R1 y R2) conectados sobre una misma batería B1. La batería B1 conserva su tensión fija a pesar de la carga impuesta por los dos resistores; esto significa cada resistor tiene aplicada una tensión de 9V sobre él. La ley de Ohm indica que cuando a un resistor de 1K se le aplica una tensión de 9V por el circula una corriente de 9 mA. I = E/R = 9/1.000 = 0,009 A = 9 mA Por lo tanto podemos asegurar que cada resistor va a tomar una corriente de 9 mA de la batería o que entre ambos van a tomar 18 mA de la batería. También podríamos decir que desde la batería sale un conductor por el que circulan 18 mA que al llegar al nodo 1 se bifurca en una corriente de 9 mA que circula por cada resistor, de modo que en el nodo 2 se vuelven a unir para retornar a la batería con un valor de 18 mA.",
+            style: GoogleFonts.redHatDisplay(fontSize: 18, letterSpacing: 1.2),
+          ),
+          Image.asset(
+            "assets/imgs/image52.png",
+            width: 480,
+            height: 250,
+          ),
+          Text(
+            'Es decir que en el nodo 1 podemos decir que I1 = I2 + I3 y reemplazando valores: que 1 8 mA = 9 mA + 9 mA y que en el nodo 2, I4 = I2 + I3. Las corriente I1 e I4 son iguales porque lo que egresa de la batería debe ser igual a lo que ingresa.',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              letterSpacing: 1.2,
+            ),
           ),
         ],
       ),

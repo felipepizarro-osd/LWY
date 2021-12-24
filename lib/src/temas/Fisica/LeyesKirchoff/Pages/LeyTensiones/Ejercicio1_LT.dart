@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion1_LN extends StatelessWidget {
-  const Explicacion1_LN({Key? key}) : super(key: key);
+class Ejercicio1_LT extends StatelessWidget {
+  const Ejercicio1_LT({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,30 +16,6 @@ class Explicacion1_LN extends StatelessWidget {
           ),
           customAppBar(context),
           listaVertical(context),
-        ],
-      ),
-    );
-  }
-
-  Widget customAppBar(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/leydenodos.png',
-            height: 56,
-            width: 230,
-          ),
-          IconButton(
-            iconSize: 43,
-            icon: Image.network(
-                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
-            onPressed: () {
-              Navigator.pushNamed(context, "perfil");
-            },
-          ),
         ],
       ),
     );
@@ -70,13 +46,33 @@ class Explicacion1_LN extends StatelessWidget {
     );
   }
 
-  Widget barra(context) {
+  Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Image.asset('assets/imgs/eleynodos.png'),
+          Image.asset(
+            'assets/imgs/cajita.png',
+            height: 60,
+            width: 60,
+          ),
+          Text(
+            'Ley de las Tensiones',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
+          ),
+          IconButton(
+            iconSize: 43,
+            icon: Image.network(
+                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
+            onPressed: () {
+              Navigator.pushNamed(context, "perfil");
+            },
+          ),
         ],
       ),
     );
@@ -94,7 +90,7 @@ class Explicacion1_LN extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "homenodos");
+                  Navigator.pushNamed(context, "hometensiones");
                 },
               ),
               Text(
@@ -105,6 +101,7 @@ class Explicacion1_LN extends StatelessWidget {
               ),
             ],
           ),
+          //Botón Next
         ],
       ),
     );
@@ -117,17 +114,29 @@ class Explicacion1_LN extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'En un circuito eléctrico, es común que se generen nodos de corriente. Un nodo es el punto del circuito donde se unen mas de un terminal de un componente eléctrico. Si lo desea pronuncie “nodo” y piense en “nudo” porque esa es precisamente la realidad: dos o mas componentes se unen anudados entre sí (en realidad soldados entre sí). En la figura 1 se puede observar el mas básico de los circuitos de CC (corriente continua) que contiene dos nodos.',
+            'Encontrar el valor de las corrientes I1, I2 e I3 mostradas en la figura.',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
-            "assets/imgs/image50.png",
-            width: 500,
+            "assets/imgs/image9.png",
+            width: 490,
             height: 170,
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget barra(context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Image.asset('assets/imgs/ejercicio_LT.png'),
         ],
       ),
     );

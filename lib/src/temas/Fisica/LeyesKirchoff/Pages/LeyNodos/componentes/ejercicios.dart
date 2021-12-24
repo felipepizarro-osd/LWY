@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion_LeyDeNodos extends StatelessWidget {
-  const Explicacion_LeyDeNodos({Key? key}) : super(key: key);
+class EjerciciosLN extends StatelessWidget {
+  const EjerciciosLN({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,14 +30,14 @@ class Explicacion_LeyDeNodos extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(9),
                       //color de la franja
-                      color: Color.fromRGBO(157, 194, 255, 1),
+                      color: Color.fromRGBO(221, 136, 202, 1),
                     ),
                   ),
                   Row(
                     children: <Widget>[
                       const SizedBox(height: 85, width: 25),
                       Text(
-                        '    Explicación',
+                        '    Ejercicios',
                         style: GoogleFonts.redHatDisplay(
                             fontSize: 34,
                             fontWeight: FontWeight.bold,
@@ -53,7 +54,7 @@ class Explicacion_LeyDeNodos extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "Explicacion1_LN");
+                Navigator.pushNamed(context, "Ejercicio1_LN");
               },
             ),
           ],
