@@ -57,78 +57,144 @@ class Ejemplo2_SR extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
         ),
         Container(
-          height: 590,
+          height: 570,
           child: ListView(
             scrollDirection: Axis.vertical,
             children: <Widget>[
-              SizedBox(
-                height: 0,
-              ),
-              explicacion1(context),
-              foto(context),
+              boton(context),              
+              explicacion(context),
               SizedBox(height: 25,),
-              boton(context),
-              SizedBox(height: 30,),
               botonFinal(context),
-              SizedBox(height: 30,),
+              SizedBox(height: 20,),
             ],
           ),
         ),
       ],
     );
   }
-  Widget explicacion1(context) {
+  Widget explicacion(context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 40),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          // titulo
 
-          Text(
-            '¿Cómo se puede calcular el vólumen de  sólido de revolución de un sartén de cocina?',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(43, 217, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 21,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.normal,
-                height: 1.8),
-          ),
-          SizedBox(height: 15,),
-
-          Text(
-          'Las medidas de la circunferencia del sartén son  9 cm de profunidad y 16 cm de radio.\nEl sartén se ve representado por la función:',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0,0,0,1),
-                fontFamily: 'Red Hat Text',
-                fontSize: 18,
-                letterSpacing: 0.1,
-                fontWeight: FontWeight.normal,
-                height: 1.2),
-          )                   
-
-
-        ],
-      ),
-    );
-  }
-
-  Widget foto(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 90, vertical:5),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
           Image.asset(
-            'assets/imgs/matematicas/f(x).png',
+            'assets/imgs/matematicas/sr1.png',
           ),
+
           SizedBox(height: 10,),
-          Image.asset(
-            'assets/imgs/matematicas/sarten.png',
+
+          Text(
+            '- Despejamos y para que nos diera una circunferencia completa de radio 16.',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
           ),
+          SizedBox(height: 10,),          
+
+          Image.asset(
+            'assets/imgs/matematicas/sr2.png',
+          ),
+
+          SizedBox(height: 5),
+
+          Text(
+            '- Encontramos sus intervalos',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 5,),             
+
+          Image.asset(
+            'assets/imgs/matematicas/sr3.png',
+          ),
+
+          SizedBox(height: 5),
+
+          Text(
+            '- Los intervalos van a ser [0,4]',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 5,),            
+
+          Text(
+            '- Utilizaremos el método de los discos ',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 15,),       
+
+          Text(
+            'Fórmula del Método del Disco ',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(255, 12, 12, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 10,),                 
+
+          Image.asset(
+            'assets/imgs/matematicas/sr4.png',
+          ),
+
+          Text(
+            '- Lo hacemos girar por el eje de las y, y usamos rectángulos horizontales.',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 10,),   
+
+          Image.asset(
+            'assets/imgs/matematicas/sr5.png',
+          ),
+
+          Text(
+            'Por lo tanto, el vólumen del sartén de cocina sería de 128/3 π',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+
         ],
       ),
     );
@@ -166,19 +232,19 @@ class Ejemplo2_SR extends StatelessWidget {
 
   Widget boton(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 130, vertical: 1),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           MaterialButton(
             elevation: 10,
-            minWidth: 118,
-            height: 40,
-            color: Color.fromRGBO(255, 255, 255, 1),
+            minWidth: 160,
+            height: 25,
+            color: Color.fromRGBO(242, 242, 242, 1),
             child: Text(
-              'Explicación',
+              'Ocultar explicación ...',
               style: TextStyle(
-                color: Color.fromRGBO(151, 118, 0, 1),
+                color: Color.fromRGBO(43, 217, 0, 1),
                 fontSize: 19),
             ),
             onPressed: (){

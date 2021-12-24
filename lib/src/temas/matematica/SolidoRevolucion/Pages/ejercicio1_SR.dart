@@ -84,35 +84,11 @@ class Ejercicio1_SR extends StatelessWidget {
                             onPressed: () {
                               if (_keyForm.currentState!.validate()) {
                                 print('Correcto');
-                                //explicacion1(context);
-                                //Navigator.pushNamed(context, "chupaloCarlo");
+                                Navigator.pushNamed(context, "correcto_SR");
 
                               } else {
                                 print("Ha ocurrido un error");
-
-                                                              MaterialButton(
-                                elevation: 10,
-                                minWidth: 170,
-                                height: 50,
-                                color: Theme.of(context).primaryColor,
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                child: Text(
-                                  'Get Started',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.0 
-
-                                  ),
-
-
-                                ),
-                                onPressed: () {
-
-                                },
-
-                              );
-
-                                //Navigator.pushNamed(context, "chupaloCarlo");
+                                Navigator.pushNamed(context, "incorrecto_SR");
 
                               }
                             },

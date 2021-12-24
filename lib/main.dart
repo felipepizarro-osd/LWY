@@ -20,10 +20,12 @@ import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/correcto_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/incorrecto_SR.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -78,15 +80,16 @@ class MyApp extends StatelessWidget {
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
         "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
-
-        "explSumasRiemann": (_) => Practica2(),
-
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
-        //"next2_SR": (_) => const Ejemplo2_SR(),
+        "explicacion_SR": (_) => const Ejemplo2_SR(),
 
         "back2_SR": (_) => const home_solido(),
         "vidaCotidiana": (_) => const Explicacion3_SR(),
+        //"correcto_SR": (_) => const correcto_SR(),
+        "incorrecto_SR": (_) => const incorrecto_SR(),
+
+        //"explSumasRiemann": (_) => Practica2(),
 
         //"ejemSolidoRevolucion": (_) => const Ejemplo_CE(),
         //"ejSolidorRevolucion": (_) => const ejercicio_CE(),

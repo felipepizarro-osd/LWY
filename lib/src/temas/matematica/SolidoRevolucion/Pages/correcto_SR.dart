@@ -3,232 +3,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Ejercicio1_SR extends StatelessWidget {
-  late String respuesta;
-  final _keyForm = GlobalKey<FormState>();
+class correcto_SR extends StatelessWidget {
+  const correcto_SR({Key? key}) : super(key: key);
 
-  @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            width: double.infinity,
-            child: Form(
-              key: _keyForm,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  customAppBar(
-                    context,
-                  ),
-                  barra(
-                    context,
-                  ),
-                  explicacion1(context),
-                  Image.asset('assets/imgs/matematicas/cilindro.png'),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(15),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          '¿Que función ayudará al mecánico?',
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(
-                              color: Color.fromRGBO(0, 0, 0, 1),
-                              fontFamily: 'Red Hat Text',
-                              fontSize: 20,
-                              letterSpacing: -0.44,
-                              fontWeight: FontWeight.normal,
-                              height: 1.63),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        TextFormField(
-                          validator: (valor) {
-                            if (valor!.isEmpty) {
-                              return 'numero vacio';
-                            }
-
-                            if (valor != 'y=5' &&
-                                valor != 'y = 5' &&
-                                valor != 'Y = 5' &&
-                                valor != 'Y=5') {
-                              return 'Respuesta incorrecta';
-                              
-                            }
-                            return null;
-                          },
-                          keyboardType: TextInputType.text,
-                          decoration: InputDecoration(
-//                            icon: Icon(Icons.calendar_view_day),
-                            labelText: 'Ingrese su respuesta',
-                            border: OutlineInputBorder(),
-                            isDense: false,
-                            contentPadding: EdgeInsets.all(10),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Container(
-                          width: 118,
-                          height: 40,
-                          child: RaisedButton(
-                            child: Text(
-                              'Comprobar',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
-                            ),
-                            color: Colors.blue[600],
-                            onPressed: () {
-                              if (_keyForm.currentState!.validate()) {
-                                print('Correcto');
-                              }
-                              else {
-                                print("Ha ocurrido un error");
-                              }
-                            },
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        botonFinal(context),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Pregunta(
-    BuildContext context,
-    GlobalKey<FormState> _keyForm,
-  ) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Column(
         children: <Widget>[
-          Form(
-            key: _keyForm,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: 251,
-                  padding: EdgeInsets.all(15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-//                      SizedBox(height: 20,),
-                      TextFormField(
-                        validator: (valor) {
-                          if (valor!.isEmpty) {
-                            return 'numero vacio';
-                          }
-
-                          if (valor != '5') {
-                            return 'numero invalido';
-                          }
-
-                          return null;
-                        },
-                        keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
-//                            icon: Icon(Icons.calendar_view_day),
-                          labelText: 'Ingrese su Respuesta',
-                          border: OutlineInputBorder(),
-                          isDense: false,
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-//                      SizedBox(height: 20,),
-                    ],
-                  ),
-                ),
-                //
-              ],
-            ),
-          ),
-          Container(
-            width: 118,
-            height: 40,
-            child: RaisedButton(
-              child: Text(
-                'Comprobar',
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-              color: Colors.blue[600],
-              onPressed: () {
-                if (_keyForm.currentState!.validate()) {
-                  // ignore: avoid_print
-                  print('Respuesta Correcta');
-                  //Navigator.pushNamed(context, "chupaloCarlo");
-
-                } else {
-                  print("Ingrese una respuesta válida. ");
-
-                  //Navigator.pushNamed(context, "chupaloCarlo");
-
-                }
-              },
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget barra(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('assets/imgs/matematicas/ejercicio_SR.png'),
-        ],
-      ),
-    );
-  }
-
-  Widget explicacion1(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Un mecánico necesita encontrar la función para formar un rodillo de 5 cm de radio, de una de las máquinas en el área del transporte de lodo.',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 22,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.normal,
-                height: 1.63),
-          ),
           SizedBox(
             height: 20,
           ),
-          //Image.asset('assets/imgs/matematicas/cilindro.png'),
-          SizedBox(height: 20),
+          customAppBar(context),
+          this.listaVertical(context)                    ,
+
+
         ],
       ),
     );
@@ -258,9 +46,162 @@ class Ejercicio1_SR extends StatelessWidget {
     );
   }
 
+  Widget listaVertical(context) {
+    return Column(
+//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
+        ),
+        Container(
+          height: 570,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              boton(context),              
+              explicacion(context),
+              SizedBox(height: 25,),
+              botonFinal(context),
+              SizedBox(height: 20,),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+  Widget explicacion(context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 40),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+
+          Image.asset(
+            'assets/imgs/matematicas/sr1.png',
+          ),
+
+          SizedBox(height: 10,),
+
+          Text(
+            '- Despejamos y para que nos diera una circunferencia completa de radio 16.',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 10,),          
+
+          Image.asset(
+            'assets/imgs/matematicas/sr2.png',
+          ),
+
+          SizedBox(height: 5),
+
+          Text(
+            '- Encontramos sus intervalos',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 5,),             
+
+          Image.asset(
+            'assets/imgs/matematicas/sr3.png',
+          ),
+
+          SizedBox(height: 5),
+
+          Text(
+            '- Los intervalos van a ser [0,4]',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 5,),            
+
+          Text(
+            '- Utilizaremos el método de los discos ',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 15,),       
+
+          Text(
+            'Fórmula del Método del Disco ',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(255, 12, 12, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 10,),                 
+
+          Image.asset(
+            'assets/imgs/matematicas/sr4.png',
+          ),
+
+          Text(
+            '- Lo hacemos girar por el eje de las y, y usamos rectángulos horizontales.',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+          SizedBox(height: 10,),   
+
+          Image.asset(
+            'assets/imgs/matematicas/sr5.png',
+          ),
+
+          Text(
+            'Por lo tanto, el vólumen del sartén de cocina sería de 128/3 π',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 18,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.bold,
+                height: 2),
+          ),
+
+        ],
+      ),
+    );
+  }
+
   Widget botonFinal(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 0, vertical: 17.2),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -270,7 +211,7 @@ class Ejercicio1_SR extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_SR");
+                  Navigator.pop(context);
                 },
               ),
               Text(
@@ -282,8 +223,39 @@ class Ejercicio1_SR extends StatelessWidget {
             ],
           ),
           //Botón Next
+
         ],
       ),
     );
   }
+
+  Widget boton(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          MaterialButton(
+            elevation: 10,
+            minWidth: 160,
+            height: 25,
+            color: Color.fromRGBO(242, 242, 242, 1),
+            child: Text(
+              'Ocultar explicación ...',
+              style: TextStyle(
+                color: Color.fromRGBO(43, 217, 0, 1),
+                fontSize: 19),
+            ),
+            onPressed: (){
+
+            },
+
+          ),
+
+
+        ],
+      ),
+    );
+  }  
 }
+
