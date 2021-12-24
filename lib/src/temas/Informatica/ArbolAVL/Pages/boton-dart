@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+
+class MyImage extends StatelessWidget {
+  final Function() onTap;
+  final String imagePath;
+
+  const MyImage({
+    Key key,
+    @required this.onTap,
+    @required this.imagePath,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        this.onTap();
+      },
+      child: Image.asset(
+        imagePath,
+        height: 100.0,
+      ),
+    );
+  }
+}

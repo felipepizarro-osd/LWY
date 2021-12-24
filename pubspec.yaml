@@ -32,6 +32,7 @@ dependencies:
   material_design_icons_flutter: ^3.2.3895
   chewie: ^1.2.2 
   video_player: 2.2.10
+  url_launcher:  6.0.17
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -66,6 +67,7 @@ flutter:
     - assets/imgs/fisica/
     - assets/imgs/informatica/
     - assets/imgs/videos/video11.mp4
+    - assets/imgs/videos/v2.mp4
     #- assets/imgs/informatica/
     - assets/icons/
   # To add assets to your application, add an assets section, like this:

@@ -5,8 +5,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:video_player/video_player.dart';
-
-import 'ChewieListItem.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../../ChewieListItem.dart';
 
 class Explicacion1_AVL extends StatelessWidget {
   const Explicacion1_AVL({Key? key}) : super(key: key);
@@ -18,7 +18,9 @@ class Explicacion1_AVL extends StatelessWidget {
         children: <Widget>[
           customAppBar(context),
           VideoConteiner(context),
-          explicacion(context),
+          //explicacion(context),
+          Ex2(context),
+          customAppBar1(context),
           botonFinal(context),
         ],
       ),
@@ -49,7 +51,7 @@ Widget VideoConteiner(BuildContext context) {
     children: <Widget>[
       ChewieListItem(
         videoPlayerController: VideoPlayerController.asset(
-          'assets/imgs/videos/video11.mp4',
+          'assets/imgs/videos/v2.mp4',
         ),
         looping: true,
       ),
@@ -81,6 +83,77 @@ Widget customAppBar(BuildContext context) {
   );
 }
 
+Widget Ex2(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Image.asset(
+          'assets/imgs/Ex.AVL.png',
+          height: 150,
+          width: 380,
+          fit: BoxFit.fitWidth,
+        ),
+      ],
+    ),
+  );
+}
+
+//customiza los botones para hacer menu de botones con imagen presionables
+Widget customAppBar1(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        GestureDetector(
+          onTap: () => launchURL1(),
+          child: Image.asset('assets/imgs/JavaIcon.png'),
+        ),
+        GestureDetector(
+          onTap: () => launchURL2(),
+          child: Image.asset('assets/imgs/PythonIcon.png'),
+        ),
+        GestureDetector(
+          onTap: () => launchURL3(),
+          child: Image.asset('assets/imgs/CIcon.png'),
+        )
+      ],
+    ),
+  );
+}
+
+//lanzamientos de paginas
+launchURL1() async {
+  const url = 'https://replit.com/join/doomeykxes-felipepizarroos';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+launchURL2() async {
+  const url =
+      'https://pythondiario.com/2018/08/implementacion-de-un-arbol-avl.html';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+launchURL3() async {
+  const url = 'https://replit.com/join/tftlclqxhp-felipepizarroos';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+@override
 Widget botonFinal(BuildContext context) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
