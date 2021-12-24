@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion1_LK extends StatelessWidget {
-  const Explicacion1_LK({Key? key}) : super(key: key);
+class Explicacion1_LN extends StatelessWidget {
+  const Explicacion1_LN({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class Explicacion1_LK extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/explicacion1_NQ.png'),
+          Image.asset('assets/imgs/leydenodos.png'),
         ],
       ),
     );

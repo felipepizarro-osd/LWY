@@ -55,24 +55,18 @@ class MyApp extends StatelessWidget {
         "quimica": (_) => const HomePageQuimica(),
         "matematica": (_) => const HomeMatematica(),
 
-
         //INFORMATICA________________________________________________________
         "back_informatica": (_) => const HomeMatematica(),
         "solidoR": (_) => home_solido(),
         "sumas": (_) => home_sumas(),
         "derivada2": (_) => home_segundaDerivada(),
-
         //Arbol AVL
-        "arbolAVL": (_) => const Explicacion1_AVL(),
+        "arbolAVL": (_) => Explicacion1_AVL(),
 
-
-      
         //Listas
         //Bubble Sort
 
-
-        //fin de INFORMATICA________________________________________________________        
-
+        //fin de INFORMATICA________________________________________________________
 
         //MATEMATICAS________________________________________________________
         "back_SR": (_) => const HomeMatematica(),
@@ -80,37 +74,26 @@ class MyApp extends StatelessWidget {
         "sumas": (_) => home_sumas(),
         "derivada2": (_) => home_segundaDerivada(),
 
-
-
         //Solido de Revolucion
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
         "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
 
         "explSumasRiemann": (_) => Practica2(),
-        
+
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
         //"next2_SR": (_) => const Ejemplo2_SR(),
-        
+
         "back2_SR": (_) => const home_solido(),
         "vidaCotidiana": (_) => const Explicacion3_SR(),
-        
-
 
         //"ejemSolidoRevolucion": (_) => const Ejemplo_CE(),
-        //"ejSolidorRevolucion": (_) => const ejercicio_CE(),        
-
-
+        //"ejSolidorRevolucion": (_) => const ejercicio_CE(),
 
         //Sumas de Riemann
 
         //Criterio de la segunda derivada
-
-      
-
-
-
 
         //fin de MATEMATICAS________________________________________________________
 
@@ -119,7 +102,7 @@ class MyApp extends StatelessWidget {
         "campoE": (_) => home_campoElectrico(),
         "leyKirchoff": (_) => home_leyKirchoff(),
         "leyCoulomb": (_) => home_leyCoulomb(),
-        
+
         //Leyes de Kirchoff
         //"explicacion1_NQ": (_) => const Explicacion1_NQ(),
 
@@ -131,11 +114,8 @@ class MyApp extends StatelessWidget {
         "ejcampoElectrico": (_) => const ejercicio_CE(),
         "apcampoElectrico": (_) => const aplicacion_CE(),
 
-
-
-
         "back_CE": (_) => const home_campoElectrico(),
-        
+
         "ejemplo_CE": (_) => const Ejemplo1_NQ(),
         "ejercicio_CE": (_) => const Ejercicio1_NQ(),
 
