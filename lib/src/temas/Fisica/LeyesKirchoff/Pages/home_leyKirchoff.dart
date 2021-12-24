@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,15 +17,14 @@ class home_leyKirchoff extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          explicacion(context),
+          leynodos(context),
           SizedBox(
             height: 20,
           ),
-          ejemplos(context),
+          leytensiones(context),
           SizedBox(height: 20),
-          ejercicios(context),
+          aplicacion(context),
           botonFinal(context),
-
         ],
       ),
     );
@@ -53,148 +54,66 @@ class home_leyKirchoff extends StatelessWidget {
     );
   }
 
-  Widget explicacion (BuildContext context) {
+  Widget leynodos(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Stack(
-
           alignment: AlignmentDirectional.bottomCenter,
           children: <Widget>[
             Container(
-            width: 293,
-            height: 114,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              //color de fondo
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 10),
-                Container(
-                  width: 279,
-                  height: 7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
-                    //color de la franja
-                    color: Color.fromRGBO(157, 194, 255, 1),
-                  ),
-                ),
-                Row(
-                  children: <Widget>[
-                    const SizedBox(height: 85, width: 25),
-                    Text(
-                      '    Explicación',
-                      style: GoogleFonts.redHatDisplay(
-                          fontSize: 34,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromRGBO(25, 25, 29, 1)),
-                          
+              width: 293,
+              height: 114,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                //color de fondo
+                color: Color.fromRGBO(255, 255, 255, 1),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  const SizedBox(height: 10),
+                  Container(
+                    width: 279,
+                    height: 7,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9),
+                      //color de la franja
+                      color: Color.fromRGBO(157, 194, 255, 1),
                     ),
-                  ],
-                ),
-                const SizedBox(height: 2),
-
+                  ),
+                  Row(
+                    children: <Widget>[
+                      const SizedBox(height: 85, width: 25),
+                      Text(
+                        'Ley de Nodos',
+                        style: GoogleFonts.redHatDisplay(
+                            fontSize: 34,
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromRGBO(25, 25, 29, 1)),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 2),
                 ],
               ),
             ),
-          MaterialButton(
-            elevation: 10,
-            minWidth: 293,
-            height: 114,
-            onPressed: () {
-              Navigator.pushNamed(context, "explsegundaDerivada");
-            },
-          ),
-            
+            MaterialButton(
+              elevation: 10,
+              minWidth: 293,
+              height: 114,
+              onPressed: () {
+                Navigator.pushNamed(context, "explsegundaDerivada");
+              },
+            ),
           ],
-          
         ),
         SizedBox(height: 20),
-
-
-
-
-      ],
-    );    
-
-
-  }
-
-  Widget ejemplos (BuildContext context) {
-    
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        Stack(
-
-          alignment: AlignmentDirectional.bottomCenter,
-          children: <Widget>[
-            Container(
-            width: 293,
-            height: 114,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              //color de fondo
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 10),
-                Container(
-                  width: 279,
-                  height: 7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
-                    //color de la franja
-                    color: Color.fromRGBO(238, 153, 68, 1),
-                  ),
-                ),
-                Row(
-                  children: <Widget>[
-                    const SizedBox(height: 85, width: 25),
-                    Text(
-                      '    Ejemplos',
-                      style: GoogleFonts.redHatDisplay(
-                          fontSize: 34,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromRGBO(25, 25, 29, 1)),
-                          
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 2),
-
-                ],
-              ),
-            ),
-          MaterialButton(
-            elevation: 10,
-            minWidth: 293,
-            height: 114,
-            onPressed: () {
-              Navigator.pushNamed(context, "ejemsegundaDerivada");
-            },
-          ),
-            
-          ],
-          
-        ),
-        SizedBox(height: 20),
-
-
-
-
       ],
     );
-
-
   }
 
-  Widget ejercicios (BuildContext context) {
+  Widget leytensiones(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -226,7 +145,66 @@ class home_leyKirchoff extends StatelessWidget {
                     children: <Widget>[
                       const SizedBox(height: 85, width: 25),
                       Text(
-                        '    Ejercicios',
+                        'Ley de\nlas Tensiones',
+                        style: GoogleFonts.redHatDisplay(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromRGBO(25, 25, 29, 1)),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 2),
+                ],
+              ),
+            ),
+            MaterialButton(
+              elevation: 10,
+              minWidth: 293,
+              height: 114,
+              onPressed: () {
+                Navigator.pushNamed(context, "ejemsegundaDerivada");
+              },
+            ),
+          ],
+        ),
+        SizedBox(height: 20),
+      ],
+    );
+  }
+
+  Widget aplicacion(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Stack(
+          alignment: AlignmentDirectional.bottomCenter,
+          children: <Widget>[
+            Container(
+              width: 293,
+              height: 114,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                //color de fondo
+                color: Color.fromRGBO(255, 255, 255, 1),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  const SizedBox(height: 10),
+                  Container(
+                    width: 279,
+                    height: 7,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9),
+                      //color de la franja
+                      color: Color.fromRGBO(170, 234, 148, 1),
+                    ),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      const SizedBox(height: 85, width: 25),
+                      Text(
+                        ' Aplicacion',
                         style: GoogleFonts.redHatDisplay(
                             fontSize: 34,
                             fontWeight: FontWeight.bold,
@@ -234,7 +212,6 @@ class home_leyKirchoff extends StatelessWidget {
                       ),
                     ],
                   ),
-                  
                   const SizedBox(height: 2),
                 ],
               ),
@@ -252,7 +229,7 @@ class home_leyKirchoff extends StatelessWidget {
         SizedBox(height: 20),
       ],
     );
-  }      
+  }
 
   Widget botonFinal(BuildContext context) {
     return Padding(
