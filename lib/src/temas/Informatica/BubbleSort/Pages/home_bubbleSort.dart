@@ -126,7 +126,7 @@ Widget customAppBar1(BuildContext context) {
 
 //lanzamientos de paginas
 launchURL1() async {
-  const url = 'https://replit.com/join/doomeykxes-felipepizarroos';
+  const url = 'https://replit.com/join/qttaqgvsou-felipepizarroos';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -135,8 +135,7 @@ launchURL1() async {
 }
 
 launchURL2() async {
-  const url =
-      'https://pythondiario.com/2018/08/implementacion-de-un-arbol-avl.html';
+  const url = 'https://replit.com/join/rxszzxdplp-felipepizarroos';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -145,7 +144,7 @@ launchURL2() async {
 }
 
 launchURL3() async {
-  const url = 'https://replit.com/join/tftlclqxhp-felipepizarroos';
+  const url = 'https://replit.com/join/tayjldohhn-felipepizarroos';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

@@ -135,8 +135,7 @@ launchURL1() async {
 }
 
 launchURL2() async {
-  const url =
-      'https://pythondiario.com/2018/08/implementacion-de-un-arbol-avl.html';
+  const url = 'https://replit.com/join/kilfpyscxe-felipepizarroos';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
