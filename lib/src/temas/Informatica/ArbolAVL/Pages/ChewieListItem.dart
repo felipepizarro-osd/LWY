@@ -27,8 +27,8 @@ class _ChewieListItemState extends State<ChewieListItem> {
     super.initState();
     // Wrapper on top of the videoPlayerController
     _chewieController = ChewieController(
-      videoPlayerController: widget.videoPlayerController,
-      aspectRatio: 16 / 9,
+      videoPlayerController: widget.videoPlayerController,    
+      aspectRatio: 4/3,
       // Prepare the video to be played and display the first frame
       autoInitialize: true,
       looping: widget.looping,
@@ -48,7 +48,7 @@ class _ChewieListItemState extends State<ChewieListItem> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.symmetric(vertical: 25,horizontal:25),
       child: Chewie(
         controller: _chewieController,
       ),

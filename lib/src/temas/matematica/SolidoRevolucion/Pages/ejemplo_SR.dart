@@ -196,7 +196,7 @@ class Ejemplo_SR extends StatelessWidget {
                 fontSize: 19),
             ),
             onPressed: (){
-              Navigator.pushNamed(context, "next1_SR");
+              Navigator.pushNamed(context, "explicacion_SR");
 
             },
 
