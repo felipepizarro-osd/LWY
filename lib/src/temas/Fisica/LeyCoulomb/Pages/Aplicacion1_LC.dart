@@ -61,7 +61,7 @@ class Aplicacion1_LCo extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/explicacion_LC.png'),
+          Image.asset('assets/imgs/aplicacion_LCo.png'),
         ],
       ),
     );

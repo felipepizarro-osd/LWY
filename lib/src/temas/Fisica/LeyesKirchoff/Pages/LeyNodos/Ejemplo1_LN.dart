@@ -134,8 +134,9 @@ class Ejemplo1_LN extends StatelessWidget {
           ),
           Image.asset(
             "assets/imgs/image52.png",
-            width: 480,
-            height: 250,
+            width: 500,
+            height: 300,
+            scale: 0.5,
           ),
           Text(
             'Es decir que en el nodo 1 podemos decir que I1 = I2 + I3 y reemplazando valores: que 1 8 mA = 9 mA + 9 mA y que en el nodo 2, I4 = I2 + I3. Las corriente I1 e I4 son iguales porque lo que egresa de la batería debe ser igual a lo que ingresa.',
