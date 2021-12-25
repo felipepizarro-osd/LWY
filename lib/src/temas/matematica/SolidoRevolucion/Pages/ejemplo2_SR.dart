@@ -61,7 +61,8 @@ class Ejemplo2_SR extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.vertical,
             children: <Widget>[
-              boton(context),              
+              boton(context),
+              SizedBox(height: 25,)              ,
               explicacion(context),
               SizedBox(height: 25,),
               botonFinal(context),
@@ -232,7 +233,7 @@ class Ejemplo2_SR extends StatelessWidget {
 
   Widget boton(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[

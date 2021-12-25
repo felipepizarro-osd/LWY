@@ -1,23 +1,16 @@
-
-// ignore_for_file: annotate_overrides, file_names
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class incorrecto_SR extends StatelessWidget {
-  const incorrecto_SR({Key? key}) : super(key: key);
+class Explicacion1_sumas extends StatelessWidget {
+  const Explicacion1_sumas({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          SizedBox(
-            height: 20,
-          ),
           customAppBar(context),
-          this.listaVertical(context)                    ,
-
-
+          this.listaVertical(context),
+          
         ],
       ),
     );
@@ -30,7 +23,7 @@ class incorrecto_SR extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/matematicas/solidoRevolucion.png',
+            'assets/imgs/matematicas/sumasRiemann.png',
             height: 56,
             width: 212,
           ),
@@ -54,35 +47,31 @@ class incorrecto_SR extends StatelessWidget {
 
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
         ),
         Container(
-          height: 570,
+          height: 590,
           child: ListView(
             scrollDirection: Axis.vertical,
-            children: <Widget>[           
+            children: <Widget>[
               barra(context),
               explicacion(context),
-              justificacion(context),
-              SizedBox(height: 25,),
-              foto(context),
-              SizedBox(height: 25,),
+              gif(context),
               botonFinal(context),
-              SizedBox(height: 20,),
             ],
           ),
         ),
       ],
     );
-  }
+  }  
 
   Widget barra(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/matematicas/explicacionIncorrecta_SR.png'),
+          Image.asset('assets/imgs/matematicas/explicacion_sumas.png'),
         ],
       ),
     );
@@ -90,75 +79,38 @@ class incorrecto_SR extends StatelessWidget {
 
   Widget explicacion(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-
+          // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'La función que ayudará al mecánico a crear el sólido de revolución que necesita es:',
+            'Una suma de Riemann es una aproximación del área bajo la curva, al dividirla en varias formas simples tales como rectángulos o trapecios.',
             textAlign: TextAlign.justify,
             style: TextStyle(
-                color: Color.fromRGBO(0,0, 0, 1),
+                color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 20,
+                fontSize: 26,
                 letterSpacing: -0.44,
                 fontWeight: FontWeight.normal,
-                height: 2),
-          ),
-
-          Image.asset('assets/imgs/matematicas/incorrecto1_SR.png'),
-          
-
-
+                height: 1.38),
+          )
         ],
       ),
     );
   }
 
-  Widget justificacion(context) {
+  Widget gif(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-
-          Text(
-            'Justificación: ',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(255,0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 21,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.bold,
-                height: 2),
+          //SizedBox(height: 25,),
+          Image.asset(
+            'assets/imgs/matematicas/integralSumas.gif',
           ),
 
-          Text(
-            'La función y=5 es una linea paralela a eje de las x. Si hacemos girar esta línea alrededor del eje de las x podremos formar un cilindro de radio r=5.',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0,0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 21,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.normal,
-                height: 2),
-          ),          
-          
-        ],
-      ),
-    );
-  }  
-
-  Widget foto(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('assets/imgs/matematicas/incorrecto2_SR.png'),
         ],
       ),
     );
@@ -166,7 +118,7 @@ class incorrecto_SR extends StatelessWidget {
 
   Widget botonFinal(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -176,7 +128,7 @@ class incorrecto_SR extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "back1_sumas");
                 },
               ),
               Text(
@@ -188,11 +140,24 @@ class incorrecto_SR extends StatelessWidget {
             ],
           ),
           //Botón Next
-
+          Row(
+            children: <Widget>[
+              Text(
+                'Next',
+                style: GoogleFonts.arbutusSlab(
+                  fontSize: 20,
+                ),
+              ),
+              TextButton(
+                child: const Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.pushNamed(context, "next1_sumas");
+                },
+              ),
+            ],
+          )
         ],
       ),
     );
   }
- 
 }
-

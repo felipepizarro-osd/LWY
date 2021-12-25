@@ -5,6 +5,7 @@ import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/home
 import 'package:flutter_application_2/src/temas/Fisica/LeyCoulomb/Pages/home_leyCoulomb.dart';
 import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
 import 'package:flutter_application_2/src/temas/Informatica/ArbolAVL/Pages/explicacion1_AVL.dart';
+import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/ejemplo_Derivada.dart';
 import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/ejercicio1_SR.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
@@ -20,12 +21,19 @@ import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/explicacion1_2derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/explicacion2_2derivada.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/correcto_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/incorrecto_SR.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/correcto_Sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/incorrecto_Sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/ejemplo_sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/explicacion1_sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/explicacion2_sumas.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -86,17 +94,24 @@ class MyApp extends StatelessWidget {
 
         "back2_SR": (_) => const home_solido(),
         "vidaCotidiana": (_) => const Explicacion3_SR(),
-        //"correcto_SR": (_) => const correcto_SR(),
+        "correcto_SR": (_) => const correcto_SR(),
         "incorrecto_SR": (_) => const incorrecto_SR(),
-
-        //"explSumasRiemann": (_) => Practica2(),
-
-        //"ejemSolidoRevolucion": (_) => const Ejemplo_CE(),
-        //"ejSolidorRevolucion": (_) => const ejercicio_CE(),
 
         //Sumas de Riemann
 
+        "explSumasRiemann": (_) => Explicacion1_sumas(),
+        "next1_sumas": (_) => Explicacion2_sumas(),
+        "back1_sumas": (_) => home_sumas(),
+        "ejemSumasRiemann": (_) => Ejemplo_sumas(),
+        "correcto_sumas": (_) => const correcto_sumas(),
+        "incorrecto_sumas": (_) => const incorrecto_sumas(),
+
         //Criterio de la segunda derivada
+
+        "explsegundaDerivada": (_) => Explicacion1_2derivada(),
+        "next1_2derivada": (_) => Explicacion2_2derivada(),
+        "back1_2derivada": (_) => home_segundaDerivada(),
+        "ejemDerivada": (_) => ejemplo_derivada(),
 
         //fin de MATEMATICAS________________________________________________________
 
