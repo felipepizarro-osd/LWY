@@ -1,10 +1,10 @@
-// ignore_for_file: annotate_overrides, unnecessary_this, file_names, prefer_const_constructors
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ejercicio_CE extends StatelessWidget {
-  const ejercicio_CE({Key? key}) : super(key: key);
+class ejercicio2_CE extends StatelessWidget {
+  const ejercicio2_CE({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -98,14 +98,70 @@ class ejercicio_CE extends StatelessWidget {
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Dada la imagen, y asumiendo que se coloca una carga q = 2*10^-7 C, y en ella actúa una fuerza F= 5*10^-2N, ¿Cuál es entonces, la intensidad del campo en P?\n',
+            'Solucion:\n',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
+              color: const Color.fromRGBO(245, 136, 35, 1),
+              letterSpacing: 1.2,
+            ),
+          ),
+          Text(
+            'Para poder solucionar el problema, basta nuevamente en colocar nuestros datos en la fórmula.',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              color: const Color.fromRGBO(245, 136, 35, 1),
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
-            "assets/imgs/image34.png",
+            "assets/imgs/image35.png",
+            width: 450,
+            height: 250,
+          ),
+          Text(
+            'Al retirar la carga q y colocar en P una carga positiva de ',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              color: const Color.fromRGBO(245, 136, 35, 1),
+              letterSpacing: 1.2,
+            ),
+          ),
+          Image.asset(
+            "assets/imgs/image36.png",
+            width: 450,
+            height: 250,
+          ),
+          Text(
+            '¿Cuál será el valor de la fuerza F que actuará sobre esa carga, y cuál es el sentido del movimiento que tenderá a adquirir?\nPara poder solucionar esta parte, es necesario sustituir el nuevo valor de la carga en la fórmula, Pero con la condición de que ahora la fuerza será la incógnita, es decir:',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              color: const Color.fromRGBO(245, 136, 35, 1),
+              letterSpacing: 1.2,
+            ),
+          ),
+          Text(
+            'F = qE ',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 35,
+              color: const Color.fromRGBO(245, 136, 35, 1),
+              letterSpacing: 1.2,
+            ),
+          ),
+          Text(
+            'Hemos despejado F de la ecuación de campo eléctrico, entonces después de esto reemplazamos los datos ',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              color: const Color.fromRGBO(245, 136, 35, 1),
+              letterSpacing: 1.2,
+            ),
+          ),
+          Image.asset(
+            "assets/imgs/image37.png",
+            width: 450,
+            height: 250,
+          ),
+          Image.asset(
+            "assets/imgs/image38.png",
             width: 450,
             height: 250,
           ),

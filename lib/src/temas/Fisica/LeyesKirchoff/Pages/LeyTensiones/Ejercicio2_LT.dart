@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Ejercicio1_LT extends StatelessWidget {
-  const Ejercicio1_LT({Key? key}) : super(key: key);
+class Ejercicio2_LT extends StatelessWidget {
+  const Ejercicio2_LT({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -114,14 +114,31 @@ class Ejercicio1_LT extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Encontrar el valor de la corriente "ia" de la figura.',
+            'Como sabemos, la corriente circula siempre circula desde los terminales positivos (mayor voltaje) a los negativos (menor voltaje), si bien podemos adoptar cualquier sistema de referencia, yo utilizo este por que es lo que lo considero mas sencillo y fácil de entender.',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
-            "assets/imgs/image31.png",
+            "assets/imgs/image30.png",
+            width: 490,
+            height: 170,
+          ),
+          Text(
+            'Si acomodamos un podo la ecuación nos queda lo siguiente, como vemos muchos de los términos comunes se eliminan permitiéndonos de esta manera calcular el valor de la corriente Ib que nos da -1Ampere',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              letterSpacing: 1.2,
+            ),
+          ),
+          Image.asset(
+            "assets/imgs/image32.png",
+            width: 490,
+            height: 170,
+          ),
+          Image.asset(
+            "assets/imgs/image33.png",
             width: 490,
             height: 170,
           ),

@@ -32,6 +32,7 @@ import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/componentes/ejercicios.dar
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/homenodos.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejemplo1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio1_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio2_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
@@ -131,6 +132,7 @@ class MyApp extends StatelessWidget {
         "Explicacion1_LT": (_) => const Explicacion1_LT(),
         "Ejemplo1_LT": (_) => const Ejemplo1_LT(),
         "Ejercicio1_LT": (_) => const Ejercicio1_LT(),
+        "Ejercicio2_LT": (_) => const Ejercicio2_LT(),
         //ley de coulomb
         "homeLC": (_) => const home_leyCoulomb(),
         "Aplicacion1_LCo": (_) => const Aplicacion1_LCo(),

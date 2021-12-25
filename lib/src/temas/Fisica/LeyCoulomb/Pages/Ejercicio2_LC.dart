@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Ejercicio1_LCo extends StatelessWidget {
-  const Ejercicio1_LCo({Key? key}) : super(key: key);
+class Ejercicio2_LCo extends StatelessWidget {
+  const Ejercicio2_LCo({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,17 +127,77 @@ Widget cuerpo(BuildContext context) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Una carga de 3*10^-6 C se encuentra 2 m de una carga de -8*10^-6 C, ¿Cuál es la magnitud de la fuerza de atracción entre las cargas?',
+          'Solución: Para darle solución al ejercicio, debemos de obtener los datos para poder resolverlo de manera directa, puesto que tenemos todo lo que necesitamos.',
           style: GoogleFonts.redHatDisplay(
             fontSize: 18,
             letterSpacing: 1.2,
           ),
         ),
         Image.asset(
-          "assets/imgs/image14.png",
+          "assets/imgs/image15.png",
           width: 490,
           height: 170,
         ),
+        Text(
+          'Aplicando la fórmula de la ley de coulomb.',
+          style: GoogleFonts.redHatDisplay(
+            fontSize: 18,
+            letterSpacing: 1.2,
+          ),
+        ),
+        Image.asset(
+          "assets/imgs/image16.png",
+          width: 490,
+          height: 170,
+        ),
+        Text(
+          'Sustituimos',
+          style: GoogleFonts.redHatDisplay(
+            fontSize: 18,
+            letterSpacing: 1.2,
+          ),
+        ),
+        Image.asset(
+          "assets/imgs/image17.png",
+          width: 490,
+          height: 170,
+        ),
+        Text(
+          'Hemos multiplicado las cargas eléctricas, recordar que los exponentes se suman. y hemos elevado al cuadrado la distancia que los separa, ahora seguimos con las operaciones.',
+          style: GoogleFonts.redHatDisplay(
+            fontSize: 18,
+            letterSpacing: 1.2,
+          ),
+        ),
+        Image.asset(
+          "assets/imgs/image18.png",
+          width: 490,
+          height: 170,
+        ),
+        Text(
+          'Multiplicamos y obtenemos:',
+          style: GoogleFonts.redHatDisplay(
+            fontSize: 18,
+            letterSpacing: 1.2,
+          ),
+        ),
+        Image.asset(
+          "assets/imgs/image19.png",
+          width: 490,
+          height: 170,
+        ),
+        Text(
+          'Vemos que hay un signo negativo, por ahora no nos sirve interpretar el signo, puesto que el problema nos pide la magnitud de la fuerza, esto quiere decir que tomaremos la fuerza como un valor absoluto, que vendría a ser nuestro resultado.',
+          style: GoogleFonts.redHatDisplay(
+            fontSize: 18,
+            letterSpacing: 1.2,
+          ),
+        ),
+        Image.asset(
+          "assets/imgs/image20.png",
+          width: 490,
+          height: 170,
+        )
       ],
     ),
   );

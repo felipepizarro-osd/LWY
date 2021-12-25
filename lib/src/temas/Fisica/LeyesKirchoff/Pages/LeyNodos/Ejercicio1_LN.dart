@@ -94,9 +94,9 @@ class Ejercicio1_LN extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            '¿Cuánto vale I?',
+            '    ¿Cuánto vale I?',
             style: GoogleFonts.redHatDisplay(
-              fontSize: 46,
+              fontSize: 42,
               fontWeight: FontWeight.w700,
               letterSpacing: 1.2,
             ),

@@ -70,18 +70,6 @@ class Explicacion1_LN extends StatelessWidget {
     );
   }
 
-  Widget barra(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('assets/imgs/eleynodos.png'),
-        ],
-      ),
-    );
-  }
-
   Widget botonFinal(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
@@ -132,4 +120,16 @@ class Explicacion1_LN extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget barra(context) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 12),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Image.asset('assets/imgs/eleynodos.png'),
+      ],
+    ),
+  );
 }
