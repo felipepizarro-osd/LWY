@@ -1,10 +1,8 @@
-// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class correcto_SR extends StatelessWidget {
-  const correcto_SR({Key? key}) : super(key: key);
+class correcto_sumas extends StatelessWidget {
+  const correcto_sumas({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +31,7 @@ class correcto_SR extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/matematicas/solidoRevolucion.png',
+            'assets/imgs/matematicas/sumasRiemann.png',
             height: 56,
             width: 212,
           ),
@@ -104,7 +102,7 @@ class correcto_SR extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_SR");
+                  Navigator.pushNamed(context, "back1_sumas");
                 },
               ),
               Text(

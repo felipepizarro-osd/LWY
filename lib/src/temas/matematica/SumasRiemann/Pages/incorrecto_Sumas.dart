@@ -1,11 +1,8 @@
-
-// ignore_for_file: annotate_overrides, file_names
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class incorrecto_SR extends StatelessWidget {
-  const incorrecto_SR({Key? key}) : super(key: key);
+class incorrecto_sumas extends StatelessWidget {
+  const incorrecto_sumas({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +27,7 @@ class incorrecto_SR extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/matematicas/solidoRevolucion.png',
+            'assets/imgs/matematicas/sumasRiemann.png',
             height: 56,
             width: 212,
           ),
@@ -62,9 +59,7 @@ class incorrecto_SR extends StatelessWidget {
             scrollDirection: Axis.vertical,
             children: <Widget>[           
               barra(context),
-              explicacion(context),
-              justificacion(context),
-              SizedBox(height: 25,),
+              SizedBox(height: 10,),
               foto(context),
               SizedBox(height: 25,),
               botonFinal(context),
@@ -82,83 +77,20 @@ class incorrecto_SR extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/matematicas/explicacionIncorrecta_SR.png'),
+          Image.asset('assets/imgs/matematicas/explicacion2_sumas.png'),
         ],
       ),
     );
   }
-
-  Widget explicacion(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-
-          Text(
-            'La función que ayudará al mecánico a crear el sólido de revolución que necesita es:',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0,0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 20,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.normal,
-                height: 2),
-          ),
-
-          Image.asset('assets/imgs/matematicas/incorrecto1_SR.png'),
-          
-
-
-        ],
-      ),
-    );
-  }
-
-  Widget justificacion(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-
-          Text(
-            'Justificación: ',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(255,0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 21,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.bold,
-                height: 2),
-          ),
-
-          Text(
-            'La función y=5 es una linea paralela a eje de las x. Si hacemos girar esta línea alrededor del eje de las x podremos formar un cilindro de radio r=5.',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0,0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 21,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.normal,
-                height: 2),
-          ),          
-          
-        ],
-      ),
-    );
-  }  
+ 
 
   Widget foto(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/matematicas/incorrecto2_SR.png'),
+          Image.asset('assets/imgs/matematicas/textoExplicacion_sumas.png'),
         ],
       ),
     );
