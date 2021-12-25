@@ -1,287 +1,182 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: file_names
+
+import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:video_player/video_player.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../../ChewieListItem.dart';
 
-class home_segundaDerivada extends StatelessWidget {
-  const home_segundaDerivada({Key? key}) : super(key: key);
+class home_listas extends StatelessWidget {
+  const home_listas({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children: <Widget>[
-          SizedBox(
-            height: 20,
-          ),
           customAppBar(context),
-          SizedBox(
-            height: 40,
-          ),
-          explicacion(context),
-          SizedBox(
-            height: 20,
-          ),
-          ejemplos(context),
-          SizedBox(height: 20),
-          ejercicios(context),
+          VideoConteiner1(context),
+          //explicacion(context),
+          Ex2(context),
+          customAppBar1(context),
           botonFinal(context),
-
         ],
       ),
     );
   }
+}
 
-  Widget customAppBar(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/matematicas/derivada2.png',
-            height: 56,
-            width: 212,
-          ),
-          IconButton(
-            iconSize: 43,
-            icon: Image.network(
-                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
-            onPressed: () {
-              Navigator.pushNamed(context, "perfil");
-            },
-          ),
-        ],
+Widget VideoConteiner1(BuildContext context) {
+  return Column(
+    children: <Widget>[
+      ChewieListItem(
+        videoPlayerController: VideoPlayerController.asset(
+          'assets/imgs/videos/v4.mp4',
+        ),
+        looping: true,
       ),
-    );
-  }
+    ],
+  );
+}
 
-  Widget explicacion (BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+Widget customAppBar(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Stack(
-
-          alignment: AlignmentDirectional.bottomCenter,
-          children: <Widget>[
-            Container(
-            width: 293,
-            height: 114,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              //color de fondo
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 10),
-                Container(
-                  width: 279,
-                  height: 7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
-                    //color de la franja
-                    color: Color.fromRGBO(157, 194, 255, 1),
-                  ),
-                ),
-                Row(
-                  children: <Widget>[
-                    const SizedBox(height: 85, width: 25),
-                    Text(
-                      '    Explicación',
-                      style: GoogleFonts.redHatDisplay(
-                          fontSize: 34,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromRGBO(25, 25, 29, 1)),
-                          
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 2),
-
-                ],
-              ),
-            ),
-          MaterialButton(
-            elevation: 10,
-            minWidth: 293,
-            height: 114,
-            onPressed: () {
-              Navigator.pushNamed(context, "explsegundaDerivada");
-            },
-          ),
-            
-          ],
-          
+        Image.asset(
+          'assets/imgs/ListasCircularesNav.png',
+          height: 76,
+          width: 230,
         ),
-        SizedBox(height: 20),
-
-
-
-
-      ],
-    );    
-
-
-  }
-
-  Widget ejemplos (BuildContext context) {
-    
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        Stack(
-
-          alignment: AlignmentDirectional.bottomCenter,
-          children: <Widget>[
-            Container(
-            width: 293,
-            height: 114,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              //color de fondo
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 10),
-                Container(
-                  width: 279,
-                  height: 7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
-                    //color de la franja
-                    color: Color.fromRGBO(238, 153, 68, 1),
-                  ),
-                ),
-                Row(
-                  children: <Widget>[
-                    const SizedBox(height: 85, width: 25),
-                    Text(
-                      '    Ejemplos',
-                      style: GoogleFonts.redHatDisplay(
-                          fontSize: 34,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromRGBO(25, 25, 29, 1)),
-                          
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 2),
-
-                ],
-              ),
-            ),
-          MaterialButton(
-            elevation: 10,
-            minWidth: 293,
-            height: 114,
-            onPressed: () {
-              Navigator.pushNamed(context, "ejemsegundaDerivada");
-            },
-          ),
-            
-          ],
-          
+        IconButton(
+          iconSize: 43,
+          icon: Image.network(
+              'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
+          onPressed: () {
+            Navigator.pushNamed(context, "perfil");
+          },
         ),
-        SizedBox(height: 20),
-
-
-
-
       ],
-    );
+    ),
+  );
+}
 
-
-  }
-
-  Widget ejercicios (BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+Widget Ex2(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Stack(
-          alignment: AlignmentDirectional.bottomCenter,
+        Image.asset(
+          'assets/imgs/listaex.png',
+          height: 150,
+          width: 380,
+          fit: BoxFit.fitWidth,
+        ),
+      ],
+    ),
+  );
+}
+
+//customiza los botones para hacer menu de botones con imagen presionables
+Widget customAppBar1(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        GestureDetector(
+          onTap: () => launchURL1(),
+          child: Image.asset('assets/imgs/JavaIcon.png'),
+        ),
+        GestureDetector(
+          onTap: () => launchURL2(),
+          child: Image.asset('assets/imgs/PythonIcon.png'),
+        ),
+        GestureDetector(
+          onTap: () => launchURL3(),
+          child: Image.asset('assets/imgs/CIcon.png'),
+        )
+      ],
+    ),
+  );
+}
+
+//lanzamientos de paginas
+launchURL1() async {
+  const url = 'https://replit.com/join/doomeykxes-felipepizarroos';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+launchURL2() async {
+  const url =
+      'https://pythondiario.com/2018/08/implementacion-de-un-arbol-avl.html';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+launchURL3() async {
+  const url = 'https://replit.com/join/tftlclqxhp-felipepizarroos';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+@override
+Widget botonFinal(BuildContext context) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        //Boton Back
+        Row(
           children: <Widget>[
-            Container(
-              width: 293,
-              height: 114,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                //color de fondo
-                color: Color.fromRGBO(255, 255, 255, 1),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  const SizedBox(height: 10),
-                  Container(
-                    width: 279,
-                    height: 7,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9),
-                      //color de la franja
-                      color: Color.fromRGBO(221, 136, 202, 1),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      const SizedBox(height: 85, width: 25),
-                      Text(
-                        '    Ejercicios',
-                        style: GoogleFonts.redHatDisplay(
-                            fontSize: 34,
-                            fontWeight: FontWeight.bold,
-                            color: const Color.fromRGBO(25, 25, 29, 1)),
-                      ),
-                    ],
-                  ),
-                  
-                  const SizedBox(height: 2),
-                ],
-              ),
-            ),
-            MaterialButton(
-              elevation: 10,
-              minWidth: 293,
-              height: 114,
+            TextButton(
+              child: const Icon(Icons.arrow_back),
               onPressed: () {
-                Navigator.pushNamed(context, "ejsegundaDerivada");
+                Navigator.pushNamed(context, "informatica");
+              },
+            ),
+            Text(
+              'Prev',
+              style: GoogleFonts.arbutusSlab(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        //Botón Next
+        Row(
+          children: <Widget>[
+            Text(
+              'Next',
+              style: GoogleFonts.arbutusSlab(
+                fontSize: 20,
+              ),
+            ),
+            TextButton(
+              child: const Icon(Icons.arrow_forward),
+              onPressed: () {
+                Navigator.pushNamed(context, "informatica"); //next
               },
             ),
           ],
         ),
-        SizedBox(height: 20),
       ],
-    );
-  }      
-
-  Widget botonFinal(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          //Boton Back
-          Row(
-            children: <Widget>[
-              TextButton(
-                child: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.pushNamed(context, "back_SR");
-                },
-              ),
-              Text(
-                'Prev',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-            ],
-          ),
-          //Botón Next
-        ],
-      ),
-    );
-  }
+    ),
+  );
 }

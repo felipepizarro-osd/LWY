@@ -51,7 +51,7 @@ Widget VideoConteiner1(BuildContext context) {
     children: <Widget>[
       ChewieListItem(
         videoPlayerController: VideoPlayerController.asset(
-          'assets/imgs/videos/OB.mp4',
+          'assets/imgs/videos/v5.mp4',
         ),
         looping: true,
       ),
@@ -66,7 +66,7 @@ Widget customAppBar(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Image.asset(
-          'assets/imgs/ListasCircularesNav.png',
+          'assets/imgs/bubl.png',
           height: 76,
           width: 230,
         ),
@@ -90,7 +90,7 @@ Widget Ex2(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Image.asset(
-          'assets/imgs/Ex.AVL.png',
+          'assets/imgs/bublex.png',
           height: 150,
           width: 380,
           fit: BoxFit.fitWidth,

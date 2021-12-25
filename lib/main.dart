@@ -6,6 +6,7 @@ import 'package:flutter_application_2/src/temas/Fisica/LeyCoulomb/Pages/home_ley
 import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
 import 'package:flutter_application_2/src/temas/Informatica/ArbolAVL/Pages/explicacion1_AVL.dart';
 import 'package:flutter_application_2/src/temas/Informatica/BubbleSort/Pages/home_bubbleSort.dart';
+import 'package:flutter_application_2/src/temas/Informatica/Listas/Pages/home_listas.dart';
 import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/ejercicio1_SR.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
@@ -63,9 +64,10 @@ class MyApp extends StatelessWidget {
         "derivada2": (_) => home_segundaDerivada(),
         //Arbol AVL
         "arbolAVL": (_) => Explicacion1_AVL(),
+        //Bubble Sort
         "bubbleSort": (_) => home_bubbleSort(),
         //Listas
-        //Bubble Sort
+        "listas": (_) => home_listas(),
 
         //fin de INFORMATICA________________________________________________________
 
