@@ -10,7 +10,7 @@ class home_leyCoulomb extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          SizedBox(height: 0),
+          SizedBox(height: 15),
           customAppBar(context),
           SizedBox(height: 0),
           explicacion(context),
@@ -27,14 +27,22 @@ class home_leyCoulomb extends StatelessWidget {
 
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/fisica/leyCoulomb.png',
-            height: 56,
-            width: 212,
+            'assets/imgs/cajita.png',
+            height: 60,
+            width: 60,
+          ),
+          Text(
+            'Ley de Coulomb',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
           ),
           IconButton(
             iconSize: 43,
@@ -98,7 +106,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "expleyCoulomb");
+                Navigator.pushNamed(context, "Explicacion1_LCo");
               },
             ),
           ],
@@ -157,7 +165,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "ejemleyCoulomb");
+                Navigator.pushNamed(context, "Ejemplo1_LCo");
               },
             ),
           ],
@@ -216,7 +224,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "ejleyCoulomb");
+                Navigator.pushNamed(context, "Ejercicio1_LCo");
               },
             ),
           ],
@@ -275,7 +283,7 @@ class home_leyCoulomb extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "apleyCoulomb");
+                Navigator.pushNamed(context, "Aplicacion1_LCo");
               },
             ),
           ],

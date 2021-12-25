@@ -114,7 +114,7 @@ class Ejercicio_LC extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "back1_LC");
                 },
               ),
               Text(

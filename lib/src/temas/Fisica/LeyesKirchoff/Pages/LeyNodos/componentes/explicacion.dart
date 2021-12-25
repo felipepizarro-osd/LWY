@@ -53,7 +53,7 @@ class Explicacion_LeyDeNodos extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "explicacion1_LN");
+                Navigator.pushNamed(context, "Explicacion1_LN");
               },
             ),
           ],

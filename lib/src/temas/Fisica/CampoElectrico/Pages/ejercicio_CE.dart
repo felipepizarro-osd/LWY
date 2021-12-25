@@ -1,4 +1,3 @@
-
 // ignore_for_file: annotate_overrides, unnecessary_this, file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
@@ -7,34 +6,64 @@ import 'package:google_fonts/google_fonts.dart';
 class ejercicio_CE extends StatelessWidget {
   const ejercicio_CE({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
+          SizedBox(
+            height: 26,
+          ),
           customAppBar(context),
-          barra(context),
-          SizedBox(height: 30),
-          explicacion1(context),
-          SizedBox(height: 46),
-          Pregunta(context),
-          SizedBox(height: 10),
-
-          botonFinal(context),
+          listaVertical(context),
         ],
       ),
     );
   }
 
+  Widget listaVertical(context) {
+    return Column(
+//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+
+      children: <Widget>[
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
+        ),
+        SizedBox(
+          height: 583,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              barra(context),
+              //formula(context),
+              cuerpo(context),
+              botonFinal(context),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/fisica/campoElectrico.png',
-            height: 56,
-            width: 212,
+            'assets/imgs/cajita.png',
+            height: 60,
+            width: 60,
+          ),
+          Text(
+            'Campo Electrico',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
           ),
           IconButton(
             iconSize: 43,
@@ -43,26 +72,6 @@ class ejercicio_CE extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, "perfil");
             },
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget Pregunta(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/respuesta.png',
-          ),
-          Image.asset(
-            'assets/imgs/comprueba.png',
-          ),
-          Image.asset(
-            'assets/imgs/borrar.png',
           ),
         ],
       ),
@@ -81,25 +90,25 @@ class ejercicio_CE extends StatelessWidget {
     );
   }
 
-  Widget explicacion1(context) {
+  Widget cuerpo(context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center ,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Para una carga puntual de Q = +1nC ubique un punto alejado de dicha carga aproximadamente a unos 150 cm de esta.\n-Estime el valor de la intensidad de campo y el potencial eléctricos, a través de las siguientes expresiones matemáticas escalares: .\n-Campo eléctrico: E=K Q/r^2',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 18,
-                letterSpacing: -0.4399999976158142,
-                fontWeight: FontWeight.normal,
-                height: 2.2),
+            'Dada la imagen, y asumiendo que se coloca una carga q = 2*10^-7 C, y en ella actúa una fuerza F= 5*10^-2N, ¿Cuál es entonces, la intensidad del campo en P?\n',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              letterSpacing: 1.2,
+            ),
           ),
-         
+          Image.asset(
+            "assets/imgs/image34.png",
+            width: 450,
+            height: 250,
+          ),
         ],
       ),
     );
@@ -128,7 +137,6 @@ class ejercicio_CE extends StatelessWidget {
               ),
             ],
           ),
-          
         ],
       ),
     );

@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion1_LK extends StatelessWidget {
-  const Explicacion1_LK({Key? key}) : super(key: key);
+class Ejercicio1_LT extends StatelessWidget {
+  const Ejercicio1_LT({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,27 +12,58 @@ class Explicacion1_LK extends StatelessWidget {
       body: Column(
         children: <Widget>[
           SizedBox(
-            height: 20,
+            height: 26,
           ),
           customAppBar(context),
-          barra(context),
-          cuerpo(context),
-          botonFinal(context),
+          listaVertical(context),
         ],
       ),
     );
   }
 
+  Widget listaVertical(context) {
+    return Column(
+//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+
+      children: <Widget>[
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
+        ),
+        SizedBox(
+          height: 583,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              barra(context),
+              //formula(context),
+              cuerpo(context),
+              botonFinal(context),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/nomenclatura.png',
-            height: 56,
-            width: 230,
+            'assets/imgs/cajita.png',
+            height: 60,
+            width: 60,
+          ),
+          Text(
+            'Ley de las Tensiones',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
           ),
           IconButton(
             iconSize: 43,
@@ -42,18 +73,6 @@ class Explicacion1_LK extends StatelessWidget {
               Navigator.pushNamed(context, "perfil");
             },
           ),
-        ],
-      ),
-    );
-  }
-
-  Widget barra(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('assets/imgs/explicacion1_NQ.png'),
         ],
       ),
     );
@@ -71,7 +90,7 @@ class Explicacion1_LK extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_NQ");
+                  Navigator.pushNamed(context, "hometensiones");
                 },
               ),
               Text(
@@ -83,22 +102,6 @@ class Explicacion1_LK extends StatelessWidget {
             ],
           ),
           //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "explicacion2_NQ");
-                },
-              ),
-            ],
-          )
         ],
       ),
     );
@@ -111,17 +114,29 @@ class Explicacion1_LK extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Se llama nomenclatura química a un sistema de reglas que permite dar nombre a los diferentes compuestos químico según el tipo y número de elementos que los componen. La nomenclaturan permite identificar, clasificar y organizar los compuestos químicos.',
+            'Encontrar el valor de la corriente "ia" de la figura.',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
-            "assets/imgs/image24.png",
-            width: 500,
+            "assets/imgs/image31.png",
+            width: 490,
             height: 170,
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget barra(context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Image.asset('assets/imgs/ejercicio_LT.png'),
         ],
       ),
     );

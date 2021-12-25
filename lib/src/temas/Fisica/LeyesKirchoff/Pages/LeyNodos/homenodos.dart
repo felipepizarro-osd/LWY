@@ -7,6 +7,10 @@ import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/comp
 
 import 'package:google_fonts/google_fonts.dart';
 
+import 'componentes/ejemplos.dart';
+import 'componentes/ejercicios.dart';
+import 'componentes/explicacion.dart';
+
 class homeleynodos extends StatelessWidget {
   const homeleynodos({Key? key}) : super(key: key);
 
@@ -21,13 +25,13 @@ class homeleynodos extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Explicacion_Nomenclatura(),
+          Explicacion_LeyDeNodos(),
           SizedBox(
             height: 20,
           ),
-          Ejemplos_Nomenclatura(),
+          EjemplosLN(),
           SizedBox(height: 20),
-          Ejercicios_Nomenclatura(),
+          EjerciciosLN(),
           //this.Botonera(context),
           botonFinal(context),
         ],
@@ -42,7 +46,7 @@ class homeleynodos extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/nomenclatura.png',
+            'assets/imgs/leynodos.png',
             height: 56,
             width: 230,
           ),
@@ -71,7 +75,7 @@ class homeleynodos extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back_EQ");
+                  Navigator.pushNamed(context, "homeLK");
                 },
               ),
               Text(
