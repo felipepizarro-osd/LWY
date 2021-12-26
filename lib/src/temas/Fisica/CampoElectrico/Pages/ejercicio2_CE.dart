@@ -98,7 +98,7 @@ class ejercicio2_CE extends StatelessWidget {
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Solucion:\n',
+            'Solucion:',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
               color: const Color.fromRGBO(245, 136, 35, 1),
@@ -109,41 +109,39 @@ class ejercicio2_CE extends StatelessWidget {
             'Para poder solucionar el problema, basta nuevamente en colocar nuestros datos en la fórmula.',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
-              color: const Color.fromRGBO(245, 136, 35, 1),
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
             "assets/imgs/image35.png",
-            width: 450,
-            height: 250,
+            width: 260,
+            height: 80,
+            scale: 0.5,
           ),
           Text(
             'Al retirar la carga q y colocar en P una carga positiva de ',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
-              color: const Color.fromRGBO(245, 136, 35, 1),
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
             "assets/imgs/image36.png",
-            width: 450,
-            height: 250,
+            width: 200,
+            height: 100,
+            scale: 0.5,
           ),
           Text(
             '¿Cuál será el valor de la fuerza F que actuará sobre esa carga, y cuál es el sentido del movimiento que tenderá a adquirir?\nPara poder solucionar esta parte, es necesario sustituir el nuevo valor de la carga en la fórmula, Pero con la condición de que ahora la fuerza será la incógnita, es decir:',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
-              color: const Color.fromRGBO(245, 136, 35, 1),
               letterSpacing: 1.2,
             ),
           ),
           Text(
-            'F = qE ',
+            '\nF = qE\n ',
             style: GoogleFonts.redHatDisplay(
               fontSize: 35,
-              color: const Color.fromRGBO(245, 136, 35, 1),
               letterSpacing: 1.2,
             ),
           ),
@@ -151,19 +149,20 @@ class ejercicio2_CE extends StatelessWidget {
             'Hemos despejado F de la ecuación de campo eléctrico, entonces después de esto reemplazamos los datos ',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
-              color: const Color.fromRGBO(245, 136, 35, 1),
               letterSpacing: 1.2,
             ),
           ),
           Image.asset(
             "assets/imgs/image37.png",
             width: 450,
-            height: 250,
+            height: 100,
+            scale: 0.6,
           ),
           Image.asset(
             "assets/imgs/image38.png",
             width: 450,
-            height: 250,
+            height: 100,
+            scale: 0.6,
           ),
         ],
       ),

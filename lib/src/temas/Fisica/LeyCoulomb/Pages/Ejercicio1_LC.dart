@@ -4,44 +4,113 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Ejercicio1_LCo extends StatelessWidget {
-  const Ejercicio1_LCo({Key? key}) : super(key: key);
+  late String respuesta;
+  final _keyForm = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 26,
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Form(
+              key: _keyForm,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  customAppBar(
+                    context,
+                  ),
+                  barra(
+                    context,
+                  ),
+                  cuerpo(context),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          '¿Cuál es la magnitud de la fuerza de atracción entre las cargas?',
+                          textAlign: TextAlign.justify,
+                          style: GoogleFonts.redHatDisplay(
+                            fontSize: 22,
+                            // fontWeight: FontWeight.bold,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        TextFormField(
+                          validator: (valor) {
+                            if (valor!.isEmpty) {
+                              return 'numero vacio';
+                            }
+
+                            if (valor != '0.054N' &&
+                                valor != '0.054 N' &&
+                                valor != '0,054 N' &&
+                                valor != '0,054N' &&
+                                valor != '0,054' &&
+                                valor != '0.054') {
+                              return 'Respuesta incorrecta';
+                            }
+
+                            return null;
+                          },
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su respuesta',
+                            border: OutlineInputBorder(),
+                            isDense: false,
+                            contentPadding: EdgeInsets.all(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          width: 118,
+                          height: 40,
+                          child: RaisedButton(
+                            child: Text(
+                              'Comprobar',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            color: Colors.blue[600],
+                            onPressed: () {
+                              if (_keyForm.currentState!.validate()) {
+                                print('Correcto');
+                                Navigator.pushNamed(context, "CorrectoFisica");
+                              } else {
+                                print("Ha ocurrido un error");
+                                Navigator.pushNamed(context, "Ejercicio2_LCo");
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        botonFinal(context),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
-          customAppBar(context),
-          listaVertical(context),
-        ],
+        ),
       ),
-    );
-  }
-
-  Widget listaVertical(context) {
-    return Column(
-//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
-
-      children: <Widget>[
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
-        ),
-        SizedBox(
-          height: 583,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
-              barra(context),
-              //formula(context),
-              cuerpo(context),
-              botonFinal(context),
-            ],
-          ),
-        ),
-      ],
     );
   }
 
@@ -92,7 +161,7 @@ class Ejercicio1_LCo extends StatelessWidget {
 
 Widget botonFinal(BuildContext context) {
   return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+    padding: EdgeInsets.symmetric(horizontal: 0, vertical: 17.2),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
@@ -126,7 +195,7 @@ Widget cuerpo(BuildContext context) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Una carga de 3*10^-6 C se encuentra 2 m de una carga de -8*10^-6 C, ¿Cuál es la magnitud de la fuerza de atracción entre las cargas?',
+          'Una carga de 3*10^-6 C se encuentra 2 m de una carga de -8*10^-6 C',
           style: GoogleFonts.redHatDisplay(
             fontSize: 18,
             letterSpacing: 1.2,

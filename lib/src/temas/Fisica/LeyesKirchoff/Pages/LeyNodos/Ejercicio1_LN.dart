@@ -4,21 +4,112 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Ejercicio1_LN extends StatelessWidget {
-  const Ejercicio1_LN({Key? key}) : super(key: key);
+  late String respuesta;
+  final _keyForm = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 20,
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Form(
+              key: _keyForm,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  customAppBar(
+                    context,
+                  ),
+                  barra(
+                    context,
+                  ),
+                  cuerpo(context),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          '¿Cual es el valor de i?',
+                          textAlign: TextAlign.justify,
+                          style: GoogleFonts.redHatDisplay(
+                            fontSize: 22,
+                            // fontWeight: FontWeight.bold,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        TextFormField(
+                          validator: (valor) {
+                            if (valor!.isEmpty) {
+                              return 'numero vacio';
+                            }
+
+                            if (valor != '4' &&
+                                valor != '4ma' &&
+                                valor != '4 ma' &&
+                                valor != '4mA' &&
+                                valor != '4 mA') {
+                              return 'Respuesta incorrecta';
+                            }
+
+                            return null;
+                          },
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su respuesta',
+                            border: OutlineInputBorder(),
+                            isDense: false,
+                            contentPadding: EdgeInsets.all(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          width: 118,
+                          height: 40,
+                          child: RaisedButton(
+                            child: Text(
+                              'Comprobar',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            color: Colors.blue[600],
+                            onPressed: () {
+                              if (_keyForm.currentState!.validate()) {
+                                print('Correcto');
+                                Navigator.pushNamed(context, "CorrectoFisica");
+                              } else {
+                                print("Ha ocurrido un error");
+                                Navigator.pushNamed(context, "Ejercicio2_LN");
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        botonFinal(context),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
-          customAppBar(context),
-          barra(context),
-          cuerpo(context),
-          botonFinal(context),
-        ],
+        ),
       ),
     );
   }

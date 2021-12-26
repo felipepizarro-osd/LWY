@@ -4,45 +4,209 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Ejercicio1_LT extends StatelessWidget {
-  const Ejercicio1_LT({Key? key}) : super(key: key);
+  late String respuesta;
+  final _keyForm = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 26,
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Form(
+              key: _keyForm,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  customAppBar(
+                    context,
+                  ),
+                  barra(
+                    context,
+                  ),
+                  cuerpo(context),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          '¿Cual es el valor de ia?',
+                          textAlign: TextAlign.justify,
+                          style: GoogleFonts.redHatDisplay(
+                            fontSize: 22,
+                            // fontWeight: FontWeight.bold,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        TextFormField(
+                          validator: (valor) {
+                            if (valor!.isEmpty) {
+                              return 'numero vacio';
+                            }
+
+                            if (valor != '-1' &&
+                                valor != '-1 A' &&
+                                valor != '-1A' &&
+                                valor != '-1 a' &&
+                                valor != '-1a') {
+                              return 'Respuesta incorrecta';
+                            }
+
+                            return null;
+                          },
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su respuesta',
+                            border: OutlineInputBorder(),
+                            isDense: false,
+                            contentPadding: EdgeInsets.all(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          width: 118,
+                          height: 40,
+                          child: RaisedButton(
+                            child: Text(
+                              'Comprobar',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            color: Colors.blue[600],
+                            onPressed: () {
+                              if (_keyForm.currentState!.validate()) {
+                                print('Correcto');
+                                Navigator.pushNamed(context, "CorrectoFisica");
+                              } else {
+                                print("Ha ocurrido un error");
+                                Navigator.pushNamed(context, "Ejercicio2_LT");
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        botonFinal(context),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
-          customAppBar(context),
-          listaVertical(context),
-        ],
+        ),
       ),
     );
   }
 
-  Widget listaVertical(context) {
-    return Column(
-//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
+  Widget pregunta(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+      child: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Form(
+              key: _keyForm,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          '¿Que función ayudará al mecánico?',
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(
+                              color: Color.fromRGBO(0, 0, 0, 1),
+                              fontFamily: 'Red Hat Text',
+                              fontSize: 20,
+                              letterSpacing: -0.44,
+                              fontWeight: FontWeight.normal,
+                              height: 1.63),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        TextFormField(
+                          validator: (valor) {
+                            if (valor!.isEmpty) {
+                              return 'numero vacio';
+                            }
 
-      children: <Widget>[
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
-        ),
-        SizedBox(
-          height: 583,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
-              barra(context),
-              //formula(context),
-              cuerpo(context),
-              botonFinal(context),
-            ],
+                            if (valor != 'y=5' &&
+                                valor != 'y = 5' &&
+                                valor != 'Y = 5' &&
+                                valor != 'Y=5') {
+                              return 'Respuesta incorrecta';
+                            }
+
+                            return null;
+                          },
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su respuesta',
+                            border: OutlineInputBorder(),
+                            isDense: false,
+                            contentPadding: EdgeInsets.all(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          width: 118,
+                          height: 40,
+                          child: RaisedButton(
+                            child: Text(
+                              'Comprobar',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            color: Colors.blue[600],
+                            onPressed: () {
+                              if (_keyForm.currentState!.validate()) {
+                                print('Correcto');
+                                Navigator.pushNamed(context, "correcto_SR");
+                              } else {
+                                print("Ha ocurrido un error");
+                                Navigator.pushNamed(context, "incorrecto_SR");
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
-      ],
+      ),
     );
   }
 

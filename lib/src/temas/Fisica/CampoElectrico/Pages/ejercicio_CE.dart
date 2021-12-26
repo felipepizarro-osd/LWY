@@ -4,45 +4,116 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ejercicio_CE extends StatelessWidget {
-  const ejercicio_CE({Key? key}) : super(key: key);
+  late String respuesta;
+  final _keyForm = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 26,
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Form(
+              key: _keyForm,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  customAppBar(
+                    context,
+                  ),
+                  barra(
+                    context,
+                  ),
+                  cuerpo(context),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          ' ¿Cuál es entonces, la intensidad del campo en P?',
+                          textAlign: TextAlign.justify,
+                          style: GoogleFonts.redHatDisplay(
+                            fontSize: 22,
+                            // fontWeight: FontWeight.bold,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        TextFormField(
+                          validator: (valor) {
+                            if (valor!.isEmpty) {
+                              return 'numero vacio';
+                            }
+
+                            if (valor != '7.5*10^-2 N' &&
+                                valor != '7,5*10^-2 N' &&
+                                valor != '7,5*10^-2N' &&
+                                valor != '7.5*10^-2N' &&
+                                valor != '7.5x10^-2 N' &&
+                                valor != '7.5x10^-2' &&
+                                valor != '7,5*10^-2') {
+                              return 'Respuesta incorrecta';
+                            }
+
+                            return null;
+                          },
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su respuesta',
+                            border: OutlineInputBorder(),
+                            isDense: false,
+                            contentPadding: EdgeInsets.all(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          width: 118,
+                          height: 40,
+                          child: RaisedButton(
+                            child: Text(
+                              'Comprobar',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            color: Colors.blue[600],
+                            onPressed: () {
+                              if (_keyForm.currentState!.validate()) {
+                                print('Correcto');
+                                Navigator.pushNamed(context, "CorrectoFisica");
+                              } else {
+                                print("Ha ocurrido un error");
+                                Navigator.pushNamed(
+                                    context, "ej2campoElectrico");
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        botonFinal(context),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
-          customAppBar(context),
-          listaVertical(context),
-        ],
+        ),
       ),
-    );
-  }
-
-  Widget listaVertical(context) {
-    return Column(
-//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
-
-      children: <Widget>[
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
-        ),
-        SizedBox(
-          height: 583,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
-              barra(context),
-              //formula(context),
-              cuerpo(context),
-              botonFinal(context),
-            ],
-          ),
-        ),
-      ],
     );
   }
 
@@ -98,7 +169,7 @@ class ejercicio_CE extends StatelessWidget {
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Dada la imagen, y asumiendo que se coloca una carga q = 2*10^-7 C, y en ella actúa una fuerza F= 5*10^-2N, ¿Cuál es entonces, la intensidad del campo en P?\n',
+            'Dada la imagen, y asumiendo que se coloca una carga q = 2*10^-7 C, y en ella actúa una fuerza F= 5*10^-2N\n',
             style: GoogleFonts.redHatDisplay(
               fontSize: 18,
               letterSpacing: 1.2,
