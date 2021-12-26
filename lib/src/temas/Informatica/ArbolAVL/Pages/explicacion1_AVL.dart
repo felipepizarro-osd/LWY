@@ -126,7 +126,7 @@ Widget customAppBar1(BuildContext context) {
 
 //lanzamientos de paginas
 launchURL1() async {
-  const url = 'https://replit.com/join/doomeykxes-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/AVL-Tree-C19S#AVLClass.java';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -135,7 +135,7 @@ launchURL1() async {
 }
 
 launchURL2() async {
-  const url = 'https://replit.com/join/kilfpyscxe-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/AVL-Tree-2#main.py';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -144,7 +144,7 @@ launchURL2() async {
 }
 
 launchURL3() async {
-  const url = 'https://replit.com/join/tftlclqxhp-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/AVL-Tree-Cpp';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

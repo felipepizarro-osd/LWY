@@ -108,7 +108,7 @@ Widget customAppBar1(BuildContext context) {
 
 //lanzamientos de paginas
 launchURL1() async {
-  const url = 'https://replit.com/join/ezzppectvh-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/Circulares-list#Main.java';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -117,7 +117,7 @@ launchURL1() async {
 }
 
 launchURL2() async {
-  const url = 'https://replit.com/join/yskrmyjgul-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/Circle-List';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -126,7 +126,7 @@ launchURL2() async {
 }
 
 launchURL3() async {
-  const url = 'https://replit.com/join/osigxbgrcn-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/Array-Circle#main.cpp';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

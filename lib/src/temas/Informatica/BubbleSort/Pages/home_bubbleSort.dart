@@ -126,7 +126,7 @@ Widget customAppBar1(BuildContext context) {
 
 //lanzamientos de paginas
 launchURL1() async {
-  const url = 'https://replit.com/join/qttaqgvsou-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/Bubble-sort-2#Main.java';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -135,7 +135,7 @@ launchURL1() async {
 }
 
 launchURL2() async {
-  const url = 'https://replit.com/join/rxszzxdplp-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/Bubble-sort-1#main.py';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -144,7 +144,7 @@ launchURL2() async {
 }
 
 launchURL3() async {
-  const url = 'https://replit.com/join/tayjldohhn-felipepizarroos';
+  const url = 'https://replit.com/@felipepizarroos/Bubble-sort#main.cpp';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
