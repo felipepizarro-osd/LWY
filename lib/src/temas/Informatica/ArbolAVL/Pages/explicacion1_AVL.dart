@@ -188,7 +188,7 @@ Widget botonFinal(BuildContext context) {
             TextButton(
               child: const Icon(Icons.arrow_forward),
               onPressed: () {
-                Navigator.pushNamed(context, "informatica"); //next
+                Navigator.pushNamed(context, "listas"); //next
               },
             ),
           ],
