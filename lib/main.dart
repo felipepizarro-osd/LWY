@@ -41,9 +41,13 @@ import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio2_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
 import 'src/temas/Fisica/correctoFisica.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/correcto_2derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_Derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/ejercicio_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion1_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion2_2derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/incorrecto_2derivada.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/correcto_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
@@ -109,11 +113,10 @@ class MyApp extends StatelessWidget {
         //Solido de Revolucion
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
-        "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
+        "ejSolidoRevolucion": (_) => ejercicio_SR(),
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
         "explicacion_SR": (_) => const Ejemplo2_SR(),
-
         "back2_SR": (_) => const home_solido(),
         "vidaCotidiana": (_) => const Explicacion3_SR(),
         "correcto_SR": (_) => const correcto_SR(),
@@ -134,7 +137,10 @@ class MyApp extends StatelessWidget {
         "next1_2derivada": (_) => Explicacion2_2derivada(),
         "back1_2derivada": (_) => home_segundaDerivada(),
         "ejemDerivada": (_) => ejemplo_derivada(),
-
+        "ejemsegundaDerivada" : (_) => ejemplo_2derivada(),
+        "ejsegundaDerivada": (_) => ejercicio_2derivada(),
+        "correcto_2derivada": (_) => const correcto_2derivada(),
+        "incorrecto_2derivada": (_) => const incorrecto_2derivada(),        
         //fin de MATEMATICAS________________________________________________________
 
         //FISICA________________________________________________________
@@ -151,9 +157,9 @@ class MyApp extends StatelessWidget {
         //nodos
         "Explicacion1_LN": (_) => const Explicacion1_LN(),
         "Ejemplo1_LN": (_) => const Ejemplo1_LN(),
-        "Ejercicio1_LN": (_) => Ejercicio1_LN(),
-        "Ejercicio2_LN": (_) => Ejercicio2_LN(),
-        //ley de las tensiones
+        "Ejercicio1_LN": (_) =>  Ejercicio1_LN(),
+        "Ejercicio2_LN": (_) => const Ejercicio2_LN(),
+        //ley de las tensionesflutt
         "hometensiones": (_) => const Home_LT(),
         "Explicacion1_LT": (_) => const Explicacion1_LT(),
         "Ejemplo1_LT": (_) => const Ejemplo1_LT(),
@@ -180,9 +186,6 @@ class MyApp extends StatelessWidget {
 
         "back_CE": (_) => const home_campoElectrico(),
 
-        "ejemplo_CE": (_) => const Ejemplo1_NQ(),
-        "ejercicio_CE": (_) => const Ejercicio1_NQ(),
-
         //fin de FISICA________________________________________________________
 
         //QUIMICA________________________________________________________
@@ -204,7 +207,7 @@ class MyApp extends StatelessWidget {
         "back3_NQ": (_) => const homeNomenclatura(),
 
         "ejemplo1_NQ": (_) => const Ejemplo1_NQ(),
-        "ejercicio1_NQ": (_) => const Ejercicio1_NQ(),
+        "ejercicio1_NQ": (_) => ejercicio_NQ(),
         "homeNQ": (_) => const homeNomenclatura(),
 
         //Equilibrio quimico

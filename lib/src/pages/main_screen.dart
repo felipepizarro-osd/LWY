@@ -302,7 +302,7 @@ Widget Quimica (BuildContext context){
                   ),
                   Row(
                     children: <Widget>[
-                      const SizedBox(height: 105, width: 70),
+                      const SizedBox(height: 105, width: 90),
       // Figma Flutter Generator H6Widget - TEXT
                       Text('Química', textAlign: TextAlign.left, style: TextStyle(
                         color: Color.fromRGBO(25, 25, 29, 1),
