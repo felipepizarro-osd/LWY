@@ -1,19 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/ejemplo_CE.dart';
-import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/explicacion_CE.dart';
-import 'package:flutter_application_2/src/temas/Fisica/CampoElectrico/Pages/home_campoE.dart';
-import 'package:flutter_application_2/src/temas/Fisica/LeyCoulomb/Pages/home_leyCoulomb.dart';
-import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
-import 'package:flutter_application_2/src/temas/Informatica/ArbolAVL/Pages/explicacion1_AVL.dart';
-import 'package:flutter_application_2/src/temas/Informatica/BubbleSort/Pages/home_bubbleSort.dart';
-import 'package:flutter_application_2/src/temas/Informatica/Listas/Pages/home_listas.dart';
-import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
-import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/ejercicio1_SR.dart';
-import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
-import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
-import 'package:flutter_application_2/src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
-import 'package:flutter_application_2/src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
-import 'package:flutter_application_2/src/temas/quimica/LeyCharles/Pages/explicacion1_LC.dart';
 import 'src/pages/pages.dart';
 import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
@@ -21,13 +6,17 @@ import 'src/pages/home_quimica.dart';
 import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/ejemplo_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio2_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/explicacion_CE.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/home_campoE.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Aplicacion1_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Ejemplo1_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Ejercicio1_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Ejercicio2_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Explicacion1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/home_leyCoulomb.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/Aplicacion1_LK.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejemplo1_LN.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejercicio1_LN.dart';
@@ -40,25 +29,31 @@ import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio2_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/home_leyKirchoff.dart';
 import 'src/temas/Fisica/correctoFisica.dart';
-import 'src/temas/matematica/SegundaDerivada/Pages/correcto_2derivada.dart';
-import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_2derivada.dart';
+import 'src/temas/Informatica/ArbolAVL/Pages/explicacion1_AVL.dart';
+import 'src/temas/Informatica/BubbleSort/Pages/home_bubbleSort.dart';
+import 'src/temas/Informatica/Listas/Pages/home_listas.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_Derivada.dart';
-import 'src/temas/matematica/SegundaDerivada/Pages/ejercicio_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion1_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion2_2derivada.dart';
-import 'src/temas/matematica/SegundaDerivada/Pages/incorrecto_2derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/correcto_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/incorrecto_SR.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/correcto_Sumas.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/ejemplo_sumas.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/explicacion1_sumas.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/explicacion2_sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/incorrecto_Sumas.dart';
+import 'src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
+import 'src/temas/quimica/LeyCharles/Pages/explicacion1_LC.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -113,10 +108,11 @@ class MyApp extends StatelessWidget {
         //Solido de Revolucion
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
-        "ejSolidoRevolucion": (_) => ejercicio_SR(),
+        "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
         "explicacion_SR": (_) => const Ejemplo2_SR(),
+
         "back2_SR": (_) => const home_solido(),
         "vidaCotidiana": (_) => const Explicacion3_SR(),
         "correcto_SR": (_) => const correcto_SR(),
@@ -137,10 +133,7 @@ class MyApp extends StatelessWidget {
         "next1_2derivada": (_) => Explicacion2_2derivada(),
         "back1_2derivada": (_) => home_segundaDerivada(),
         "ejemDerivada": (_) => ejemplo_derivada(),
-        "ejemsegundaDerivada" : (_) => ejemplo_2derivada(),
-        "ejsegundaDerivada": (_) => ejercicio_2derivada(),
-        "correcto_2derivada": (_) => const correcto_2derivada(),
-        "incorrecto_2derivada": (_) => const incorrecto_2derivada(),        
+
         //fin de MATEMATICAS________________________________________________________
 
         //FISICA________________________________________________________
@@ -157,9 +150,9 @@ class MyApp extends StatelessWidget {
         //nodos
         "Explicacion1_LN": (_) => const Explicacion1_LN(),
         "Ejemplo1_LN": (_) => const Ejemplo1_LN(),
-        "Ejercicio1_LN": (_) =>  Ejercicio1_LN(),
-        "Ejercicio2_LN": (_) => const Ejercicio2_LN(),
-        //ley de las tensionesflutt
+        "Ejercicio1_LN": (_) => Ejercicio1_LN(),
+        "Ejercicio2_LN": (_) => Ejercicio2_LN(),
+        //ley de las tensiones
         "hometensiones": (_) => const Home_LT(),
         "Explicacion1_LT": (_) => const Explicacion1_LT(),
         "Ejemplo1_LT": (_) => const Ejemplo1_LT(),
