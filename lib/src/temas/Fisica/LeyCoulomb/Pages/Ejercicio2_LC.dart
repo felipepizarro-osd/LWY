@@ -134,7 +134,7 @@ Widget cuerpo(BuildContext context) {
           ),
         ),
         Image.asset(
-          "assets/imgs/image15.png",
+          "assets/imgs/image115.png",
           width: 490,
           height: 170,
         ),
@@ -146,7 +146,7 @@ Widget cuerpo(BuildContext context) {
           ),
         ),
         Image.asset(
-          "assets/imgs/image16.png",
+          "assets/imgs/image116.png",
           width: 490,
           height: 170,
         ),
@@ -158,7 +158,7 @@ Widget cuerpo(BuildContext context) {
           ),
         ),
         Image.asset(
-          "assets/imgs/image17.png",
+          "assets/imgs/image117.png",
           width: 490,
           height: 170,
         ),
@@ -170,7 +170,7 @@ Widget cuerpo(BuildContext context) {
           ),
         ),
         Image.asset(
-          "assets/imgs/image18.png",
+          "assets/imgs/image118.png",
           width: 490,
           height: 170,
         ),
@@ -182,7 +182,7 @@ Widget cuerpo(BuildContext context) {
           ),
         ),
         Image.asset(
-          "assets/imgs/image19.png",
+          "assets/imgs/image119.png",
           width: 490,
           height: 170,
         ),
@@ -194,7 +194,7 @@ Widget cuerpo(BuildContext context) {
           ),
         ),
         Image.asset(
-          "assets/imgs/image20.png",
+          "assets/imgs/image120.png",
           width: 490,
           height: 170,
         ),
