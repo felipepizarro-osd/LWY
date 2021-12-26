@@ -10,19 +10,19 @@ class home_leyKirchoff extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           customAppBar(context),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           leynodos(context),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           leytensiones(context),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           aplicacion(context),
           botonFinal(context),
         ],
@@ -103,7 +103,7 @@ class home_leyKirchoff extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "explsegundaDerivada");
+                Navigator.pushNamed(context, "homenodos");
               },
             ),
           ],
@@ -162,7 +162,7 @@ class home_leyKirchoff extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "ejemsegundaDerivada");
+                Navigator.pushNamed(context, "hometensiones");
               },
             ),
           ],
@@ -221,7 +221,7 @@ class home_leyKirchoff extends StatelessWidget {
               minWidth: 293,
               height: 114,
               onPressed: () {
-                Navigator.pushNamed(context, "ejsegundaDerivada");
+                Navigator.pushNamed(context, "Aplicacion1_LK");
               },
             ),
           ],

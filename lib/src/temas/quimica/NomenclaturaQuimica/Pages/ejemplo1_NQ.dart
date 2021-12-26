@@ -74,7 +74,7 @@ class Ejemplo1_NQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "homeNQ");
                 },
               ),
               Text(
@@ -85,7 +85,6 @@ class Ejemplo1_NQ extends StatelessWidget {
               ),
             ],
           ),
-
         ],
       ),
     );

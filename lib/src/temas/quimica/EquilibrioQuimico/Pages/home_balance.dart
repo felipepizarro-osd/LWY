@@ -11,11 +11,17 @@ class EquilibrioQuimico extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           customAppBar(context),
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           Explicacion_balance(),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Ejemplos_balance(),
           SizedBox(height: 20),
           Ejercicios_balance(),
@@ -73,14 +79,10 @@ class EquilibrioQuimico extends StatelessWidget {
                 ),
               ),
             ],
-          ), 
-          //Botón Next   
-
+          ),
+          //Botón Next
         ],
       ),
     );
-  }    
-
-
-
+  }
 }

@@ -44,17 +44,15 @@ class CampoElectrico extends StatelessWidget {
               Text(
                 'Electromagnetismo',
                 style: GoogleFonts.redHatDisplay(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromRGBO(58, 58, 68, 1)),
+                    fontSize: 14, color: const Color.fromRGBO(58, 58, 68, 1)),
               ),
             ],
           ),
         ),
         MaterialButton(
           elevation: 10,
-          minWidth: 154,
-          height: 136,
+          minWidth: 170,
+          height: 140,
           onPressed: () {
             Navigator.pushNamed(context, "campoE");
           },
@@ -62,8 +60,4 @@ class CampoElectrico extends StatelessWidget {
       ],
     );
   }
-
-
-
-  
 }

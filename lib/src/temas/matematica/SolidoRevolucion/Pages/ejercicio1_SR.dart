@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print, file_names
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print, file_names, dead_code
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -84,13 +84,11 @@ class Ejercicio1_SR extends StatelessWidget {
                             onPressed: () {
                               if (_keyForm.currentState!.validate()) {
                                 print('Correcto');
-                                //explicacion1(context);
-                                //Navigator.pushNamed(context, "chupaloCarlo");
+                                Navigator.pushNamed(context, "correcto_SR");
 
                               } else {
                                 print("Ha ocurrido un error");
-
-                                //Navigator.pushNamed(context, "chupaloCarlo");
+                                Navigator.pushNamed(context, "incorrecto_SR");
 
                               }
                             },
@@ -110,90 +108,6 @@ class Ejercicio1_SR extends StatelessWidget {
       ),
     );
   }
-
-Pregunta(BuildContext context, GlobalKey<FormState> _keyForm, ) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Form(
-            key: _keyForm,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: 251,
-                  padding: EdgeInsets.all(15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-//                      SizedBox(height: 20,),
-                      TextFormField(
-                        validator: (valor) {
-                          if (valor!.isEmpty) {
-                            return 'numero vacio';
-                          }
-
-                          if (valor != '5') {
-                            return 'numero invalido';
-                          }
-
-                          return null;
-                        },
-                        keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
-//                            icon: Icon(Icons.calendar_view_day),
-                          labelText: 'Ingrese su Respuesta',
-                          border: OutlineInputBorder(),
-                          isDense: false,
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-//                      SizedBox(height: 20,),
-
-                    ],
-                  ),
-                ),
-                // 
-                
-
-              ],
-            ),            
-
-
-          ),  
-          Container(
-            width: 118,
-            height: 40,
-            child: RaisedButton(
-              child: Text(
-                'Comprobar',
-                style:
-                    TextStyle(color: Colors.white, fontSize: 16),
-              ),
-              color: Colors.blue[600],
-              onPressed: () {
-                if (_keyForm.currentState!.validate()) {
-                  // ignore: avoid_print
-                  print('Respuesta Correcta');
-                  //Navigator.pushNamed(context, "chupaloCarlo");
-
-                } else {
-                  print("Ingrese una respuesta válida. ");
-
-                  //Navigator.pushNamed(context, "chupaloCarlo");
-
-                }
-              },
-            ),
-          ),                  
-
-        ],
-      ),
-    );  
-
-}
 
   Widget barra(context) {
     return Padding(

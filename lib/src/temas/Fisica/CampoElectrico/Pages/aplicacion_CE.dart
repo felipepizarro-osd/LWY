@@ -12,7 +12,6 @@ class aplicacion_CE extends StatelessWidget {
         children: <Widget>[
           customAppBar(context),
           this.listaVertical(context),
-
         ],
       ),
     );
@@ -39,14 +38,13 @@ class aplicacion_CE extends StatelessWidget {
               foto(context),
               //SizedBox(height: 10),
 
-              botonFinal(context),              
-
+              botonFinal(context),
             ],
           ),
         ),
       ],
     );
-  }  
+  }
 
   Widget customAppBar(BuildContext context) {
     return Padding(
@@ -78,9 +76,11 @@ class aplicacion_CE extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-
-          Image.asset('assets/imgs/fisica/foto2.png',height: 235,width: 382,),
-
+          Image.asset(
+            'assets/imgs/fisica/foto2.png',
+            height: 235,
+            width: 382,
+          ),
         ],
       ),
     );
@@ -102,7 +102,7 @@ class aplicacion_CE extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center ,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
@@ -116,7 +116,6 @@ class aplicacion_CE extends StatelessWidget {
                 fontWeight: FontWeight.normal,
                 height: 2.2),
           ),
-         
         ],
       ),
     );
@@ -134,7 +133,7 @@ class aplicacion_CE extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "back_CE");
                 },
               ),
               Text(
@@ -145,7 +144,6 @@ class aplicacion_CE extends StatelessWidget {
               ),
             ],
           ),
-          
         ],
       ),
     );

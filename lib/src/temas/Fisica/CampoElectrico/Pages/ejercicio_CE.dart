@@ -1,40 +1,140 @@
-
 // ignore_for_file: annotate_overrides, unnecessary_this, file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ejercicio_CE extends StatelessWidget {
-  const ejercicio_CE({Key? key}) : super(key: key);
+  late String respuesta;
+  final _keyForm = GlobalKey<FormState>();
 
+  @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          customAppBar(context),
-          barra(context),
-          SizedBox(height: 30),
-          explicacion1(context),
-          SizedBox(height: 46),
-          Pregunta(context),
-          SizedBox(height: 10),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Form(
+              key: _keyForm,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  customAppBar(
+                    context,
+                  ),
+                  barra(
+                    context,
+                  ),
+                  cuerpo(context),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          ' ¿Cuál es entonces, la intensidad del campo en P?',
+                          textAlign: TextAlign.justify,
+                          style: GoogleFonts.redHatDisplay(
+                            fontSize: 22,
+                            // fontWeight: FontWeight.bold,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        TextFormField(
+                          validator: (valor) {
+                            if (valor!.isEmpty) {
+                              return 'numero vacio';
+                            }
 
-          botonFinal(context),
-        ],
+                            if (valor != '7.5*10^-2 N' &&
+                                valor != '7,5*10^-2 N' &&
+                                valor != '7,5*10^-2N' &&
+                                valor != '7.5*10^-2N' &&
+                                valor != '7.5x10^-2 N' &&
+                                valor != '7.5x10^-2' &&
+                                valor != '7,5*10^-2') {
+                              return 'Respuesta incorrecta';
+                            }
+
+                            return null;
+                          },
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su respuesta',
+                            border: OutlineInputBorder(),
+                            isDense: false,
+                            contentPadding: EdgeInsets.all(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          width: 118,
+                          height: 40,
+                          child: RaisedButton(
+                            child: Text(
+                              'Comprobar',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            color: Colors.blue[600],
+                            onPressed: () {
+                              if (_keyForm.currentState!.validate()) {
+                                print('Correcto');
+                                Navigator.pushNamed(context, "CorrectoFisica");
+                              } else {
+                                print("Ha ocurrido un error");
+                                Navigator.pushNamed(
+                                    context, "ej2campoElectrico");
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        botonFinal(context),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
 
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/fisica/campoElectrico.png',
-            height: 56,
-            width: 212,
+            'assets/imgs/cajita.png',
+            height: 60,
+            width: 60,
+          ),
+          Text(
+            'Campo Electrico',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
           ),
           IconButton(
             iconSize: 43,
@@ -43,26 +143,6 @@ class ejercicio_CE extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, "perfil");
             },
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget Pregunta(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/respuesta.png',
-          ),
-          Image.asset(
-            'assets/imgs/comprueba.png',
-          ),
-          Image.asset(
-            'assets/imgs/borrar.png',
           ),
         ],
       ),
@@ -81,25 +161,25 @@ class ejercicio_CE extends StatelessWidget {
     );
   }
 
-  Widget explicacion1(context) {
+  Widget cuerpo(context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center ,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Para una carga puntual de Q = +1nC ubique un punto alejado de dicha carga aproximadamente a unos 150 cm de esta.\n-Estime el valor de la intensidad de campo y el potencial eléctricos, a través de las siguientes expresiones matemáticas escalares: .\n-Campo eléctrico: E=K Q/r^2',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 18,
-                letterSpacing: -0.4399999976158142,
-                fontWeight: FontWeight.normal,
-                height: 2.2),
+            'Dada la imagen, y asumiendo que se coloca una carga q = 2*10^-7 C, y en ella actúa una fuerza F= 5*10^-2N\n',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 18,
+              letterSpacing: 1.2,
+            ),
           ),
-         
+          Image.asset(
+            "assets/imgs/image34.png",
+            width: 450,
+            height: 250,
+          ),
         ],
       ),
     );
@@ -128,7 +208,6 @@ class ejercicio_CE extends StatelessWidget {
               ),
             ],
           ),
-          
         ],
       ),
     );

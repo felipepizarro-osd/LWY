@@ -21,11 +21,40 @@ import 'src/pages/home_quimica.dart';
 import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio2_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Aplicacion1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Ejemplo1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Ejercicio1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Ejercicio2_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Explicacion1_LC.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/Aplicacion1_LK.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejemplo1_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejercicio1_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejercicio2_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Explicacion1_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/componentes/ejercicios.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/homenodos.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejemplo1_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio1_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio2_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
+import 'src/temas/Fisica/correctoFisica.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_Derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/explicacion1_2derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/explicacion2_2derivada.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/correcto_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/incorrecto_SR.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/correcto_Sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/ejemplo_sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/explicacion1_sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/explicacion2_sumas.dart';
+import 'src/temas/matematica/SumasRiemann/Pages/incorrecto_Sumas.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -81,22 +110,30 @@ class MyApp extends StatelessWidget {
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
         "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
-
-        "explSumasRiemann": (_) => Practica2(),
-
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
-        //"next2_SR": (_) => const Ejemplo2_SR(),
+        "explicacion_SR": (_) => const Ejemplo2_SR(),
 
         "back2_SR": (_) => const home_solido(),
         "vidaCotidiana": (_) => const Explicacion3_SR(),
-
-        //"ejemSolidoRevolucion": (_) => const Ejemplo_CE(),
-        //"ejSolidorRevolucion": (_) => const ejercicio_CE(),
+        "correcto_SR": (_) => const correcto_SR(),
+        "incorrecto_SR": (_) => const incorrecto_SR(),
 
         //Sumas de Riemann
 
+        "explSumasRiemann": (_) => Explicacion1_sumas(),
+        "next1_sumas": (_) => Explicacion2_sumas(),
+        "back1_sumas": (_) => home_sumas(),
+        "ejemSumasRiemann": (_) => Ejemplo_sumas(),
+        "correcto_sumas": (_) => const correcto_sumas(),
+        "incorrecto_sumas": (_) => const incorrecto_sumas(),
+
         //Criterio de la segunda derivada
+
+        "explsegundaDerivada": (_) => Explicacion1_2derivada(),
+        "next1_2derivada": (_) => Explicacion2_2derivada(),
+        "back1_2derivada": (_) => home_segundaDerivada(),
+        "ejemDerivada": (_) => ejemplo_derivada(),
 
         //fin de MATEMATICAS________________________________________________________
 
@@ -104,17 +141,41 @@ class MyApp extends StatelessWidget {
         "back_fisica": (_) => const FisicaHome(),
         "campoE": (_) => home_campoElectrico(),
         "leyKirchoff": (_) => home_leyKirchoff(),
+        "CorrectoFisica": (_) => CorrectoFisica(),
         "leyCoulomb": (_) => home_leyCoulomb(),
+        //kirchooff
+        "leynodos": (_) => const EjerciciosLN(),
+        "homeLK": (_) => const home_leyKirchoff(),
+        "homenodos": (_) => const homeleynodos(),
+        "Aplicacion1_LK": (_) => const Aplicacion1_LK(),
+        //nodos
+        "Explicacion1_LN": (_) => const Explicacion1_LN(),
+        "Ejemplo1_LN": (_) => const Ejemplo1_LN(),
+        "Ejercicio1_LN": (_) => Ejercicio1_LN(),
+        "Ejercicio2_LN": (_) => Ejercicio2_LN(),
+        //ley de las tensiones
+        "hometensiones": (_) => const Home_LT(),
+        "Explicacion1_LT": (_) => const Explicacion1_LT(),
+        "Ejemplo1_LT": (_) => const Ejemplo1_LT(),
+        "Ejercicio1_LT": (_) => Ejercicio1_LT(),
+        "Ejercicio2_LT": (_) => const Ejercicio2_LT(),
+        //ley de coulomb
+        "homeLC": (_) => const home_leyCoulomb(),
+        "Aplicacion1_LCo": (_) => const Aplicacion1_LCo(),
+        "Ejercicio1_LCo": (_) => Ejercicio1_LCo(),
+        "Ejercicio2_LCo": (_) => const Ejercicio2_LCo(),
+        "Ejemplo1_LCo": (_) => const Ejemplo1_LCo(),
+        "Explicacion1_LCo": (_) => const Explicacion1_LCo(),
 
-        //Leyes de Kirchoff
         //"explicacion1_NQ": (_) => const Explicacion1_NQ(),
 
         //Ley de Coulomb
-
+        // "Ejercicio1_LC": (_) => const Ejercicio1_LC(),
         //Campo Electrico
         "explcampoElectrico": (_) => const Explicacion_CE(),
         "ejemcampoElectrico": (_) => const Ejemplo_CE(),
-        "ejcampoElectrico": (_) => const ejercicio_CE(),
+        "ejcampoElectrico": (_) => ejercicio_CE(),
+        "ej2campoElectrico": (_) => const ejercicio2_CE(),
         "apcampoElectrico": (_) => const aplicacion_CE(),
 
         "back_CE": (_) => const home_campoElectrico(),

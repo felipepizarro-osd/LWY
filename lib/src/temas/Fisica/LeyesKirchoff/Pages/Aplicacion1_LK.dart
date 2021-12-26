@@ -3,15 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion1_LK extends StatelessWidget {
-  const Explicacion1_LK({Key? key}) : super(key: key);
+class Aplicacion1_LK extends StatelessWidget {
+  const Aplicacion1_LK({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           customAppBar(context),
@@ -25,14 +25,22 @@ class Explicacion1_LK extends StatelessWidget {
 
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/nomenclatura.png',
-            height: 56,
-            width: 230,
+            'assets/imgs/cajita.png',
+            height: 60,
+            width: 60,
+          ),
+          Text(
+            'Leyes de kirchhoff',
+            style: GoogleFonts.redHatDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
           ),
           IconButton(
             iconSize: 43,
@@ -53,7 +61,7 @@ class Explicacion1_LK extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/explicacion1_NQ.png'),
+          Image.asset('assets/imgs/aplicacionLK.png'),
         ],
       ),
     );
@@ -61,7 +69,7 @@ class Explicacion1_LK extends StatelessWidget {
 
   Widget botonFinal(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -71,7 +79,7 @@ class Explicacion1_LK extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_NQ");
+                  Navigator.pushNamed(context, "homeLK");
                 },
               ),
               Text(
@@ -82,23 +90,6 @@ class Explicacion1_LK extends StatelessWidget {
               ),
             ],
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "explicacion2_NQ");
-                },
-              ),
-            ],
-          )
         ],
       ),
     );
@@ -106,21 +97,22 @@ class Explicacion1_LK extends StatelessWidget {
 
   Widget cuerpo(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Se llama nomenclatura química a un sistema de reglas que permite dar nombre a los diferentes compuestos químico según el tipo y número de elementos que los componen. La nomenclaturan permite identificar, clasificar y organizar los compuestos químicos.',
+            'Permiten calcular corrientes, voltajes y resistencias en circuitos eléctricos, para calcular consumos de energía, calibración , y normatividad de cables y componentes eléctricos.',
             style: GoogleFonts.redHatDisplay(
-              fontSize: 18,
+              fontSize: 20,
               letterSpacing: 1.2,
             ),
           ),
+          const SizedBox(height: 45),
           Image.asset(
-            "assets/imgs/image24.png",
+            "assets/imgs/image54.png",
             width: 500,
-            height: 170,
+            height: 200,
           ),
         ],
       ),
