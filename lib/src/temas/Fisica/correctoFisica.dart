@@ -1,49 +1,25 @@
-// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class correcto_SR extends StatelessWidget {
-  const correcto_SR({Key? key}) : super(key: key);
+class CorrectoFisica extends StatelessWidget {
+  const CorrectoFisica({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
           SizedBox(
-            height: 20,
+            height: 120,
           ),
-          customAppBar(context),
           respuesta(context),
           foto(context),
           SizedBox(
-            height: 110,
+            height: 120,
           ),
           botonFinal(context),
-        ],
-      ),
-    );
-  }
-
-  Widget customAppBar(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/matematicas/solidoRevolucion.png',
-            height: 56,
-            width: 212,
-          ),
-          IconButton(
-            iconSize: 43,
-            icon: Image.network(
-                'https://lh3.googleusercontent.com/-TG6ztsHV91s/YYIQpvM2P6I/AAAAAAAAAA4/_Yk-veTi2FsT0lysAtNjwnhX3BaBkCs3QCLcBGAsYHQ/Userpic.png'),
-            onPressed: () {
-              Navigator.pushNamed(context, "perfil");
-            },
-          ),
         ],
       ),
     );
@@ -104,7 +80,7 @@ class correcto_SR extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_SR");
+                  Navigator.pushNamed(context, "back_fisica");
                 },
               ),
               Text(

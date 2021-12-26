@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion2_LN extends StatelessWidget {
-  const Explicacion2_LN({Key? key}) : super(key: key);
+class Ejercicio2_LN extends StatelessWidget {
+  const Ejercicio2_LN({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

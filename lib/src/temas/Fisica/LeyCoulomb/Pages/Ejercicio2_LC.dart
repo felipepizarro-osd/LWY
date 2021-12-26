@@ -197,7 +197,7 @@ Widget cuerpo(BuildContext context) {
           "assets/imgs/image20.png",
           width: 490,
           height: 170,
-        )
+        ),
       ],
     ),
   );

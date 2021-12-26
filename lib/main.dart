@@ -23,10 +23,12 @@ import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Aplicacion1_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Ejemplo1_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Ejercicio1_LC.dart';
+import 'src/temas/Fisica/LeyCoulomb/Pages/Ejercicio2_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Explicacion1_LC.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/Aplicacion1_LK.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejemplo1_LN.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejercicio1_LN.dart';
+import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Ejercicio2_LN.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/Explicacion1_LN.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/componentes/ejercicios.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyNodos/homenodos.dart';
@@ -35,6 +37,7 @@ import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio2_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
+import 'src/temas/Fisica/correctoFisica.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_Derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion1_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion2_2derivada.dart';
@@ -134,7 +137,7 @@ class MyApp extends StatelessWidget {
         "back_fisica": (_) => const FisicaHome(),
         "campoE": (_) => home_campoElectrico(),
         "leyKirchoff": (_) => home_leyKirchoff(),
-
+        "CorrectoFisica": (_) => CorrectoFisica(),
         "leyCoulomb": (_) => home_leyCoulomb(),
         //kirchooff
         "leynodos": (_) => const EjerciciosLN(),
@@ -144,17 +147,19 @@ class MyApp extends StatelessWidget {
         //nodos
         "Explicacion1_LN": (_) => const Explicacion1_LN(),
         "Ejemplo1_LN": (_) => const Ejemplo1_LN(),
-        "Ejercicio1_LN": (_) => const Ejercicio1_LN(),
+        "Ejercicio1_LN": (_) => Ejercicio1_LN(),
+        "Ejercicio2_LN": (_) => Ejercicio2_LN(),
         //ley de las tensiones
         "hometensiones": (_) => const Home_LT(),
         "Explicacion1_LT": (_) => const Explicacion1_LT(),
         "Ejemplo1_LT": (_) => const Ejemplo1_LT(),
-        "Ejercicio1_LT": (_) => const Ejercicio1_LT(),
+        "Ejercicio1_LT": (_) => Ejercicio1_LT(),
         "Ejercicio2_LT": (_) => const Ejercicio2_LT(),
         //ley de coulomb
         "homeLC": (_) => const home_leyCoulomb(),
         "Aplicacion1_LCo": (_) => const Aplicacion1_LCo(),
-        "Ejercicio1_LCo": (_) => const Ejercicio1_LCo(),
+        "Ejercicio1_LCo": (_) => Ejercicio1_LCo(),
+        "Ejercicio2_LCo": (_) => const Ejercicio2_LCo(),
         "Ejemplo1_LCo": (_) => const Ejemplo1_LCo(),
         "Explicacion1_LCo": (_) => const Explicacion1_LCo(),
 
