@@ -66,7 +66,7 @@ Widget customAppBar(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Image.asset(
-          'assets/imgs/bubl.png',
+          'assets/imgs/BubbleHeader.png',
           height: 76,
           width: 230,
         ),

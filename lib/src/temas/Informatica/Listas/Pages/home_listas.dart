@@ -48,7 +48,7 @@ Widget customAppBar(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Image.asset(
-          'assets/imgs/ListasCircularesNav.png',
+          'assets/imgs/CircularesHeader.png',
           height: 76,
           width: 230,
         ),

@@ -51,7 +51,7 @@ Widget VideoConteiner(BuildContext context) {
     children: <Widget>[
       ChewieListItem(
         videoPlayerController: VideoPlayerController.asset(
-          'assets/imgs/videos/v2.mp4',
+          'assets/imgs/videos/Video_AVL.mp4',
         ),
         looping: true,
       ),
@@ -66,7 +66,7 @@ Widget customAppBar(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Image.asset(
-          'assets/imgs/arbolavlvideo.png',
+          'assets/imgs/arbolo.png',
           height: 76,
           width: 230,
         ),
