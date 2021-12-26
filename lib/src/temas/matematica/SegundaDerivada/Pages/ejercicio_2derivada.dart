@@ -81,11 +81,11 @@ class ejercicio_2derivada extends StatelessWidget {
                             onPressed: () {
                               if (_keyForm.currentState!.validate()) {
                                 print('Correcto');
-                                Navigator.pushNamed(context, "correcto_SR");
+                                Navigator.pushNamed(context, "correcto_2derivada");
 
                               } else {
                                 print("Ha ocurrido un error");
-                                Navigator.pushNamed(context, "incorrecto_SR");
+                                Navigator.pushNamed(context, "incorrecto_2derivada");
 
                               }
                             },
@@ -158,14 +158,12 @@ class ejercicio_2derivada extends StatelessWidget {
 
   Widget customAppBar(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/matematicas/solidoRevolucion.png',
-            height: 56,
-            width: 212,
+            'assets/imgs/matematicas/2derivada.png',
           ),
           IconButton(
             iconSize: 43,
@@ -192,7 +190,7 @@ class ejercicio_2derivada extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_SR");
+                  Navigator.pushNamed(context, "back1_2derivada");
                   
                 },
               ),

@@ -7,6 +7,7 @@ import 'package:flutter_application_2/src/temas/Fisica/LeyesKirchoff/Pages/home_
 import 'package:flutter_application_2/src/temas/Informatica/ArbolAVL/Pages/explicacion1_AVL.dart';
 import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/ejemplo_2derivada.dart';
 import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
+import 'package:flutter_application_2/src/temas/matematica/SegundaDerivada/Pages/incorrecto_2derivada.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/ejercicio1_SR.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
 import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Pages/home_solido.dart';
@@ -36,6 +37,7 @@ import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio2_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/correcto_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_Derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/ejercicio_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion1_2derivada.dart';
@@ -128,10 +130,12 @@ class MyApp extends StatelessWidget {
         "next1_2derivada": (_) => Explicacion2_2derivada(),
         "back1_2derivada": (_) => home_segundaDerivada(),
         "ejemDerivada": (_) => ejemplo_derivada(),
-
         "ejemsegundaDerivada" : (_) => ejemplo_2derivada(),
-
         "ejsegundaDerivada": (_) => ejercicio_2derivada(),
+        "correcto_2derivada": (_) => const correcto_2derivada(),
+        "incorrecto_2derivada": (_) => const incorrecto_2derivada(),        
+
+
 
         //fin de MATEMATICAS________________________________________________________
 
