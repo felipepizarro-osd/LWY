@@ -54,6 +54,7 @@ class ejemplo_2derivada extends StatelessWidget {
             children: <Widget>[
               barra(context),
               explicacion(context),
+              explicacion2(context),
               SizedBox(height: 10,),
               botonFinal(context),
             ],
@@ -124,6 +125,17 @@ class ejemplo_2derivada extends StatelessWidget {
           ),
           SizedBox(height: 10,),     
 
+        ],
+      ),
+    );
+  }
+
+  Widget explicacion2(context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 40),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[ 
           Text(
             ' · Calculamos la primera derivada.',
             textAlign: TextAlign.justify,
@@ -135,18 +147,12 @@ class ejemplo_2derivada extends StatelessWidget {
                 fontWeight: FontWeight.normal,
                 height: 1.5),
           ),          
-          SizedBox(height: 10,),           
-          
-                 
-
-          Image.asset(
-            'assets/imgs/matematicas/seg2.png',
-          ),
-
+          SizedBox(height: 10),
+          foto2(context),     
           SizedBox(height: 5),
 
           Text(
-            '- Encontramos sus intervalos',
+            ' · Calculamos los puntos críticos.',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0,0, 0, 1),
@@ -155,101 +161,74 @@ class ejemplo_2derivada extends StatelessWidget {
                 letterSpacing: -0.44,
                 fontWeight: FontWeight.normal,
                 height: 1.5),
-          ),
-          SizedBox(height: 5,),             
-
-          Image.asset(
-            'assets/imgs/matematicas/seg3.png',
-          ),
-
-          SizedBox(height: 5),
-
+          ),    
+          foto3(context),     
+          SizedBox(height: 5), 
           Text(
-            '- Los intervalos van a ser [0,4]',
+            ' · Calculamos la segunda derivada.',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0,0, 0, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 18,
+                fontSize: 20,
                 letterSpacing: -0.44,
-                fontWeight: FontWeight.bold,
-                height: 2),
-          ),
-          SizedBox(height: 5,),            
-
+                fontWeight: FontWeight.normal,
+                height: 1.5),
+          ),       
+          foto4(context)                                ,
+          SizedBox(height: 15,),
           Text(
-            '- Utilizaremos el método de los discos ',
+            ' · Evaluamos la segunda derivada en los puntos críticos',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0,0, 0, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 18,
+                fontSize: 20,
                 letterSpacing: -0.44,
-                fontWeight: FontWeight.bold,
-                height: 2),
-          ),
-          SizedBox(height: 15,),       
-
+                fontWeight: FontWeight.normal,
+                height: 1.5),
+          ),       
+          foto5(context),
+          SizedBox(height: 25,),
           Text(
-            'Fórmula del Método del Disco ',
+            'Por lo tanto, la función de la montaña rusa tiene un máximo local en x = 0 y un mínimo local en x = 2.',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 20,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.normal,
+                height: 1.5),
+          ),     
+          SizedBox(height: 15,)  ,
+          Text(
+            'Representación gráfica: ',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(255, 12, 12, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 18,
+                fontSize: 20,
                 letterSpacing: -0.44,
-                fontWeight: FontWeight.bold,
-                height: 2),
+                fontWeight: FontWeight.normal,
+                height: 1.5),
           ),
-          SizedBox(height: 10,),                 
-
-          Image.asset(
-            'assets/imgs/matematicas/sr4.png',
-          ),
-
-          Text(
-            '- Lo hacemos girar por el eje de las y, y usamos rectángulos horizontales.',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0,0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 18,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.bold,
-                height: 2),
-          ),
-          SizedBox(height: 10,),   
-
-          Image.asset(
-            'assets/imgs/matematicas/sr5.png',
-          ),
-
-          Text(
-            'Por lo tanto, el vólumen del sartén de cocina sería de 128/3 π',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0,0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 18,
-                letterSpacing: -0.44,
-                fontWeight: FontWeight.bold,
-                height: 2),
-          ),
+          foto6(context),
 
         ],
       ),
     );
-  }
+  }  
 
-  Widget barra2(BuildContext context) {
+  Widget foto2(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 70, vertical: 5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           //SizedBox(height: 25,),
           Image.asset(
-            'assets/imgs/matematicas/derivada1.png',
+            'assets/imgs/matematicas/seg2.png',
           ),
 
         ],
@@ -257,98 +236,69 @@ class ejemplo_2derivada extends StatelessWidget {
     );
   }
 
-  Widget explicacion2(context) {
+    Widget foto3(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+      padding: EdgeInsets.symmetric(horizontal: 70, vertical: 5),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
-          Text(
-            'La derivada de una función es una medida de la rapidez con la que cambia el valor de dicha función según cambie el valor de su variable independiente, es decir, la derivada nos indica el ritmo con el que dicha función crece,decrece o permanece constante cuando se producen cambios en la variable independiente.',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Text',
-                fontSize: 18,
-                letterSpacing: 0.44,
-                fontWeight: FontWeight.normal,
-                height: 1.55),
-          )
+          //SizedBox(height: 25,),
+          Image.asset(
+            'assets/imgs/matematicas/seg3.png',
+          ),
+
         ],
       ),
     );
-  }  
+  }
 
-  Widget ejemplo (BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        Stack(
-
-          alignment: AlignmentDirectional.bottomCenter,
-          children: <Widget>[
-            Container(
-            width: 173,
-            height: 57,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              //color de fondo
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 10),
-                Container(
-                  width: 158,
-                  height: 7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
-                    //color de la franja
-                    color: Color.fromRGBO(238, 153, 68, 1),
-                  ),
-                ),
-                Row(
-                  children: <Widget>[
-                    const SizedBox(height: 5, width: 15),
-                    Text(
-                      '    Ejemplos',
-                      style: GoogleFonts.redHatDisplay(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromRGBO(25, 25, 29, 1)),
-                          
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 2),
-
-                ],
-              ),
-            ),
-          MaterialButton(
-            elevation: 10,
-            minWidth: 173,
-            height: 57,
-            onPressed: () {
-              Navigator.pushNamed(context, "ejemDerivada");
-            },
+    Widget foto4(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 70, vertical: 5),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          //SizedBox(height: 25,),
+          Image.asset(
+            'assets/imgs/matematicas/seg4.png',
           ),
-            
-          ],
-          
-        ),
-        SizedBox(height: 20),
 
-
-
-
-      ],
+        ],
+      ),
     );
+  }
 
+    Widget foto5(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 70, vertical: 5),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          //SizedBox(height: 25,),
+          Image.asset(
+            'assets/imgs/matematicas/seg5.png',
+          ),
 
-  }  
+        ],
+      ),
+    );
+  }
+
+    Widget foto6(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 00, vertical: 5),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          //SizedBox(height: 25,),
+          Image.asset(
+            'assets/imgs/matematicas/seg6.png',
+          ),
+
+        ],
+      ),
+    );
+  } 
 
   Widget botonFinal(BuildContext context) {
     return Padding(

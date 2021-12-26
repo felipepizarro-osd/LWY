@@ -1,11 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print, file_names, dead_code
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ejercicio_SR extends StatelessWidget {
+class ejercicio_2derivada extends StatelessWidget {
   late String respuesta;
   final _keyForm = GlobalKey<FormState>();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +21,11 @@ class ejercicio_SR extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  customAppBar(
-                    context,
-                  ),
-                  barra(
-                    context,
-                  ),
+                  customAppBar(context,),
+                  barra(context,),
                   explicacion1(context),
-                  Image.asset('assets/imgs/matematicas/cilindro.png'),
-                  SizedBox(
-                    height: 5,
-                  ),
+                  SizedBox(height: 5,),
+
                   Container(
                     width: double.infinity,
                     padding: EdgeInsets.all(15),
@@ -40,35 +33,31 @@ class ejercicio_SR extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          '¿Que función ayudará al mecánico?',
+                          '¿Cuál es el máximo local?',
                           textAlign: TextAlign.justify,
                           style: TextStyle(
-                              color: Color.fromRGBO(0, 0, 0, 1),
+                              color: Color.fromRGBO(0,0,0,1),
                               fontFamily: 'Red Hat Text',
                               fontSize: 20,
                               letterSpacing: -0.44,
                               fontWeight: FontWeight.normal,
                               height: 1.63),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
+                        ),                         
+
+                        SizedBox(height: 30,),
                         TextFormField(
                           validator: (valor) {
                             if (valor!.isEmpty) {
                               return 'numero vacio';
                             }
 
-                            if (valor != 'y=5' &&
-                                valor != 'y = 5' &&
-                                valor != 'Y = 5' &&
-                                valor != 'Y=5') {
+                            if (valor != '1' ) {
                               return 'Respuesta incorrecta';
                             }
 
                             return null;
                           },
-                          keyboardType: TextInputType.text,
+                          keyboardType: TextInputType.number,
                           decoration: InputDecoration(
 //                            icon: Icon(Icons.calendar_view_day),
                             labelText: 'Ingrese su respuesta',
@@ -77,9 +66,8 @@ class ejercicio_SR extends StatelessWidget {
                             contentPadding: EdgeInsets.all(10),
                           ),
                         ),
-                        SizedBox(
-                          height: 30,
-                        ),
+                        
+                        SizedBox(height: 30,),
                         Container(
                           width: 118,
                           height: 40,
@@ -94,16 +82,17 @@ class ejercicio_SR extends StatelessWidget {
                               if (_keyForm.currentState!.validate()) {
                                 print('Correcto');
                                 Navigator.pushNamed(context, "correcto_SR");
+
                               } else {
                                 print("Ha ocurrido un error");
                                 Navigator.pushNamed(context, "incorrecto_SR");
+
                               }
                             },
                           ),
                         ),
-                        SizedBox(
-                          height: 30,
-                        ),
+                        SizedBox(height: 30,),
+
                         botonFinal(context),
                       ],
                     ),
@@ -123,7 +112,7 @@ class ejercicio_SR extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/matematicas/ejercicio_SR.png'),
+          Image.asset('assets/imgs/matematicas/desafio_2derivada.png'),
         ],
       ),
     );
@@ -136,25 +125,36 @@ class ejercicio_SR extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            'Un mecánico necesita encontrar la función para formar un rodillo de 5 cm de radio, de una de las máquinas en el área del transporte de lodo.',
+            'Dos alpinistas quieren escalar el Monte Everest, pero antes quieren conocer cual es el punto más alto de la montaña(máximo).',
             textAlign: TextAlign.justify,
             style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
+                color: Color.fromRGBO(0,0,0,1),
                 fontFamily: 'Red Hat Display',
                 fontSize: 22,
                 letterSpacing: -0.44,
                 fontWeight: FontWeight.normal,
                 height: 1.63),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          //Image.asset('assets/imgs/matematicas/cilindro.png'),
-          SizedBox(height: 20),
+          ),         
+          SizedBox(height: 20,),
+          Text(
+            'f(x) del Monte Everest:',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0,0,0,1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 22,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.normal,
+                height: 1.63),
+          ),           
+
+          //f(x) del Monte Everest:
+          Image.asset('assets/imgs/matematicas/fx_derivada.png'),
+
         ],
       ),
     );
-  }
+  } 
 
   Widget customAppBar(BuildContext context) {
     return Padding(
@@ -193,6 +193,7 @@ class ejercicio_SR extends StatelessWidget {
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
                   Navigator.pushNamed(context, "back2_SR");
+                  
                 },
               ),
               Text(
@@ -207,5 +208,6 @@ class ejercicio_SR extends StatelessWidget {
         ],
       ),
     );
-  }
+  }  
+
 }

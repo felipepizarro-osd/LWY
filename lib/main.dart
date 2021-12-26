@@ -37,6 +37,7 @@ import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Ejercicio2_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/Explicacion1_LT.dart';
 import 'src/temas/Fisica/LeyesKirchoff/Pages/LeyTensiones/home_lt.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/ejemplo_Derivada.dart';
+import 'src/temas/matematica/SegundaDerivada/Pages/ejercicio_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion1_2derivada.dart';
 import 'src/temas/matematica/SegundaDerivada/Pages/explicacion2_2derivada.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/correcto_SR.dart';
@@ -103,7 +104,7 @@ class MyApp extends StatelessWidget {
         //Solido de Revolucion
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
-        "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
+        "ejSolidoRevolucion": (_) => ejercicio_SR(),
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
         "explicacion_SR": (_) => const Ejemplo2_SR(),
@@ -129,6 +130,8 @@ class MyApp extends StatelessWidget {
         "ejemDerivada": (_) => ejemplo_derivada(),
 
         "ejemsegundaDerivada" : (_) => ejemplo_2derivada(),
+
+        "ejsegundaDerivada": (_) => ejercicio_2derivada(),
 
         //fin de MATEMATICAS________________________________________________________
 
