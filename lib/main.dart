@@ -41,6 +41,7 @@ import 'src/temas/matematica/SegundaDerivada/Pages/home_derivada2.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/correcto_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/ejemplo_SR.dart';
+import 'src/temas/matematica/SolidoRevolucion/Pages/ejercicio1_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion1_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2.2_SR.dart';
 import 'src/temas/matematica/SolidoRevolucion/Pages/explicacion2_SR.dart';
@@ -108,7 +109,7 @@ class MyApp extends StatelessWidget {
         //Solido de Revolucion
         "explSolidoRevolucion": (_) => const Explicacion1_SR(),
         "ejemSolidoRevolucion": (_) => const Ejemplo_SR(),
-        "ejSolidoRevolucion": (_) => Ejercicio1_SR(),
+        "ejSolidoRevolucion": (_) => ejercicio_SR(),
         "back1_SR": (_) => const home_solido(),
         "next1_SR": (_) => const Explicacion2_SR(),
         "explicacion_SR": (_) => const Ejemplo2_SR(),
