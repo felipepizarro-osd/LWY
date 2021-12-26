@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +11,7 @@ class Explicacion2_2derivada extends StatelessWidget {
       body: Column(
         children: <Widget>[
           customAppBar(context),
+          // ignore: unnecessary_this
           this.listaVertical(context),
           
         ],
@@ -53,12 +56,9 @@ class Explicacion2_2derivada extends StatelessWidget {
             scrollDirection: Axis.vertical,
             children: <Widget>[
               barra(context),
+              SizedBox(height: 15,),
               explicacion(context),
               barra2(context),
-              explicacion2(context),
-              SizedBox(height: 20,),
-              ejemplo(context),
-              SizedBox(height: 10,),
               botonFinal(context),
             ],
           ),
@@ -81,21 +81,21 @@ class Explicacion2_2derivada extends StatelessWidget {
 
   Widget explicacion(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Antes de dar a conocer el criterio de la segunda derivada debemos saber...',
+            'El criterio de la segunda derivada es un teorema o método de cálculo matemático en el que se utiliza la segunda derivada para efectuar una prueba correspondiente a los máximos y mínimos relativos de una función.',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Red Hat Text',
-                fontSize: 18,
+                fontSize: 24,
                 letterSpacing: 0.44,
                 fontWeight: FontWeight.normal,
-                height: 1.5),
+                height: 1.2),
           )
         ],
       ),
@@ -110,7 +110,7 @@ class Explicacion2_2derivada extends StatelessWidget {
         children: <Widget>[
           //SizedBox(height: 25,),
           Image.asset(
-            'assets/imgs/matematicas/derivada1.png',
+            'assets/imgs/matematicas/der5.png',
           ),
 
         ],
@@ -118,98 +118,6 @@ class Explicacion2_2derivada extends StatelessWidget {
     );
   }
 
-  Widget explicacion2(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
-          Text(
-            'La derivada de una función es una medida de la rapidez con la que cambia el valor de dicha función según cambie el valor de su variable independiente, es decir, la derivada nos indica el ritmo con el que dicha función crece,decrece o permanece constante cuando se producen cambios en la variable independiente.',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Text',
-                fontSize: 18,
-                letterSpacing: 0.44,
-                fontWeight: FontWeight.normal,
-                height: 1.55),
-          )
-        ],
-      ),
-    );
-  }  
-
-  Widget ejemplo (BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        Stack(
-
-          alignment: AlignmentDirectional.bottomCenter,
-          children: <Widget>[
-            Container(
-            width: 173,
-            height: 57,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              //color de fondo
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 10),
-                Container(
-                  width: 158,
-                  height: 7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
-                    //color de la franja
-                    color: Color.fromRGBO(238, 153, 68, 1),
-                  ),
-                ),
-                Row(
-                  children: <Widget>[
-                    const SizedBox(height: 5, width: 15),
-                    Text(
-                      '    Ejemplos',
-                      style: GoogleFonts.redHatDisplay(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromRGBO(25, 25, 29, 1)),
-                          
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 2),
-
-                ],
-              ),
-            ),
-          MaterialButton(
-            elevation: 10,
-            minWidth: 173,
-            height: 57,
-            onPressed: () {
-              Navigator.pushNamed(context, "ejemDerivada");
-            },
-          ),
-            
-          ],
-          
-        ),
-        SizedBox(height: 20),
-
-
-
-
-      ],
-    );
-
-
-  }  
 
   Widget botonFinal(BuildContext context) {
     return Padding(
@@ -234,23 +142,7 @@ class Explicacion2_2derivada extends StatelessWidget {
               ),
             ],
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "next1_2derivada");
-                },
-              ),
-            ],
-          )
+          
         ],
       ),
     );
