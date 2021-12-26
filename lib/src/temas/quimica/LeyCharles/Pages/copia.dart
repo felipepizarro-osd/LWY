@@ -1,31 +1,23 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Explicacion1_EQ extends StatelessWidget {
-  const Explicacion1_EQ({Key? key}) : super(key: key);
+class copia extends StatelessWidget {
+  const copia({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          SizedBox(
-            height: 20,
-          ),
           customAppBar(context),
-          SizedBox(
-            height: 0,
-          ),
-          barra(context),
 
+          barra(context),
           explicacion1(context),
-          SizedBox(height: 20),
-          AyB(context),
+          SizedBox(height: 140),
+          Pregunta(context),
+          //SizedBox(height: 30),
           botonFinal(context),
-          //Ejercicios_balance(),
-          //this.Botonera(context),
-          //customAppBar2(context),
         ],
       ),
     );
@@ -38,7 +30,7 @@ class Explicacion1_EQ extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/equilibrio.png',
+            'assets/imgs/leyCharles.png',
             height: 56,
             width: 212,
           ),
@@ -61,7 +53,7 @@ class Explicacion1_EQ extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('assets/imgs/explicacion1_EQ.png'),
+          Image.asset('assets/imgs/ejercicio_LC.png'),
         ],
       ),
     );
@@ -69,41 +61,41 @@ class Explicacion1_EQ extends StatelessWidget {
 
   Widget explicacion1(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 12),
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 35),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
           Text(
-            'Es el estado al que se llega al final\nde cualquier sistema químico.\nLa expresión matemática que \nrepresenta al Equilibrio Químico,\nse conoce como Ley de Acción de\nMasas. Para cualquier reacción:',
+            'El volumen inicial de una cierta cantidad de gas es de 200 mL a la temperatura de 293,15 K.\nCalcule el volumen del gas si la temperatura asciende a 363,15 K y la presión se mantiene constante. ',
             textAlign: TextAlign.justify,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Red Hat Display',
-                fontSize: 22,
+                fontSize: 19,
                 letterSpacing: -0.4399999976158142,
-                fontWeight: FontWeight.normal,
-                height: 2),
-          )
+                fontWeight: FontWeight.bold,
+                height: 1.9),
+          ),
         ],
       ),
     );
   }
 
-  Widget AyB(BuildContext context) {
+  Widget Pregunta(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/a.png',
+            'assets/imgs/respuesta.png',
           ),
           Image.asset(
-            'assets/imgs/+.png',
+            'assets/imgs/comprueba.png',
           ),
           Image.asset(
-            'assets/imgs/b.png',
+            'assets/imgs/borrar.png',
           ),
         ],
       ),
@@ -122,7 +114,7 @@ class Explicacion1_EQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back1_EQ");
+                  Navigator.pushNamed(context, "back1_LC");
                 },
               ),
               Text(
@@ -133,23 +125,6 @@ class Explicacion1_EQ extends StatelessWidget {
               ),
             ],
           ),
-          //Botón Next
-          Row(
-            children: <Widget>[
-              Text(
-                'Next',
-                style: GoogleFonts.arbutusSlab(
-                  fontSize: 20,
-                ),
-              ),
-              TextButton(
-                child: const Icon(Icons.arrow_forward),
-                onPressed: () {
-                  Navigator.pushNamed(context, "next1_EQ");
-                },
-              ),
-            ],
-          )
         ],
       ),
     );

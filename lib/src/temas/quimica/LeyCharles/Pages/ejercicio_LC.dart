@@ -1,23 +1,137 @@
-// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print, file_names, dead_code
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Ejercicio_LC extends StatelessWidget {
-  const Ejercicio_LC({Key? key}) : super(key: key);
+class ejercicio_LC extends StatelessWidget {
+  late String respuesta;
+  final _keyForm = GlobalKey<FormState>();
 
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: <Widget>[
-          customAppBar(context),
+    Size size = MediaQuery.of(context).size;
 
-          barra(context),
-          explicacion1(context),
-          SizedBox(height: 140),
-          Pregunta(context),
-          //SizedBox(height: 30),
-          botonFinal(context),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Form(
+              key: _keyForm,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  customAppBar(
+                    context,
+                  ),
+                  barra(
+                    context,
+                  ),
+                  explicacion1(context),
+                  SizedBox(
+                    height: 0,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 30,
+                        ),
+                        TextFormField(
+                          validator: (valor) {
+                            if (valor!.isEmpty) {
+                              return 'numero vacio';
+                            }
+
+                            if (valor != '0.25' && valor != '0,25') {
+                              return 'Respuesta incorrecta';
+                              return null;
+                            }
+
+                            
+                          },
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+//                            icon: Icon(Icons.calendar_view_day),
+                            labelText: 'Ingrese su respuesta',
+                            border: OutlineInputBorder(),
+                            isDense: false,
+                            contentPadding: EdgeInsets.all(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          width: 118,
+                          height: 40,
+                          child: RaisedButton(
+                            child: Text(
+                              'Comprobar',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            color: Colors.blue[600],
+                            onPressed: () {
+                              if (_keyForm.currentState!.validate()) {
+                                print('Correcto');
+                                Navigator.pushNamed(context, "correcto_LC");
+                              } else {
+                                print("Ha ocurrido un error");
+                                Navigator.pushNamed(context, "incorrecto_LC");
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        botonFinal(context),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget barra(context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Image.asset('assets/imgs/ejercicio_LeyC.png'),
+        ],
+      ),
+    );
+  }
+
+  Widget explicacion1(context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            'El volumen inicial de una cierta cantidad de gas es de 200 mL a la temperatura de 293,15 K.\nCalcule el volumen del gas si la temperatura asciende a 363,15 K y la presión se mantiene constante.',
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+                fontFamily: 'Red Hat Display',
+                fontSize: 20,
+                letterSpacing: -0.44,
+                fontWeight: FontWeight.normal,
+                height: 1.5),
+          ),       
         ],
       ),
     );
@@ -47,64 +161,9 @@ class Ejercicio_LC extends StatelessWidget {
     );
   }
 
-  Widget barra(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('assets/imgs/ejercicio_LC.png'),
-        ],
-      ),
-    );
-  }
-
-  Widget explicacion1(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 35),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          // Figma Flutter Generator EselestadoalquesellegaalfinaldecualquiersistemaqumicolaexpresinmatemticaquerepresentaalequilibrioqumicoseconocecomoleydeaccindemasasparacualquierreaccinWidget - TEXT
-          Text(
-            'El volumen inicial de una cierta cantidad de gas es de 200 mL a la temperatura de 293,15 K.\nCalcule el volumen del gas si la temperatura asciende a 363,15 K y la presión se mantiene constante. ',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Red Hat Display',
-                fontSize: 19,
-                letterSpacing: -0.4399999976158142,
-                fontWeight: FontWeight.bold,
-                height: 1.9),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget Pregunta(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Image.asset(
-            'assets/imgs/respuesta.png',
-          ),
-          Image.asset(
-            'assets/imgs/comprueba.png',
-          ),
-          Image.asset(
-            'assets/imgs/borrar.png',
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget botonFinal(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17.2),
+      padding: EdgeInsets.symmetric(horizontal: 0, vertical: 17.2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -125,6 +184,7 @@ class Ejercicio_LC extends StatelessWidget {
               ),
             ],
           ),
+          //Botón Next
         ],
       ),
     );

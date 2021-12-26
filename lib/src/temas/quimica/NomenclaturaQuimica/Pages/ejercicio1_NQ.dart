@@ -47,7 +47,7 @@ class ejercicio_NQ extends StatelessWidget {
                               return 'numero vacio';
                             }
 
-                            if (valor != 'oxido de magnesio') {
+                            if (valor != 'monoxido de magnesio' && valor != 'monóxido de magnesio' && valor != 'MONOXIDO DE MAGNESIO') {
                               return 'Respuesta incorrecta';
                             }
 
@@ -167,7 +167,7 @@ class ejercicio_NQ extends StatelessWidget {
               TextButton(
                 child: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushNamed(context, "back2_SR");
+                  Navigator.pushNamed(context, "back1_NQ");
                 },
               ),
               Text(

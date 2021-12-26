@@ -14,6 +14,9 @@ import 'package:flutter_application_2/src/temas/matematica/SolidoRevolucion/Page
 import 'package:flutter_application_2/src/temas/matematica/SumasRiemann/Pages/home_sumas.dart';
 import 'package:flutter_application_2/src/temas/quimica/EquilibrioQuimico/Pages/explicacion1_EQ.dart';
 import 'package:flutter_application_2/src/temas/quimica/LeyCharles/Pages/explicacion1_LC.dart';
+import 'package:flutter_application_2/src/temas/quimica/LeyCharles/Pages/incorrecto_LeyC.dart';
+import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/Pages/correcto_NQ.dart';
+import 'package:flutter_application_2/src/temas/quimica/NomenclaturaQuimica/Pages/incorrecto_NQ.dart';
 import 'src/pages/pages.dart';
 import 'src/pages/home_fisica.dart';
 import 'src/pages/home_matematica.dart';
@@ -59,6 +62,9 @@ import 'src/temas/matematica/SumasRiemann/Pages/ejemplo_sumas.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/explicacion1_sumas.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/explicacion2_sumas.dart';
 import 'src/temas/matematica/SumasRiemann/Pages/incorrecto_Sumas.dart';
+import 'src/temas/quimica/EquilibrioQuimico/Pages/correcto_EQ.dart';
+import 'src/temas/quimica/EquilibrioQuimico/Pages/incorrecto_EQ.dart';
+import 'src/temas/quimica/LeyCharles/Pages/correcto_LeyC.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejemplo1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/ejercicio1_NQ.dart';
 import 'src/temas/quimica/NomenclaturaQuimica/Pages/explicacion5_NQ.dart';
@@ -173,7 +179,6 @@ class MyApp extends StatelessWidget {
         "Ejemplo1_LCo": (_) => const Ejemplo1_LCo(),
         "Explicacion1_LCo": (_) => const Explicacion1_LCo(),
 
-        //"explicacion1_NQ": (_) => const Explicacion1_NQ(),
 
         //Ley de Coulomb
         // "Ejercicio1_LC": (_) => const Ejercicio1_LC(),
@@ -209,13 +214,17 @@ class MyApp extends StatelessWidget {
         "ejemplo1_NQ": (_) => const Ejemplo1_NQ(),
         "ejercicio1_NQ": (_) => ejercicio_NQ(),
         "homeNQ": (_) => const homeNomenclatura(),
+        "correcto_NQ": (_) => const correcto_NQ(),
+        "incorrecto_NQ": (_) => const incorrecto_NQ(),
+
+
 
         //Equilibrio quimico
         "explBalanceQuimico": (_) => const Explicacion1_EQ(),
 
         "ejemBalanceQuimico": (_) => const Ejemplo_EQ(),
 
-        "ejerciciosBalanceQuimico": (_) => const ejercicio_EQ(),
+        "ejerciciosBalanceQuimico": (_) => ejercicio_EQ(),
 
         "next1_EQ": (_) => Explicacion2_EQ(),
         "next2_EQ": (_) => Explicacion3_EQ(),
@@ -232,12 +241,15 @@ class MyApp extends StatelessWidget {
         "back7_EQ": (_) => const EquilibrioQuimico(),
         "back8_EQ": (_) => const EquilibrioQuimico(),
 
+        "correcto_EQ": (_) => const correcto_EQ(),
+        "incorrecto_EQ": (_) => const incorrecto_EQ(),        
+
         //Ley de Charles
         "explleyCharles": (_) => const Explicacion1_LC(),
 
         "ejemleyCharles": (_) => const Ejemplo_LC(),
 
-        "ejerciciosleyCharles": (_) => const Ejercicio_LC(),
+        "ejerciciosleyCharles": (_) => ejercicio_LC(),
 
         "next1_LC": (_) => Explicacion2_LC(),
 
@@ -245,6 +257,9 @@ class MyApp extends StatelessWidget {
         "back2_LC": (_) => const homeLeyCharles(),
         "back3_LC": (_) => const homeLeyCharles(),
         "back4_LC": (_) => const homeLeyCharles(),
+
+        "correcto_LC": (_) => const correcto_leyC(),
+        "incorrecto_LC": (_) => const incorrecto_leyC(),          
 
         //fin de QUIMICA________________________________________________________
       },
