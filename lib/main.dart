@@ -19,6 +19,7 @@ import 'src/pages/home_quimica.dart';
 import 'src/pages/practica.dart';
 import 'src/pages/practica2.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/aplicacion_CE.dart';
+import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio2_CE.dart';
 import 'src/temas/Fisica/CampoElectrico/Pages/ejercicio_CE.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Aplicacion1_LC.dart';
 import 'src/temas/Fisica/LeyCoulomb/Pages/Ejemplo1_LC.dart';
@@ -170,7 +171,8 @@ class MyApp extends StatelessWidget {
         //Campo Electrico
         "explcampoElectrico": (_) => const Explicacion_CE(),
         "ejemcampoElectrico": (_) => const Ejemplo_CE(),
-        "ejcampoElectrico": (_) => const ejercicio_CE(),
+        "ejcampoElectrico": (_) => ejercicio_CE(),
+        "ej2campoElectrico": (_) => const ejercicio2_CE(),
         "apcampoElectrico": (_) => const aplicacion_CE(),
 
         "back_CE": (_) => const home_campoElectrico(),
