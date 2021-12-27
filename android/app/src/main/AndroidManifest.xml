@@ -2,7 +2,7 @@
     package="com.example.flutter_application_2">
    <application
         android:label="C19Soft"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
