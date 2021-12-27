@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
         "GO": (_) =>
             HomePages(), //Ruta inicial GO, la cambiaré por equilibrio quimico pa ir probando
         //HomePages(), ruta inicial
-        "perfil": (_) => const PerfillUser(),
+        "perfil": (_) => const HomePages(),
         "home": (_) => MainScreen(),
         "setting": (_) => const opciones(),
         "fisica": (_) => const FisicaHome(),
@@ -143,10 +143,10 @@ class MyApp extends StatelessWidget {
         "next1_2derivada": (_) => Explicacion2_2derivada(),
         "back1_2derivada": (_) => home_segundaDerivada(),
         "ejemDerivada": (_) => ejemplo_derivada(),
-        "ejemsegundaDerivada" : (_) => ejemplo_2derivada(),
+        "ejemsegundaDerivada": (_) => ejemplo_2derivada(),
         "ejsegundaDerivada": (_) => ejercicio_2derivada(),
         "correcto_2derivada": (_) => const correcto_2derivada(),
-        "incorrecto_2derivada": (_) => const incorrecto_2derivada(),        
+        "incorrecto_2derivada": (_) => const incorrecto_2derivada(),
         //fin de MATEMATICAS________________________________________________________
 
         //FISICA________________________________________________________
@@ -163,7 +163,7 @@ class MyApp extends StatelessWidget {
         //nodos
         "Explicacion1_LN": (_) => const Explicacion1_LN(),
         "Ejemplo1_LN": (_) => const Ejemplo1_LN(),
-        "Ejercicio1_LN": (_) =>  Ejercicio1_LN(),
+        "Ejercicio1_LN": (_) => Ejercicio1_LN(),
         "Ejercicio2_LN": (_) => const Ejercicio2_LN(),
         //ley de las tensionesflutt
         "hometensiones": (_) => const Home_LT(),
@@ -178,7 +178,6 @@ class MyApp extends StatelessWidget {
         "Ejercicio2_LCo": (_) => const Ejercicio2_LCo(),
         "Ejemplo1_LCo": (_) => const Ejemplo1_LCo(),
         "Explicacion1_LCo": (_) => const Explicacion1_LCo(),
-
 
         //Ley de Coulomb
         // "Ejercicio1_LC": (_) => const Ejercicio1_LC(),
@@ -217,8 +216,6 @@ class MyApp extends StatelessWidget {
         "correcto_NQ": (_) => const correcto_NQ(),
         "incorrecto_NQ": (_) => const incorrecto_NQ(),
 
-
-
         //Equilibrio quimico
         "explBalanceQuimico": (_) => const Explicacion1_EQ(),
 
@@ -242,7 +239,7 @@ class MyApp extends StatelessWidget {
         "back8_EQ": (_) => const EquilibrioQuimico(),
 
         "correcto_EQ": (_) => const correcto_EQ(),
-        "incorrecto_EQ": (_) => const incorrecto_EQ(),        
+        "incorrecto_EQ": (_) => const incorrecto_EQ(),
 
         //Ley de Charles
         "explleyCharles": (_) => const Explicacion1_LC(),
@@ -259,7 +256,7 @@ class MyApp extends StatelessWidget {
         "back4_LC": (_) => const homeLeyCharles(),
 
         "correcto_LC": (_) => const correcto_leyC(),
-        "incorrecto_LC": (_) => const incorrecto_leyC(),          
+        "incorrecto_LC": (_) => const incorrecto_leyC(),
 
         //fin de QUIMICA________________________________________________________
       },
