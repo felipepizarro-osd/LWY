@@ -15,13 +15,7 @@ class Explicacion6_NQ extends StatelessWidget {
             height: 20,
           ),
           customAppBar(context),
-          barra(context),
-          cuerpo(context),
-          img(context),
-          SizedBox(
-            height: 60,
-          ),
-          botonFinal(context),
+          this.listaVertical(context),
         ],
       ),
     );
@@ -51,6 +45,30 @@ class Explicacion6_NQ extends StatelessWidget {
     );
   }
 
+  Widget listaVertical(context) {
+    return Column(
+//      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 0),
+        ),
+        Container(
+          height: 560,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              barra(context),
+              cuerpo(context),
+              img(context),
+              botonFinal(context),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget barra(context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -66,7 +84,7 @@ class Explicacion6_NQ extends StatelessWidget {
   Widget img(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Image.asset('assets/imgs/image27.png'),
+      child: Image.asset('assets/imgs/t3.png'),
     );
   }
 

@@ -118,7 +118,7 @@ class Explicacion4_NQ extends StatelessWidget {
             ),
           ),
           Image.asset(
-            "assets/imgs/imagen25.png",
+            "assets/imgs/t1.png",
             width: 500,
             height: 230,
           ),

@@ -93,7 +93,7 @@ class Explicacion5_NQ extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Image.asset(
-            'assets/imgs/imagen26.png',
+            'assets/imgs/t2.png',
             height: 400,
             width: 400,
           ),
